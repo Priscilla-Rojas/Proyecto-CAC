@@ -1,0 +1,7 @@
+:root{
+  --background-Header: hsla(196, 100%, 41%, 0.466);
+  --primary-color: blue;
+  --secundary-color: red;
+  --title-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --text-font: sans-serif;
+}
