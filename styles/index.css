@@ -1,0 +1,102 @@
+@import url(./root.css);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--title-font);
+}
+header{
+  width: 100vw;
+  height: 80px;
+  overflow-x: hidden;
+  padding: 5px 15px;
+  background-color: var(--background-Header);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo{
+  width: 65px;
+  height: 65px;
+}
+#logo > figure,
+#logo > figure > img{
+  width: 100%;
+  height: 100%;
+}
+#logo > figure > img{
+  object-fit: cover;
+}
+#nav ul{
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+}
+#nav{
+  width: 50%;
+  align-items: center;
+}
+#nav > .fa-bars{
+  display: none;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+#nav ul li{
+  margin: 5px;
+}
+#nav ul li a{
+  color: black;
+  text-decoration: none;
+  font-family: var(--title-font);
+}
+#user{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.712);
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#user article{
+  margin: 0 5px;
+}
+
+
+@media (max-width: 768px) {
+  .user-text{
+    display: none;
+  }
+}
+@media (max-width: 580px) {
+  #nav{
+    width: 40px;
+  }
+  #nav ul{
+    display: none;
+  }
+  #nav > .fa-bars{
+    display: block;
+    order: 1;
+  }
+  #logo{
+    order: 2;
+  }
+  #user{
+    order: 3;
+  }
+}
+@media (max-width: 450px) {
+  
+}
+@media (max-width: 320px) {
+  
+}
