@@ -142,8 +142,8 @@ body{
   align-content: center;
   align-items: center;
 }
-.nosotros > div > figure,
-.nosotros > div > article{
+.nosotros figure,
+.nosotros article{
   width: 45%;
   min-width: 500px;
   overflow: hidden;
@@ -153,7 +153,6 @@ body{
 .nosotros > div > figure > img{
   width: 250px;
   height: 150px;
-  margin-bottom: 20px;
 }
 
 
@@ -280,6 +279,10 @@ body{
     align-items: center;
     gap: 40px;
   }
+  .nosotros{
+    bac
+    background-position: left;
+  }
 }
 @media (max-width: 768px) {
   .user-text{
@@ -302,6 +305,35 @@ body{
   }
   #user{
     order: 3;
+  }
+  .nosotros{
+    padding: 0 10px;
+  }
+  .nosotros > div{
+    width: 100%;
+  }
+  .nosotros  figure {
+    width: 95%;
+    margin: 0 auto;
+    gap: 10px 10px;
+  }
+  .nosotros figure, .nosotros article{
+    min-width: 200px;
+  }
+  .nosotros  figure img{
+    width: 40%;
+    height: 100px;
+    max-width: 250px;
+    min-width: 200px;
+    object-fit: cover;
+  }
+  .nosotros article{
+    width: 95%;
+    padding: 0;
+    margin: 30px auto;
+  }
+  .nosotros article p{
+    padding: 5px;
   }
 }
 @media (max-width: 450px) {
