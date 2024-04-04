@@ -1,7 +1,10 @@
 :root{
-  --background-Header: rgba(255, 255, 255, 0.247);
-  --primary-color: rgb(6, 142, 196);
-  --secundary-color: red;
+  /* --background-Header: rgba(255, 255, 255, 0.247); */
+  --background-Header: rgba(146, 204, 0, 0.459);
+  /* --background-Header: rgba(19, 57, 89, 0.686); */
+  --primary-color: #1A5AA8;
+  --secundary-color: #91CC00;
+  --tertiary-color: #133959;
   --title-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   --text-font: sans-serif;
   --text-color: rgb(0, 0, 0);
