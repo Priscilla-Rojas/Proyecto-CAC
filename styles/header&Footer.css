@@ -43,6 +43,9 @@
   justify-content: center;
   list-style: none;
 }
+#nav .close{
+  display: none;
+}
 #nav{
   width: 50%;
   align-items: center;
@@ -167,5 +170,6 @@
   border: none;
 }
 .footer input[type=submit]{
-  background-color: var(--primary-color);
+  font-weight: 600;
+  background-color: var(--secundary-color);
 }

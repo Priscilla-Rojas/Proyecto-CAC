@@ -1,4 +1,9 @@
-
+body{
+  position: relative;
+}
+.header-visible{
+  overflow-x: visible;
+}
 #nav{
   width: 40px;
 }
@@ -14,6 +19,41 @@
 }
 #user{
   order: 3;
+}
+
+.header #nav .visible{
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  height: 80vh;
+  background-color: var(--primary-color);
+}
+#nav .visible .close{
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--secundary-color);
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  position: relative;
+  top: -100px;
+  right: 20px;
+  /* display: flex;
+  justify-self: center;
+  align-content: center;
+  align-items: center; */
+}
+.header #nav .visible li{
+  width: max-content;
+  margin: 10px auto;
+}
+
+#nav ul li a:hover{
+  color: var(--secundary-color);
+  text-shadow: none;
 }
 .nosotros > div{
   width: 100%;

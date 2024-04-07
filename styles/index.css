@@ -33,7 +33,6 @@ p, a, li, span{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
-  position: relative;
 }
 .nosotros::before{
   content: '';

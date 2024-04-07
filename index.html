@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/index.css">
-  <link rel="stylesheet" media="(max-width: 320px)" href="styles/responsive/max-width-320.css">
+  <!-- <link rel="stylesheet" media="(max-width: 320px)" href="styles/responsive/max-width-320.css"> -->
   <link rel="stylesheet" media="(max-width: 450px)" href="styles/responsive/max-width-450.css">
   <link rel="stylesheet" media="(max-width: 580px)" href="styles/responsive/max-width-580.css">
   <link rel="stylesheet" media="(max-width: 770px)" href="styles/responsive/max-width-770.css">
-  <link rel="stylesheet" media="(max-width: 950px)" href="styles/responsive/max-width-950.css">
+  <link rel="stylesheet" media="(max-width: 950px)" href="./styles/responsive/max-width-950.css">
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 
   <link rel="stylesheet" media= href="style.css">
@@ -28,13 +28,14 @@
       <!-- <h1>APDA</h1> -->
     </section>
     <nav id="nav">
-      <i class="fa-solid fa-bars"></i>
-      <ul>
+      <i class="fa-solid fa-bars hamburger"></i>
+      <ul class="header-nav ">
+        <i class="fa-solid fa-xmark close"></i>
         <li><a href="./index.html">Home</a></li>
-        <li><a href="./reservas.html">Reseras</a></li>
-        <li><a href="./torneos.html">Torneos</a></li>
-        <li><a href="./nosotros.html">Nosotros</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
+        <li><a href="./pages/reservas.html">Reseras</a></li>
+        <li><a href="./pages/torneos.html">Torneos</a></li>
+        <li><a href="./pages/nosotros.html">Nosotros</a></li>
+        <li><a href="./pages/contacto.html">Contacto</a></li>
       </ul>
     </nav>
     <section id="user" title="Iniciar Sesión">
@@ -55,13 +56,22 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="./assets/slider1.jpg" alt="First slide">
+              <picture>
+                <source class="d-block w-100" srcset="./assets/slider-vertical-1.png" media="(orientation: portrait)" alt="First slide">
+                <img class="d-block w-100" src="./assets/slider1.jpg" alt="First slide">
+              </picture>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="./assets/slider2.jpg" alt="Second slide">
+              <picture>
+                <source class="d-block w-100" srcset="./assets/slider-vertical-3.png" media="(orientation: portrait)" alt="First slide">
+                <img class="d-block w-100" src="./assets/slider2.jpg" alt="Second slide">
+              </picture>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="./assets/slider3.jpg" alt="Third slide">
+              <picture>
+                <source class="d-block w-100" srcset="./assets/slider-vertical-2.png" media="(orientation: portrait)" alt="First slide">
+                <img class="d-block w-100" src="./assets/slider3.jpg" alt="Third slide">
+              </picture>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -95,10 +105,10 @@
               </ul>
             </article>
             <figure>
-              <img src="./assets/slider3.jpg" alt="">
-              <img src="./assets/slider1.jpg" alt="">
-              <img src="./assets/slider2.jpg" alt="">
-              <img src="./assets/slider3.jpg" alt="">
+              <img src="./assets/club-1.jpg" alt="">
+              <img src="./assets/club-2.jpg" alt="">
+              <img src="./assets/club-3.jpg" alt="">
+              <img src="./assets/club-4.jpg" alt="">
             </figure>
           </div>
         </section>
@@ -121,9 +131,6 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6576.81910437065!2d-58.55101!3d-34.4925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb07689dfc16b%3A0xd99c91a74c6232d5!2sObispo%20Terrero%203380%2C%20B1642FXL%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712320958869!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
   </main>
-  <!-- <aside>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum nostrum nobis repellat porro illum incidunt, expedita minima perferendis facere, nihil quia dolore assumenda non explicabo accusantium consequatur ex totam.</p>
-  </aside> -->
   <footer class="footer">
     <div class="logo-foother">
       <figure>
@@ -179,5 +186,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+  <script src="app.js"></script>
+</body> 
 </html>
