@@ -17,10 +17,17 @@
   width: 90%;
   border-bottom: 1px solid var(--secundary-color);
   padding: 20px 0;
+  order: 1;
 }
 .logo-foother > figure{
   width: 200px;
   margin: 0 auto;
+}
+.nav-footer{
+  order: 3;
+}
+.news{
+  order: 2;
 }
 .footer-us{
   width: 100%;
@@ -29,6 +36,7 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
+  order: 4;
 }
 .nosotros{
   background-position: left;
