@@ -1,0 +1,36 @@
+.nosotros{
+  padding-bottom: 30px;
+}
+.nosotros > div{
+  flex-flow: column;
+  row-gap: 30px;
+}
+.nosotros figure, .nosotros article{
+  width: 100%;
+}
+.footer{
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.logo-foother{
+  width: 90%;
+  border-bottom: 1px solid var(--secundary-color);
+  padding: 20px 0;
+}
+.logo-foother > figure{
+  width: 200px;
+  margin: 0 auto;
+}
+.footer-us{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.nosotros{
+  background-position: left;
+}
+

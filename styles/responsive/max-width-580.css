@@ -1,0 +1,43 @@
+
+#nav{
+  width: 40px;
+}
+#nav ul{
+  display: none;
+}
+#nav > .fa-bars{
+  display: block;
+  order: 1;
+}
+.logo{
+  order: 2;
+}
+#user{
+  order: 3;
+}
+.nosotros > div{
+  width: 100%;
+}
+.nosotros  figure {
+  width: 95%;
+  margin: 0 auto;
+  gap: 10px 10px;
+}
+.nosotros figure, .nosotros article{
+  min-width: 200px;
+}
+.nosotros  figure img{
+  width: 40%;
+  height: 100px;
+  max-width: 250px;
+  min-width: 200px;
+  object-fit: cover;
+}
+.nosotros article{
+  width: 95%;
+  padding: 0;
+  margin: 30px auto;
+}
+.nosotros article p{
+  padding: 5px;
+}
