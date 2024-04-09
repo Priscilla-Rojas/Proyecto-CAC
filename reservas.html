@@ -15,91 +15,95 @@
   <title>APDA - Padel</title>
 </head>
 <body>
-  <header class="header">
-    <section class="logo">
-      <figure>
-        <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
-      </figure>
-      <!-- <h1>APDA</h1> -->
-    </section>
-    <nav id="nav">
-      <i class="fa-solid fa-bars"></i>
-      <h3 id="hora-dispo">Horarios Disponibles</h3>
-    </nav>
-    <section id="user" title="Iniciar Sesión">
-      <article>
-        <i class="fa-regular fa-user"></i>
-      </article>
-      <article class="user-text">
-        <p>Iniciar Sesión</p>
-      </article>
-    </section>
-  </header>
+    <header class="header">
+        <section class="logo">
+          <figure>
+           
+            <img href="./index.html" src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
+          </figure>
+          <!-- <h1>APDA</h1> -->
+        </section>
+        <nav id="nav">
+          <i class="fa-solid fa-bars"></i>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./reservas.html">Reservas</a></li>
+            <li><a href="./torneos.html">Torneos</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <section id="user" title="Iniciar Sesión">
+          <article>
+            <i class="fa-regular fa-user"></i>
+          </article>
+          <article class="user-text">
+            <p>Iniciar Sesión</p>
+          </article>
+        </section>
+      </header>
     <main>  
             <section id="head-main">
-                    <p>¿Vas a jugar? ¿Cuándo?<br>
-                        Elige una fecha: </p> <input type="date" name="fecha-turno" id="fecha-turno"> 
-                        <p>Nuestros turnos son de 90 minutos.</p><p> <span id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p>
+                <h3 id="hora-dispo">Horarios Disponibles</h3>
+                    <p>¿Vas a jugar? ¿Cuándo?
+                       Elige una fecha: </p> <input type="date" name="fecha-turno" id="fecha-turno"> 
+                        <p><span id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p>
             </section>
             <section class="canchas">
-                <div class="cancha" id="cancha-1">
-                    <h4>Cancha 1</h4>
+                <div class="cancha" id="cancha-1"><h4>Cancha 1</h4>
                     <table class="horario" id="horario-cancha-1">
                         <thead>
                             <tr>
-                            <td id="head-fecha">Fecha</td>
-                            <td id="head-turno">Turno</td>
-                            <td id="head-desde">Desde</td>
-                            <td id="head-hasta">Hasta</td>
-                            <td id="head-reserva">¿Reservar?</td>
+                            <td class="head-column1" id="head-fecha-1">Fecha</td>
+                            <td class="head-column2" id="head-turno-1">Turno</td>
+                            <td class="head-column3" id="head-desde-1">Desde</td>
+                            <td class="head-column4" id="head-hasta-1">Hasta</td>
+                            <td class="head-column5" id="head-reserva-1">¿Reservar?</td>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Primero</td>
-                                <td>10:00</td>
-                                <td>11:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-1-c1"></td>
+                                <td class="fe-turno" id="fe-c1-t1">10/04/2024</td>
+                                <td class="or-turno" id="or-c1-t1">Primero</td>
+                                <td class="de-turno" id="de-c1-t1">10:00</td>
+                                <td class="ha-turno" id="ha-c1-t1">11:30</td>
+                                <td class="re-turno" id="re-c1-t1"><input type="button" value="Reservar" id="btn-turno-1-c1"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Segundo</td>
-                                <td>11:30</td>
-                                <td>13:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-2-c1"></td>
+                                <td class="fe-turno" id="fe-c1-t2">10/04/2024</td>
+                                <td class="or-turno" id="or-c1-t2">Segundo</td>
+                                <td class="de-turno" id="de-c1-t2">11:30</td>
+                                <td class="ha-turno" id="ha-c1-t2">13:00</td>
+                                <td class="re-turno" id="re-c1-t2"><input type="button" value="Reservar" id="btn-turno-2-c1"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Tercero</td>
-                                <td>13:00</td>
-                                <td>14:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-3-c1"></td>
+                                <td class="fe-turno" id="fe-c1-t3">10/04/2024</td>
+                                <td class="or-turno" id="or-c1-t3">Tercero</td>
+                                <td class="de-turno" id="de-c1-t3">13:00</td>
+                                <td class="ha-turno" id="ha-c1-t3">14:30</td>
+                                <td class="re-turno" id="re-c1-t3"><input type="button" value="Reservar" id="btn-turno-3-c1"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Cuarto</td>
-                                <td>14:30</td>
-                                <td>16:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-4-c1"></td>
+                                <td class="fe-turno" id="fe-c1-t4">10/04/2024</td>
+                                <td class="or-turno" id="or-c1-t4">Cuarto</td>
+                                <td class="de-turno" id="de-c1-t4">14:30</td>
+                                <td class="ha-turno" id="ha-c1-t4">16:00</td>
+                                <td class="re-turno" id="re-c1-t4"><input type="button" value="Reservar" id="btn-turno-4-c1"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Quinto</td>
-                                <td>16:00</td>
-                                <td>17:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-5-c1"></td>
+                                <td class="fe-turno" id="fe-c1-t5">10/04/2024</td>
+                                <td class="or-turno" id="or-c1-t5">Quinto</td>
+                                <td class="de-turno" id="de-c1-t5">16:00</td>
+                                <td class="ha-turno" id="ha-c1-t5">17:30</td>
+                                <td class="re-turno" id="re-c1-t5"><input type="button" value="Reservar" id="btn-turno-5-c1"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Sexto</td>
-                                <td>17:30</td>
-                                <td>19:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-6-c1"></td>
+                                <td class="fe-turno" id="fe-c1-t6">10/04/2024</td>
+                                <td class="or-turno" id="or-c1-t6">Sexto</td>
+                                <td class="de-turno" id="de-c1-t6">17:30</td>
+                                <td class="ha-turno" id="ha-c1-t6">19:00</td>
+                                <td class="re-turno" id="re-c1-t6"><input type="button" value="Reservar" id="btn-turno-6-c1"></td>
                             </tr>
-                            
-                            
-    
                         </tbody>
                     </table>
                     <a class="volver" href="#">Volver</a>
@@ -108,55 +112,55 @@
                     <table class="horario" id="horario-cancha-2">
                         <thead>
                             <tr>
-                            <td id="head-fecha">Fecha</td>
-                            <td id="head-turno">Turno</td>
-                            <td id="head-desde">Desde</td>
-                            <td id="head-hasta">Hasta</td>
-                            <td id="head-reserva">¿Reservar?</td>
+                            <td class="head-column1" id="head-fecha-2">Fecha</td>
+                            <td class="head-column2" id="head-turno-2">Turno</td>
+                            <td class="head-column3" id="head-desde-2">Desde</td>
+                            <td class="head-column4" id="head-hasta-2">Hasta</td>
+                            <td class="head-column5" id="head-reserva-2">¿Reservar?</td>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Primero</td>
-                                <td>10:00</td>
-                                <td>11:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-1-c2"></td>
+                                <td class="fe-turno" id="fe-c2-t1">10/04/2024</td>
+                                <td class="or-turno" id="or-c2-t1">Primero</td>
+                                <td class="de-turno" id="de-c2-t1">10:00</td>
+                                <td class="ha-turno" id="ha-c2-t1">11:30</td>
+                                <td class="re-turno" id="re-c2-t1"><input type="button" value="Reservar" id="btn-turno-1-c2"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Segundo</td>
-                                <td>11:30</td>
-                                <td>13:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-2-c2"></td>
+                                <td class="fe-turno" id="fe-c2-t2">10/04/2024</td>
+                                <td class="or-turno" id="or-c2-t2">Segundo</td>
+                                <td class="de-turno" id="de-c2-t2">11:30</td>
+                                <td class="ha-turno" id="ha-c2-t2">13:00</td>
+                                <td class="re-turno" id="re-c2-t2"><input type="button" value="Reservar" id="btn-turno-2-c2"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Tercero</td>
-                                <td>13:00</td>
-                                <td>14:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-3-c2"></td>
+                                <td class="fe-turno" id="fe-c2-t3">10/04/2024</td>
+                                <td class="or-turno" id="or-c2-t3">Tercero</td>
+                                <td class="de-turno" id="de-c2-t3">13:00</td>
+                                <td class="ha-turno" id="ha-c2-t3">14:30</td>
+                                <td class="re-turno" id="re-c2-t3"><input type="button" value="Reservar" id="btn-turno-3-c2"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Cuarto</td>
-                                <td>14:30</td>
-                                <td>16:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-4-c2"></td>
+                                <td class="fe-turno" id="fe-c2-t4">10/04/2024</td>
+                                <td class="or-turno" id="or-c2-t4">Cuarto</td>
+                                <td class="de-turno" id="de-c2-t4">14:30</td>
+                                <td class="ha-turno" id="ha-c2-t4">16:00</td>
+                                <td class="re-turno" id="re-c2-t4"><input type="button" value="Reservar" id="btn-turno-4-c2"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Quinto</td>
-                                <td>16:00</td>
-                                <td>17:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-5-c2"></td>
+                                <td class="fe-turno" id="fe-c2-t5">10/04/2024</td>
+                                <td class="or-turno" id="or-c2-t5">Quinto</td>
+                                <td class="de-turno" id="de-c2-t5">16:00</td>
+                                <td class="ha-turno" id="ha-c2-t5">17:30</td>
+                                <td class="re-turno" id="re-c2-t5"><input type="button" value="Reservar" id="btn-turno-5-c2"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Sexto</td>
-                                <td>17:30</td>
-                                <td>19:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-6-c2"></td>
+                                <td class="fe-turno" id="fe-c2-t6">10/04/2024</td>
+                                <td class="or-turno" id="or-c2-t6">Sexto</td>
+                                <td class="de-turno" id="de-c2-t6">17:30</td>
+                                <td class="ha-turno" id="ha-c2-t6">19:00</td>
+                                <td class="re-turno" id="re-c2-t6"><input type="button" value="Reservar" id="btn-turno-6-c2"></td>
                             </tr>
                             
     
@@ -168,113 +172,113 @@
                     <table class="horario" id="horario-cancha-3">
                         <thead>
                             <tr>
-                            <td id="head-fecha">Fecha</td>
-                            <td id="head-turno">Turno</td>
-                            <td id="head-desde">Desde</td>
-                            <td id="head-hasta">Hasta</td>
-                            <td id="head-reserva">¿Reservar?</td>
+                            <td class="head-column1" id="head-fecha-3">Fecha</td>
+                            <td class="head-column2" id="head-turno-3">Turno</td>
+                            <td class="head-column3" id="head-desde-3">Desde</td>
+                            <td class="head-column4" id="head-hasta-3">Hasta</td>
+                            <td class="head-column5" id="head-reserva-3">¿Reservar?</td>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Primero</td>
-                                <td>10:00</td>
-                                <td>11:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-1-c3"></td>
+                                <td class="fe-turno" id="fe-c3-t1">10/04/2024</td>
+                                <td class="or-turno" id="or-c3-t1">Primero</td>
+                                <td class="de-turno" id="de-c3-t1">10:00</td>
+                                <td class="ha-turno" id="ha-c3-t1">11:30</td>
+                                <td class="re-turno" id="re-c3-t1"><input type="button" value="Reservar" id="btn-turno-1-c3"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Segundo</td>
-                                <td>11:30</td>
-                                <td>13:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-2-c3"></td>
+                                <td class="fe-turno" id="fe-c3-t2">10/04/2024</td>
+                                <td class="or-turno" id="or-c3-t2">Segundo</td>
+                                <td class="de-turno" id="de-c3-t2">11:30</td>
+                                <td class="ha-turno" id="ha-c3-t2">13:00</td>
+                                <td class="re-turno" id="re-c3-t2"><input type="button" value="Reservar" id="btn-turno-2-c3"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Tercero</td>
-                                <td>13:00</td>
-                                <td>14:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-3-c3"></td>
+                                <td class="fe-turno" id="fe-c3-t3">10/04/2024</td>
+                                <td class="or-turno" id="or-c3-t3">Tercero</td>
+                                <td class="de-turno" id="de-c3-t3">13:00</td>
+                                <td class="ha-turno" id="ha-c3-t3">14:30</td>
+                                <td class="re-turno" id="re-c3-t3"><input type="button" value="Reservar" id="btn-turno-3-c3"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Cuarto</td>
-                                <td>14:30</td>
-                                <td>16:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-4-c3"></td>
+                                <td class="fe-turno" id="fe-c3-t4">10/04/2024</td>
+                                <td class="or-turno" id="or-c3-t4">Cuarto</td>
+                                <td class="de-turno" id="de-c3-t4">14:30</td>
+                                <td class="ha-turno" id="ha-c3-t4">16:00</td>
+                                <td class="re-turno" id="re-c3-t4"><input type="button" value="Reservar" id="btn-turno-4-c3"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Quinto</td>
-                                <td>16:00</td>
-                                <td>17:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-5-c3"></td>
+                                <td class="fe-turno" id="fe-c3-t5">10/04/2024</td>
+                                <td class="or-turno" id="or-c3-t5">Quinto</td>
+                                <td class="de-turno" id="de-c3-t5">16:00</td>
+                                <td class="ha-turno" id="ha-c3-t5">17:30</td>
+                                <td class="re-turno" id="re-c3-t5"><input type="button" value="Reservar" id="btn-turno-5-c3"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Sexto</td>
-                                <td>17:30</td>
-                                <td>19:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-6-c3"></td>
+                                <td class="fe-turno" id="fe-c3-t6">10/04/2024</td>
+                                <td class="or-turno" id="or-c3-t6">Sexto</td>
+                                <td class="de-turno" id="de-c3-t6">17:30</td>
+                                <td class="ha-turno" id="ha-c3-t6">19:00</td>
+                                <td class="re-turno" id="re-c3-t6"><input type="button" value="Reservar" id="btn-turno-6-c3"></td>
                             </tr>
                         </tbody>
                     </table>
-                            <a class="volver" href="#">Volver</a>
-                        </div>
+                    <a class="volver" href="#">Volver</a>
+                </div>
                 <div class="cancha" id="cancha-4"><h4>Cancha 4</h4>
                     <table class="horario" id="horario-cancha-4">
                         <thead>
                             <tr>
-                            <td id="head-fecha">Fecha</td>
-                            <td id="head-turno">Turno</td>
-                            <td id="head-desde">Desde</td>
-                            <td id="head-hasta">Hasta</td>
-                            <td id="head-reserva">¿Reservar?</td>
+                            <td class="head-column1" id="head-fecha-4">Fecha</td>
+                            <td class="head-column2" id="head-turno-4">Turno</td>
+                            <td class="head-column3" id="head-desde-4">Desde</td>
+                            <td class="head-column4" id="head-hasta-4">Hasta</td>
+                            <td class="head-column5" id="head-reserva-4">¿Reservar?</td>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Primero</td>
-                                <td>10:00</td>
-                                <td>11:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-1-c4"></td>
+                                <td class="fe-turno" id="fe-c4-t1">10/04/2024</td>
+                                <td class="or-turno" id="or-c4-t1">Primero</td>
+                                <td class="de-turno" id="de-c4-t1">10:00</td>
+                                <td class="ha-turno" id="ha-c4-t1">11:30</td>
+                                <td class="re-turno" id="re-c4-t1"><input type="button" value="Reservar" id="btn-turno-1-c4"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Segundo</td>
-                                <td>11:30</td>
-                                <td>13:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-2-c4"></td>
+                                <td class="fe-turno" id="fe-c4-t2">10/04/2024</td>
+                                <td class="or-turno" id="or-c4-t2">Segundo</td>
+                                <td class="de-turno" id="de-c4-t2">11:30</td>
+                                <td class="ha-turno" id="ha-c4-t2">13:00</td>
+                                <td class="re-turno" id="re-c4-t2"><input type="button" value="Reservar" id="btn-turno-2-c4"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Tercero</td>
-                                <td>13:00</td>
-                                <td>14:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-3-c4"></td>
+                                <td class="fe-turno" id="fe-c4-t3">10/04/2024</td>
+                                <td class="or-turno" id="or-c4-t3">Tercero</td>
+                                <td class="de-turno" id="de-c4-t3">13:00</td>
+                                <td class="ha-turno" id="ha-c4-t3">14:30</td>
+                                <td class="re-turno" id="re-c4-t3"><input type="button" value="Reservar" id="btn-turno-3-c4"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Cuarto</td>
-                                <td>14:30</td>
-                                <td>16:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-4-c4"></td>
+                                <td class="fe-turno" id="fe-c4-t4">10/04/2024</td>
+                                <td class="or-turno" id="or-c4-t4">Cuarto</td>
+                                <td class="de-turno" id="de-c4-t4">14:30</td>
+                                <td class="ha-turno" id="ha-c4-t4">16:00</td>
+                                <td class="re-turno" id="re-c4-t4"><input type="button" value="Reservar" id="btn-turno-4-c4"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Quinto</td>
-                                <td>16:00</td>
-                                <td>17:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-5-c4"></td>
+                                <td class="fe-turno" id="fe-c4-t5">10/04/2024</td>
+                                <td class="or-turno" id="or-c4-t5">Quinto</td>
+                                <td class="de-turno" id="de-c4-t5">16:00</td>
+                                <td class="ha-turno" id="ha-c4-t5">17:30</td>
+                                <td class="re-turno" id="re-c4-t5"><input type="button" value="Reservar" id="btn-turno-5-c4"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Sexto</td>
-                                <td>17:30</td>
-                                <td>19:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-6-c4"></td>
+                                <td class="fe-turno" id="fe-c4-t6">10/04/2024</td>
+                                <td class="or-turno" id="or-c4-t6">Sexto</td>
+                                <td class="de-turno" id="de-c4-t6">17:30</td>
+                                <td class="ha-turno" id="ha-c4-t6">19:00</td>
+                                <td class="re-turno" id="re-c4-t6"><input type="button" value="Reservar" id="btn-turno-6-c4"></td>
                             </tr>
                                
                         </tbody>
@@ -285,55 +289,55 @@
                     <table class="horario" id="horario-cancha-5">
                         <thead>
                             <tr>
-                            <td id="head-fecha">Fecha</td>
-                            <td id="head-turno">Turno</td>
-                            <td id="head-desde">Desde</td>
-                            <td id="head-hasta">Hasta</td>
-                            <td id="head-reserva">¿Reservar?</td>
+                            <td class="head-column1" id="head-fecha-5">Fecha</td>
+                            <td class="head-column2" id="head-turno-5">Turno</td>
+                            <td class="head-column3" id="head-desde-5">Desde</td>
+                            <td class="head-column4" id="head-hasta-5">Hasta</td>
+                            <td class="head-column5" id="head-reserva-5">¿Reservar?</td>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Primero</td>
-                                <td>10:00</td>
-                                <td>11:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-1-c5"></td>
+                                <td class="fe-turno" id="fe-c5-t1">10/04/2024</td>
+                                <td class="or-turno" id="or-c5-t1">Primero</td>
+                                <td class="de-turno" id="de-c5-t1">10:00</td>
+                                <td class="ha-turno" id="ha-c5-t1">11:30</td>
+                                <td class="re-turno" id="re-c5-t1"><input type="button" value="Reservar" id="btn-turno-1-c5"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Segundo</td>
-                                <td>11:30</td>
-                                <td>13:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-2-c5"></td>
+                                <td class="fe-turno" id="fe-c5-t2">10/04/2024</td>
+                                <td class="or-turno" id="or-c5-t2">Segundo</td>
+                                <td class="de-turno" id="de-c5-t2">11:30</td>
+                                <td class="ha-turno" id="ha-c5-t2">13:00</td>
+                                <td class="re-turno" id="re-c5-t2"><input type="button" value="Reservar" id="btn-turno-2-c5"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Tercero</td>
-                                <td>13:00</td>
-                                <td>14:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-3-c5"></td>
+                                <td class="fe-turno" id="fe-c5-t3">10/04/2024</td>
+                                <td class="or-turno" id="or-c5-t3">Tercero</td>
+                                <td class="de-turno" id="de-c5-t3">13:00</td>
+                                <td class="ha-turno" id="ha-c5-t3">14:30</td>
+                                <td class="re-turno" id="re-c5-t3"><input type="button" value="Reservar" id="btn-turno-3-c5"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Cuarto</td>
-                                <td>14:30</td>
-                                <td>16:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-4-c5"></td>
+                                <td class="fe-turno" id="fe-c5-t4">10/04/2024</td>
+                                <td class="or-turno" id="or-c5-t4">Cuarto</td>
+                                <td class="de-turno" id="de-c5-t4">14:30</td>
+                                <td class="ha-turno" id="ha-c5-t4">16:00</td>
+                                <td class="re-turno" id="re-c5-t4"><input type="button" value="Reservar" id="btn-turno-4-c5"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Quinto</td>
-                                <td>16:00</td>
-                                <td>17:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-5-c5"></td>
+                                <td class="fe-turno" id="fe-c5-t5">10/04/2024</td>
+                                <td class="or-turno" id="or-c5-t5">Quinto</td>
+                                <td class="de-turno" id="de-c5-t5">16:00</td>
+                                <td class="ha-turno" id="ha-c5-t5">17:30</td>
+                                <td class="re-turno" id="re-c5-t5"><input type="button" value="Reservar" id="btn-turno-5-c5"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Sexto</td>
-                                <td>17:30</td>
-                                <td>19:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-6-c5"></td>
+                                <td class="fe-turno" id="fe-c5-t6">10/04/2024</td>
+                                <td class="or-turno" id="or-c5-t6">Sexto</td>
+                                <td class="de-turno" id="de-c5-t6">17:30</td>
+                                <td class="ha-turno" id="ha-c5-t6">19:00</td>
+                                <td class="re-turno" id="re-c5-t6"><input type="button" value="Reservar" id="btn-turno-6-c5"></td>
                             </tr>
                             
                         </tbody>
@@ -344,55 +348,55 @@
                     <table class="horario" id="horario-cancha-6">
                         <thead>
                             <tr>
-                            <td id="head-fecha">Fecha</td>
-                            <td id="head-turno">Turno</td>
-                            <td id="head-desde">Desde</td>
-                            <td id="head-hasta">Hasta</td>
-                            <td id="head-reserva">¿Reservar?</td>
+                            <td class="head-column1" id="head-fecha-6">Fecha</td>
+                            <td class="head-column2" id="head-turno-6">Turno</td>
+                            <td class="head-column3" id="head-desde-6">Desde</td>
+                            <td class="head-column4" id="head-hasta-6">Hasta</td>
+                            <td class="head-column5" id="head-reserva-6">¿Reservar?</td>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Primero</td>
-                                <td>10:00</td>
-                                <td>11:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-1-c6"></td>
+                                <td class="fe-turno" id="fe-c6-t1">10/04/2024</td>
+                                <td class="or-turno" id="or-c6-t1">Primero</td>
+                                <td class="de-turno" id="de-c6-t1">10:00</td>
+                                <td class="ha-turno" id="ha-c6-t1">11:30</td>
+                                <td class="re-turno" id="re-c6-t1"><input type="button" value="Reservar" id="btn-turno-1-c6"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Segundo</td>
-                                <td>11:30</td>
-                                <td>13:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-2-c6"></td>
+                                <td class="fe-turno" id="fe-c6-t2">10/04/2024</td>
+                                <td class="or-turno" id="or-c6-t2">Segundo</td>
+                                <td class="de-turno" id="de-c6-t2">11:30</td>
+                                <td class="ha-turno" id="ha-c6-t2">13:00</td>
+                                <td class="re-turno" id="re-c6-t2"><input type="button" value="Reservar" id="btn-turno-2-c6"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Tercero</td>
-                                <td>13:00</td>
-                                <td>14:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-3-c6"></td>
+                                <td class="fe-turno" id="fe-c6-t3">10/04/2024</td>
+                                <td class="or-turno" id="or-c6-t3"></td>
+                                <td class="de-turno" id="de-c6-t3">13:00</td>
+                                <td class="ha-turno" id="ha-c6-t3">14:30</td>
+                                <td class="re-turno" id="re-61-t3"><input type="button" value="Reservar" id="btn-turno-3-c6"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Cuarto</td>
-                                <td>14:30</td>
-                                <td>16:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-4-c6"></td>
+                                <td class="fe-turno" id="fe-c6-t4">10/04/2024</td>
+                                <td class="or-turno" id="or-c6-t4"></td>
+                                <td class="de-turno" id="de-c6-t4">14:30</td>
+                                <td class="ha-turno" id="ha-c6-t4">16:00</td>
+                                <td class="re-turno" id="re-c6-t4"><input type="button" value="Reservar" id="btn-turno-4-c6"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Quinto</td>
-                                <td>16:00</td>
-                                <td>17:30</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-5-c6"></td>
+                                <td class="fe-turno" id="fe-c6-t5">10/04/2024</td>
+                                <td class="or-turno" id="or-c6-t5">Quinto</td>
+                                <td class="de-turno" id="de-c6-t5">16:00</td>
+                                <td class="ha-turno" id="ha-c6-t5" >17:30</td>
+                                <td class="re-turno" id="re-c6-t5"><input type="button" value="Reservar" id="btn-turno-5-c6"></td>
                             </tr>
                             <tr>
-                                <td>10/04/2024</td>
-                                <td>Sexto</td>
-                                <td>17:30</td>
-                                <td>19:00</td>
-                                <td><input type="button" value="Reservar" id="btn-turno-6-c6"></td>
+                                <td class="fe-turno" id="fe-c6-t6">10/04/2024</td>
+                                <td class="or-turno" id="or-c6-t6">Sexto</td>
+                                <td class="de-turno" id="de-c6-t6">17:30</td>
+                                <td class="ha-turno" id="ha-c6-t6">19:00</td>
+                                <td class="re-turno" id="re-c6-t6"><input type="button" value="Reservar" id="btn-turno-6-c6"></td>
                             </tr>
                             
                         </tbody>
