@@ -87,6 +87,15 @@ p, a, li, span{
   color: var(--primary-color);
   text-shadow: 0px 0px 5px #ffffffb5;
 }
+
+/* probando    */
+
+#li-home{
+  text-shadow: 1px 1px 3px rgb(119, 3, 22);
+
+}
+
+
 #user{
   display: flex;
   flex-flow: row wrap;

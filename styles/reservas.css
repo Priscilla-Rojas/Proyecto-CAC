@@ -325,7 +325,10 @@ color: rgba(255, 255, 255, 0.918) ;
     
   }
   
-  
+  #li-reservas{
+    text-shadow: 1px 1px 3px rgb(119, 3, 22);
+
+  }
   
   
   
