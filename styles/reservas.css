@@ -275,29 +275,43 @@ color: rgba(255, 255, 255, 0.918) ;
 
 
 .volver{
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
   .canchas{
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center; 
+    justify-content: center;
+    align-content: center;
+   /*  align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
    text-align: center;
-   padding: 10px;
+   padding: 10px; */
+   
   }
   .cancha{
-    width: 48%;
-    height: 60%;
+    /* border: 1.5px solid black; */
+    width: 96%;
+    height: 96%;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
     background-color: var(--secundary-color);
-  margin: 15px 7px;
-  padding: 10px 0 5px;
+    align-items: center;
+    margin: auto;
+  /* margin: 15px 7px;
+  padding: 10px 0 5px; */
   color:aliceblue;
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--primary-color);
   }
   .horario{
     width: 100%;
+    height: 100%;
+    margin: auto;
 
   }
   thead{
@@ -308,7 +322,7 @@ color: rgba(255, 255, 255, 0.918) ;
     text-align: center;
     color:aliceblue;
     border-bottom: 1px solid  #3b5998;
-    padding: 2px 07px;
+    padding: 2px 05px;
   }
 
   td > input{
@@ -326,7 +340,7 @@ color: rgba(255, 255, 255, 0.918) ;
   }
   
   #li-reservas{
-    text-shadow: 1px 1px 3px rgb(119, 3, 22);
+    text-shadow: 1px 1px 3px rgb(50, 4, 216);
 
   }
   
@@ -371,12 +385,15 @@ color: rgba(255, 255, 255, 0.918) ;
     .nosotros{
       background-position: left;
     }
-    .cancha{
+    /* .cancha{
       width:80%;
       justify-content: center;
     }
     .canchas{
       justify-content: center;
+    } */
+    .canchas{
+      grid-template-columns: 1fr;
     }
   }
 
