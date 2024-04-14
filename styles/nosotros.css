@@ -1,81 +1,43 @@
-/* Reset de estilos */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import url(./root.css);
+@import url(./header&Footer.css);
 
-/* Estilos del body */
-body {
-  font-family: Arial, sans-serif;
-  background-color: tan; /* Color de fondo neutro */
-}
-
-/* Estilos del encabezado */
-header {
-  background-color: #13e96c; /* Verde vibrante */
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* Estilos del logo */
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Estilos del contenedor principal */
+/* Estilos específicos para el contenido de la página */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
-  background-color: thistle; /* Fondo blanco */
+  background-color: thistle;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de las secciones */
 section {
-  background-color: #3498db; /* Azul brillante */
+  background-color: #3498db;
   color: #030303;
   padding: 40px 20px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
-/* Estilos del título de sección */
 section h2 {
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* Estilos del texto de sección */
 section p {
   font-style: oblique;
   line-height: 1.6;
   text-align: center;
 }
 
-/* Estilos del pie de página */
-footer {
-  background-color: #2c3e50; /* Azul oscuro */
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Animación de fade in para las imágenes */
+/* Estilos para animaciones */
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  100% {
-    opacity: 1;
-  }
 }
 
-/* Estilos de las imágenes */
+/* Estilos para la galería multimedia */
 .media {
   display: flex;
   justify-content: center;
@@ -85,10 +47,9 @@ footer {
 
 .media img {
   animation: fadeIn 1s ease-in-out;
-  margin: 10px; /* Agrega un espacio entre las imágenes */
+  margin: 10px;
 }
 
-/* Escala las imágenes al pasar el mouse */
 .media img:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
