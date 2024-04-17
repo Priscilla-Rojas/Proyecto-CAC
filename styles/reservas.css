@@ -55,14 +55,14 @@ p, a, li, span{
 .logo > figure > img{
   object-fit: cover;
 }
-/* #nav ul{
+ #nav ul{
   margin: 0;
   display: flex;
   flex-flow: row nowrap;
   align-content: center;
   justify-content: center;
   list-style: none;
-} */
+} 
 #nav{
   width: 50%;
   align-items: center;
@@ -73,7 +73,7 @@ p, a, li, span{
   font-size: 1.5rem;
 }
 
-/* #nav ul li{
+#nav ul li{
   margin: 5px;
 }
 #nav ul li a{
@@ -86,8 +86,8 @@ p, a, li, span{
   text-decoration: underline;
   color: var(--primary-color);
   text-shadow: 0px 0px 5px #ffffffb5;
-}  */
-
+} 
+ 
  #user{
   display: flex;
   flex-flow: row wrap;
@@ -112,11 +112,7 @@ color: rgba(255, 255, 255, 0.918) ;
   margin: 0;
 }
 
-#hora-dispo{
-    text-align: center;
-    font-weight: bold;
-    color: var(--primary-color);
-}
+
 /* Fin Estilos Header */
 
 
@@ -229,7 +225,11 @@ color: rgba(255, 255, 255, 0.918) ;
     text-align: center;
     width: 100%;
   }
-  
+  #hora-dispo{
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-color);
+}
   #reco-inicio-sesion{
     font-weight: 600;
     text-decoration: underline;
@@ -240,10 +240,11 @@ color: rgba(255, 255, 255, 0.918) ;
     animation: colores 4s linear 0.5s infinite;
     margin-top: 10px;
     
+    
   }
 #fecha-turno{
-  font-size: 30px;
-    margin-bottom: 15px;
+  font-size: 25px;
+    margin-bottom: 25px;
     border-radius: 5px;
     box-shadow: 2px 2px 2px var(--primary-color)
 }
@@ -274,29 +275,43 @@ color: rgba(255, 255, 255, 0.918) ;
 
 
 .volver{
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
   .canchas{
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center; 
+    justify-content: center;
+    align-content: center;
+   /*  align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
    text-align: center;
-   padding: 10px;
+   padding: 10px; */
+   
   }
   .cancha{
-    width: 48%;
-    height: 60%;
+    /* border: 1.5px solid black; */
+    width: 96%;
+    height: 96%;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
     background-color: var(--secundary-color);
-  margin: 15px 7px;
-  padding: 10px 0 5px;
+    align-items: center;
+    margin: auto;
+  /* margin: 15px 7px;
+  padding: 10px 0 5px; */
   color:aliceblue;
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--primary-color);
   }
   .horario{
     width: 100%;
+    height: 100%;
+    margin: auto;
 
   }
   thead{
@@ -306,22 +321,28 @@ color: rgba(255, 255, 255, 0.918) ;
     background-color: #08a0e9;
     text-align: center;
     color:aliceblue;
-    
     border-bottom: 1px solid  #3b5998;
-    padding: 2px 07px;
+    padding: 2px 05px;
   }
+
   td > input{
     background-color: var(--primary-color);
     color: aliceblue;
     padding: 0 5px;
+    
   }
   td > input:hover{
     cursor: pointer;
     background-color: var(--secundary-color);
     color: var(--primary-color);
+    font-weight: 800;
+    
   }
   
-  
+  #li-reservas{
+    text-shadow: 1px 1px 3px rgb(50, 4, 216);
+
+  }
   
   
   
@@ -364,7 +385,24 @@ color: rgba(255, 255, 255, 0.918) ;
     .nosotros{
       background-position: left;
     }
+    /* .cancha{
+      width:80%;
+      justify-content: center;
+    }
+    .canchas{
+      justify-content: center;
+    } */
+    .canchas{
+      grid-template-columns: 1fr;
+    }
   }
+
+
+
+
+
+
+
   @media (max-width: 768px) {
     .header{
       width: 100vw;
@@ -383,6 +421,10 @@ color: rgba(255, 255, 255, 0.918) ;
       justify-content: center;
       align-items: center;
     }
+    .cancha{
+      width:90%;
+    }
+
   }
   @media (max-width: 580px) {
     #nav{
@@ -427,10 +469,47 @@ color: rgba(255, 255, 255, 0.918) ;
     .nosotros article p{
       padding: 5px;
     }
+    .cancha{
+      width:95%;
+    }
+    td{
+      font-size: 13px;
+      padding: 7px 2px;
+    }
+
+
   }
+
+
   @media (max-width: 450px) {
-    
+    td{ 
+      font-size: 12px;
+      padding: 10px 3px;
+    }
+   .cancha{
+    width: 99%;
+   }
+    span{
+      font-size: 14px;
+    }
   }
+  @media (max-width: 420px) {
+    td{
+      font-size:11px;
+    }
+    span{
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 385px) {
+    td{
+      font-size:10px;
+    }
+    span{
+      font-size: 11px;
+    }
+  }
+
   @media (max-width: 320px) {
     
   }
