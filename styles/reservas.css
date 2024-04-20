@@ -243,10 +243,13 @@ color: rgba(255, 255, 255, 0.918) ;
     
   }
 #fecha-turno{
-  font-size: 25px;
+  font-size: 24px;
     margin-bottom: 25px;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px var(--primary-color)
+    box-shadow: 1px 1px 2px #08a0e9;
+    border: none;
+    color: var(--primary-color);
+    text-align: center;
 }
 @keyframes colores {
   0% {
@@ -275,8 +278,9 @@ color: rgba(255, 255, 255, 0.918) ;
 
 
 .volver{
-  padding-top: 5px;
+  padding-top: 3px;
   padding-bottom: 15px;
+  text-shadow: 1px 1px 1px aliceblue ;
 }
 
   .canchas{
@@ -290,10 +294,10 @@ color: rgba(255, 255, 255, 0.918) ;
     flex-wrap: wrap;
    text-align: center;
    padding: 10px; */
-   
+   margin-bottom: 15px;;
   }
   .cancha{
-    /* border: 1.5px solid black; */
+  
     width: 96%;
     height: 96%;
     margin-top: 10px;
@@ -302,11 +306,13 @@ color: rgba(255, 255, 255, 0.918) ;
     background-color: var(--secundary-color);
     align-items: center;
     margin: auto;
-  /* margin: 15px 7px;
-  padding: 10px 0 5px; */
-  color:aliceblue;
+    color:aliceblue;
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--primary-color);
+    text-shadow: 1px 1px 1px var(--primary-color);
+  }
+  .cancha > h4 {
+    padding-top: 5px;
   }
   .horario{
     width: 100%;
@@ -329,6 +335,7 @@ color: rgba(255, 255, 255, 0.918) ;
     background-color: var(--primary-color);
     color: aliceblue;
     padding: 0 5px;
+    border-radius: 7px;
     
   }
   td > input:hover{
@@ -338,9 +345,15 @@ color: rgba(255, 255, 255, 0.918) ;
     font-weight: 800;
     
   }
+
+  .no{
+    background-color:  rgb(76, 51, 166);
+    color: var--(--secundary-color);
+    font-weight: 600;
+  }
   
   #li-reservas{
-    text-shadow: 1px 1px 3px rgb(50, 4, 216);
+    text-shadow: 1px 1px 3px rgb(76, 51, 166);
 
   }
   
