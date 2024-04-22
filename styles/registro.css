@@ -1,5 +1,4 @@
 @import url(./root.css);
-@import url(./header&Footer.css);
 
 *{
   margin: 0;
@@ -7,11 +6,7 @@
   box-sizing: border-box;
   font-family: var(--title-font);
 }
-body{
-  max-width: 100vw;
-  width: 100%;
-  overflow-x: hidden;
-}
+
 h1, h2, h3, h4{
   font-family: var(--title-font);
 }
@@ -103,6 +98,7 @@ p, a, li, span{
 #user:hover{
 background-color: var(--primary-color);
 color: rgba(255, 255, 255, 0.918) ;
+
 }
 
 #user article{
@@ -115,161 +111,96 @@ color: rgba(255, 255, 255, 0.918) ;
 
 /* Fin Estilos Header */
 
-  
-/*  Estilos Main */
-  
-  main{
-    position:relative;
-    padding-top: 60px;
-    width: 100%;
+
+/* Estilos footer */
+
+.footer{
+    width: 100vw;
     min-height: 200px;
-    background-image: url(/assets/fondo.jpg); 
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  #head-main{
-    padding-top: 15px;
-    text-align: center;
-    width: 100%;
-  }
-  #hora-dispo{
-    text-align: center;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-  #reco-inicio-sesion{
-    font-weight: 600;
-    text-decoration: underline;
-    background-color: var(--secundary-color);
-    border-radius: 5px;
-    padding: 10px;
-    border: 1.5px dotted var(--secundary-color);
-    animation: colores 4s linear 0.5s infinite;
-    margin-top: 10px;
-    
-    
-  }
-#fecha-turno{
-  font-size: 24px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px #08a0e9;
-    border: none;
-    color: var(--primary-color);
-    text-align: center;
-}
-@keyframes colores {
-  0% {
-  background-color: var (--secundary-color);
-  color: var(--primary-color);
-  border-color: var(--primary-color)
-}
-25%{
-  color: aliceblue;
-}
-  50% {
-    color: var(--secundary-color);
-    background-color: var(--primary-color);
-    border-color: var(--secundary-color)
-  }
-  75%{
-    color: aliceblue;
-  }
+    padding: 30px;
+    background-color: rgb(2, 24, 37);
+    position: absolute;
   
-  100%{
-    background-color: var (--secundary-color);
-  color: var(--primary-color);
-  border-color: var(--primary-color)
-  }
-  }
-
-
-.volver{
-  padding-top: 3px;
-  padding-bottom: 15px;
-  text-shadow: 1px 1px 1px aliceblue ;
-}
-
-  .canchas{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center; 
-    justify-content: center;
+  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    gap: 50px;
+  
     align-content: center;
-   /*  align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-   text-align: center;
-   padding: 10px; */
-   margin-bottom: 15px;;
   }
-  .cancha{
-  
-    width: 96%;
-    height: 96%;
-    margin-top: 10px;
-    display:flex;
-    flex-direction: column;
-    background-color: var(--secundary-color);
-    align-items: center;
-    margin: auto;
-    color:aliceblue;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px var(--primary-color);
-    text-shadow: 1px 1px 1px var(--primary-color);
+  .footer h2{
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    text-align: center;
   }
-  .cancha > h4 {
-    padding-top: 5px;
+  .logo-foother{
+    width: 200px;
+    align-self: center;
   }
-  .horario{
+  .logo-foother figure{
+    width: 100%;
+    /* height: 80px; */
+    margin: 0;
+  }
+  .logo-foother figure img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .nav-footer{
+    width:  max-content;
+  }
+  .nav-footer ul{
+    list-style: '- ';
+    color: white;
+    margin: 0;
+  }
+  .nav-footer ul li a,
+  .footer p{
+    color: white;
+    /* margin-left: 5px; */
+    /* letter-spacing: 1px; */
+  }
+  .iconos-redes{
+    width: max-content;
+    margin: 0 auto;
+  }
+  .iconos-redes a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .iconos-redes svg{
     width: 100%;
     height: 100%;
-    margin: auto;
-
   }
-  thead{
-    font-weight: bold;
+  .iconos-redes .facebook{
+    fill: #3b5998;
   }
-  td{
-    background-color: #08a0e9;
-    text-align: center;
-    color:aliceblue;
-    border-bottom: 1px solid  #3b5998;
-    padding: 2px 05px;
+  .iconos-redes .twiter{
+    fill: #08a0e9;
   }
-
-  td > input{
+  .iconos-redes .instagram{
+    fill:  rgba(177,52,175,1);
+  }
+  .iconos-redes a:hover{
+    text-decoration: none;
+  }
+  .footer form{
+    display: flex;
+    flex-flow: column;
+  }
+  .footer input{
+    border-radius: 15px;
+    padding: 5px 10px ;
+    margin-top: 10px;
+    border: none;
+  }
+  .footer input[type=submit]{
     background-color: var(--primary-color);
-    color: aliceblue;
-    padding: 0 5px;
-    border-radius: 7px;
-    
   }
-  td > input:hover{
-    cursor: pointer;
-    background-color: var(--secundary-color);
-    color: var(--primary-color);
-    font-weight: 800;
-    
-  }
-
-  .no{
-    background-color:  rgb(76, 51, 166);
-    color: var--(--secundary-color);
-    font-weight: 600;
-  }
-  
-  #li-reservas{
-    text-shadow: 1px 1px 3px rgb(76, 51, 166);
-
-  }
-  .oculto{
-   visibility: hidden;
-  }
-  
-  
-  
   
   /* Responsive */
   
@@ -309,21 +240,12 @@ color: rgba(255, 255, 255, 0.918) ;
     .nosotros{
       background-position: left;
     }
-    /* .cancha{
-      width:80%;
-      justify-content: center;
-    }
-    .canchas{
-      justify-content: center;
-    } */
-    .canchas{
-      grid-template-columns: 1fr;
-    }
+   main{
+    text-shadow: 1px 1px 1px aliceblue;
+   }
   }
 
-
-
-
+  /* Fin Estilos Footer */
 
 
 
@@ -403,19 +325,8 @@ color: rgba(255, 255, 255, 0.918) ;
 
 
   }
-
-
   @media (max-width: 450px) {
-    td{ 
-      font-size: 12px;
-      padding: 10px 3px;
-    }
-   .cancha{
-    width: 99%;
-   }
-    span{
-      font-size: 14px;
-    }
+    
   }
   @media (max-width: 420px) {
     td{
@@ -434,6 +345,105 @@ color: rgba(255, 255, 255, 0.918) ;
     }
   }
 
-  @media (max-width: 320px) {
+  body{
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0px;
     
   }
+  #logueado{
+    display: none;
+  }
+  main{
+    position: relative;
+    padding-top: 70px;
+    height: calc(100vh + 200px);
+    background-image: url(/assets/fondo.jpg); 
+    background-size: cover;
+    color: var(--primary-color);
+  }
+  
+
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+    color: var(--primary-color)
+  }
+  
+  form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto ;
+    padding: 2em;
+    border-radius: 10px;
+    border: 1px dotted var(--secundary-color);
+    box-shadow: 2px 2px var(--primary-color);
+  }
+
+ 
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    width: 100%;
+    
+  }
+  .generoLabel{
+    display: block;
+  }
+  .generoField{
+   display: flex;
+   justify-content: space-around;
+
+  }
+    
+  label {
+    display: block;
+    margin: 0.5rem 0;
+    width: 100%
+  }
+  
+  input,
+  select {
+    margin: 10px 1px 0 0;
+    width: 100%;
+    min-height: 1.8em;
+  }
+  
+  input {
+    background-color: var(--primary-color);
+    border: 1px solid var(--secundary-color);
+    color: var(--secundary-color);
+    font-weight: 600;
+    padding-left: 10px;;
+  }
+  
+ .inline {
+    width: unset;
+    margin: 0 0.3em 0 0;
+    vertical-align: middle;
+    display: inline; 
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 45%;
+    margin: 1em auto;
+    height: 3em;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    border-color: var(--secundary-color);
+    min-width: 200px;
+  }
+  
+  input[type="file"] {
+    padding: 1px 2px;
+  }
+  
+  
+  
+  
+  
