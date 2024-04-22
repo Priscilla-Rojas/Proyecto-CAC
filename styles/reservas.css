@@ -1,4 +1,5 @@
 @import url(./root.css);
+@import url(./header&Footer.css);
 
 *{
   margin: 0;
@@ -102,7 +103,6 @@ p, a, li, span{
 #user:hover{
 background-color: var(--primary-color);
 color: rgba(255, 255, 255, 0.918) ;
-
 }
 
 #user article{
@@ -115,109 +115,17 @@ color: rgba(255, 255, 255, 0.918) ;
 
 /* Fin Estilos Header */
 
-
-/* Estilos footer */
-
-.footer{
-    width: 100vw;
-    min-height: 200px;
-    padding: 30px;
-    background-color: rgb(2, 24, 37);
-    position: absolute;
   
-  
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    gap: 50px;
-  
-    align-content: center;
-  }
-  .footer h2{
-    color: white;
-    font-size: 1.3rem;
-    text-decoration: underline;
-    text-align: center;
-  }
-  .logo-foother{
-    width: 200px;
-    align-self: center;
-  }
-  .logo-foother figure{
-    width: 100%;
-    /* height: 80px; */
-    margin: 0;
-  }
-  .logo-foother figure img{
-    width: 100%;
-    object-fit: cover;
-  }
-  .nav-footer{
-    width:  max-content;
-  }
-  .nav-footer ul{
-    list-style: '- ';
-    color: white;
-    margin: 0;
-  }
-  .nav-footer ul li a,
-  .footer p{
-    color: white;
-    /* margin-left: 5px; */
-    /* letter-spacing: 1px; */
-  }
-  .iconos-redes{
-    width: max-content;
-    margin: 0 auto;
-  }
-  .iconos-redes a{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  .iconos-redes svg{
-    width: 100%;
-    height: 100%;
-  }
-  .iconos-redes .facebook{
-    fill: #3b5998;
-  }
-  .iconos-redes .twiter{
-    fill: #08a0e9;
-  }
-  .iconos-redes .instagram{
-    fill:  rgba(177,52,175,1);
-  }
-  .iconos-redes a:hover{
-    text-decoration: none;
-  }
-  .footer form{
-    display: flex;
-    flex-flow: column;
-  }
-  .footer input{
-    border-radius: 15px;
-    padding: 5px 10px ;
-    margin-top: 10px;
-    border: none;
-  }
-  .footer input[type=submit]{
-    background-color: var(--primary-color);
-  }
-  
-  /* Fin Estilos Footer */
-  
-  /*  Estilos Main */
+/*  Estilos Main */
   
   main{
-    
     position:relative;
     padding-top: 60px;
     width: 100%;
     min-height: 200px;
-     background-image: url(/assets/fondo.jpg); 
-     background-size: cover;
+    background-image: url(/assets/fondo.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   #head-main{
