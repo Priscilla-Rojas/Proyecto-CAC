@@ -13,7 +13,7 @@ document.getElementById("fecha-turno").value = hoy;
 document.getElementById("fecha-turno").min = hoy;
 
 function fechar(p){
-   p = p.slice(-2)+"/"+ p.substr(5,2) +"/"+ p.substr(0,4)
+p = p.slice(-2)+"/"+ p.substr(5,2) +"/"+ p.substr(0,4)
    return p
 }
 
