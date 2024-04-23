@@ -56,14 +56,14 @@ p, a, li, span{
 .logo > figure > img{
   object-fit: cover;
 }
- #nav ul{
-  margin: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  align-content: center;
-  justify-content: center;
-  list-style: none;
-} 
+  #nav ul{
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+  } 
 #nav{
   width: 50%;
   align-items: center;
