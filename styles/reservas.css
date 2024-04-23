@@ -409,13 +409,7 @@ color: rgba(255, 255, 255, 0.918) ;
     .nosotros{
       background-position: left;
     }
-    /* .cancha{
-      width:80%;
-      justify-content: center;
-    }
-    .canchas{
-      justify-content: center;
-    } */
+
     .canchas{
       grid-template-columns: 1fr;
     }
