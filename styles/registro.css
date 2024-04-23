@@ -163,7 +163,7 @@ p, a, li, span{
     color: var(--primary-color)
   }
   
-  form {
+  .principal {
     width: 60vw;
     max-width: 500px;
     min-width: 300px;
@@ -204,7 +204,7 @@ p, a, li, span{
     min-height: 1.8em;
   }
   
-  input {
+  .principal input {
     background-color: var(--primary-color);
     border: 1px solid var(--secundary-color);
     color: var(--secundary-color);
@@ -219,7 +219,7 @@ p, a, li, span{
     display: inline; 
   }
   
-  input[type="submit"] {
+ .principal input[type="submit"] {
     display: block;
     width: 45%;
     margin: 1em auto;
@@ -228,6 +228,14 @@ p, a, li, span{
     background-color: var(--primary-color);
     border-color: var(--secundary-color);
     min-width: 200px;
+  }
+
+  .principal input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 2px 2px var(--primary-color);
   }
   
   input[type="file"] {
