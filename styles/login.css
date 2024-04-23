@@ -93,9 +93,10 @@
   color: var(--secundary-color);
 }
 .loginRedes{
+
   position: relative;
   width: max-content;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .loginRedes ::after{
   content: '';
