@@ -122,7 +122,8 @@ color: rgba(255, 255, 255, 0.918) ;
     position:relative;
     padding-top: 60px;
     width: 100%;
-    min-height: 200px;
+    min-height: calc(100vh - 213px);
+    height: max-content;
     background-image: url(/assets/fondo.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
@@ -265,7 +266,7 @@ color: rgba(255, 255, 255, 0.918) ;
 
   }
   .oculto{
-   visibility: hidden;
+   display: none;
   }
   
   
