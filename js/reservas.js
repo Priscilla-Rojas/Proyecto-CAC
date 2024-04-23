@@ -13,7 +13,7 @@ document.getElementById("fecha-turno").value = hoy;
 document.getElementById("fecha-turno").min = hoy;
 
 function fechar(p){
-p = p.slice(-2)+"/"+ p.substr(5,2) +"/"+ p.substr(0,4)
+   p = p.slice(-2)+"/"+ p.substr(5,2) +"/"+ p.substr(0,4)
    return p
 };
 
@@ -27,47 +27,47 @@ let elementos = document.querySelectorAll('.fe-turno');
     // ahora intentando que La pagina cambie el mensaje cada vez que cambio el valor de logueado
 
    
-function isLogin(){
-let userLogued = document.getElementById("logueado").checked;
-return userLogued
-};
-
-// con esto logré que que deje poner imite inferior en la fecha que puedo seleccionar (hoy) y el valor con que se carga la página (también hoy)
-
 
 const horariosDisponibles = document.getElementById("reco-inicio-sesion");
-
 function queMensajeMuestro(){
-
-if (isLogin()) 
-{
-canchas.classList.toggle("oculto");
-horariosDisponibles.innerHTML = `
-
-  <span id="reco-inicio-sesion">Veamos qué turnos hay disponibles para ti</span>`;
-
-}
-else 
+    let textoBoton = document.getElementById("userP");
+    if (textoBoton.textContent == "Iniciar Sesión")
 {
     canchas.classList.toggle("oculto");
-horariosDisponibles.innerHTML = `
+    horariosDisponibles.classList.toggle("animado");
+    horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`;
+    textoBoton.textContent = "Cerrar Sesión"
+}
+else {
+    canchas.classList.toggle("oculto");
+    horariosDisponibles.classList.toggle("animado");
+    horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
+    textoBoton.textContent = "Iniciar Sesión";
+}
+    };
 
-    <span id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span>`;
 
-};
-};
  
 // cambiar todas las fechas cada vez que elijan una fecha en la tabla. 
 
 let fechaInput = document.getElementById('fecha-turno');
 
 fechaInput.addEventListener('change', function(){
-    
+    let nos = document.querySelectorAll('.no');
+        nos.forEach(function(no) {
+            no.disabled = false;
+            no.classList.remove("no");
+            no.value = "Reservar";
+
+            
+        });
+
     let elementos = document.querySelectorAll('.fe-turno');
     elementos.forEach(function(elemento) {
         elemento.textContent = fechar(fechaInput.value);
     });
 });
+
 
 
 // cambiar estado del boton si el turno esta disponible o no
@@ -79,8 +79,7 @@ let botones = document.querySelectorAll('.turno-disponible');
        
         this.value = "Reservado";
         this.classList.toggle('no');
-        
+        this.disabled = true;
        
     });
 });
-
