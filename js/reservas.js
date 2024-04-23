@@ -41,18 +41,22 @@ function queMensajeMuestro(){
 
 if (isLogin()) 
 {
-canchas.classList.toggle("oculto");
-horariosDisponibles.innerHTML = `
 
-  <span id="reco-inicio-sesion">Veamos qué turnos hay disponibles para ti</span>`;
+canchas.classList.toggle("oculto");
+horariosDisponibles.classList.toggle("animado");
+horariosDisponibles.textContent = `
+
+  Veamos qué turnos hay disponibles para ti`;
 
 }
+
 else 
 {
     canchas.classList.toggle("oculto");
-horariosDisponibles.innerHTML = `
+    horariosDisponibles.classList.toggle("animado");
+horariosDisponibles.textContent = `
 
-    <span id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span>`;
+    Recuerda que debes iniciar sesión para poder reservar`;
 
 };
 };
