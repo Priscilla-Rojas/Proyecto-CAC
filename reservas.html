@@ -14,32 +14,31 @@
 </head>
 <body>
     <header class="header">
-        <a href="https://priscilla-rojas.github.io/Proyecto-CAC" class="logo">
+        <a href="./index.html" class="logo">
           <figure>
-            <img href="./index.html" src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
+            <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
           </figure>
+          
         </a>
         <nav id="nav">
           <i class="fa-solid fa-bars"></i>
           <ul>
             <li id="li-home"><a href="./index.html">Home</a></li>
             <li id="li-reservas"><a href="./reservas.html">Reservas</a></li>
-            
             <li id="li-nosotros"><a href="./nosotros.html">Nosotros</a></li>
             <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
           </ul>
         </nav>
-        <a id="user" title="Iniciar Sesión" onclick="queMensajeMuestro()">
-          <article>
-            <i class="fa-regular fa-user"></i>
-          </article>
-          <article class="user-text">
-            <p id="userP">Iniciar Sesión</p>
-          </article>
-          
-        </a>
+        <a href="/registro.html" class="user " title="Iniciar Sesión">
+            <article>
+              <i class="fa-regular fa-user"></i>
+            </article>
+            <article class="user-text">
+              <p>Iniciar Sesión</p>
+            </article>
+          </a>
         <input type="checkbox" name="logueado" id="logueado" onclick="queMensajeMuestro()">
-    </header>
+      </header>
     <main>  
        
        <section id="head-main">
@@ -47,6 +46,7 @@
                     <p>¿Vas a jugar? ¿Cuándo?
                        Elige una fecha: </p> <input type="date" name="fecha-turno" id="fecha-turno" > 
                     <p><span class="animado" id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p>
+                    <!-- <p><span class="animado" id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p> -->
         </section>
         <section class="canchas oculto" id="canchas">
                 <div class="cancha" id="cancha-1"><h4>Cancha 1</h4>
@@ -415,7 +415,7 @@
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./reservas.html">Reservas</a></li>
-            <li><a href="./torneos.html">Torneos</a></li>
+            <!-- <li><a href="./torneos.html">Torneos</a></li> -->
             <li><a href="./nosotros.html">Nosotros</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
           </ul>
@@ -458,6 +458,6 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="./js/reservas.js"></script>
-</body>
-</html>
+    </body>
+    </html>
     

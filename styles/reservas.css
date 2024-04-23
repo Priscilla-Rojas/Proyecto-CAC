@@ -1,4 +1,5 @@
 @import url(./root.css);
+@import url(./header&Footer.css);
 
 *{
   margin: 0;
@@ -55,14 +56,14 @@ p, a, li, span{
 .logo > figure > img{
   object-fit: cover;
 }
- #nav ul{
-  margin: 0;
-  display: flex;
-  flex-flow: row nowrap;
-  align-content: center;
-  justify-content: center;
-  list-style: none;
-} 
+  #nav ul{
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    justify-content: center;
+    list-style: none;
+  } 
 #nav{
   width: 50%;
   align-items: center;
@@ -215,7 +216,7 @@ color: rgba(255, 255, 255, 0.918) ;
     position:relative;
     padding-top: 60px;
     width: 100%;
-    min-height: calc(100vh - 213px);
+    min-height: calc(100vh - 50px);
      background-image: url(/assets/fondo.jpg); 
      background-size: cover;
      height: max-content;

@@ -1,3 +1,7 @@
+
+body{
+  margin: 0;
+}
 .header{
   max-width: 100vw;
   height: 60px;
@@ -68,7 +72,12 @@
   color: var(--primary-color);
   text-shadow: 0px 0px 5px #ffffffb5;
 }
-#user{
+
+.user{
+  text-decoration: none;
+  color: var(--tertiary-color);
+  font-weight: 500;
+
   display: flex;
   flex-flow: row wrap;
   align-content: center;
@@ -78,15 +87,19 @@
   border-radius: 10px;
   cursor: pointer;
 }
-#user article{
+.header .disable{
+  visibility: hidden;
+}
+.user article{
   margin: 0 5px;
 }
 .user-text p{
   margin: 0;
+  font-family: var(--text-font);
 }
 
 .footer{
-  width: 100%;
+  /* width: 100%; */
   max-width: 100vw;
   min-height: 200px;
   padding: 30px;
@@ -103,6 +116,7 @@
   font-size: 1.3rem;
   text-decoration: underline;
   text-align: center;
+  font-family: var(--title-font);
 }
 .logo-foother{
   width: 200px;
@@ -130,6 +144,7 @@
   color: white;
   font-family: var(--text-font);
   font-style: normal;
+  text-decoration: none;
 }
 .footer > section{
   background-color: transparent;
