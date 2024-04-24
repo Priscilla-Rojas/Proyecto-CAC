@@ -29,12 +29,12 @@
             <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
           </ul>
         </nav>
-        <a href="/registro.html" class="user " title="Iniciar Sesión">
+        <a href="/registro.html" id="user" class="user " title="Iniciar Sesión" >
             <article>
               <i class="fa-regular fa-user"></i>
             </article>
             <article class="user-text">
-              <p>Iniciar Sesión</p>
+                <p id="userP">Iniciar Sesión</p>
             </article>
           </a>
         <input type="checkbox" name="logueado" id="logueado" onclick="queMensajeMuestro()">
@@ -45,8 +45,8 @@
                 <h3 id="hora-dispo">Horarios Disponibles</h3>
                     <p>¿Vas a jugar? ¿Cuándo?
                        Elige una fecha: </p> <input type="date" name="fecha-turno" id="fecha-turno" > 
-                    <p><span class="animado" id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p>
-                    <!-- <p><span class="animado" id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p> -->
+                    <p><span onclick="queMensajeMuestro()" class="animado" id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p>
+                    
         </section>
         <section class="canchas oculto" id="canchas">
                 <div class="cancha" id="cancha-1"><h4>Cancha 1</h4>

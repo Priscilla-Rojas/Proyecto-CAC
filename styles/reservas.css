@@ -240,11 +240,12 @@ color: rgba(255, 255, 255, 0.918) ;
     border-radius: 5px;
     padding: 10px;
     border: 1.5px dotted var(--secundary-color);
-    
     margin-top: 10px;
+    
   }
     .animado{
       animation: colores 5s linear 0.7s infinite;
+      cursor: pointer;
     }
     
   

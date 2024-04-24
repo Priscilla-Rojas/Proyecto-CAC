@@ -36,13 +36,15 @@ function queMensajeMuestro(){
     canchas.classList.toggle("oculto");
     horariosDisponibles.classList.toggle("animado");
     horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`;
-    textoBoton.textContent = "Cerrar Sesión"
+    textoBoton.textContent = "Cerrar Sesión";
+   
 }
 else {
     canchas.classList.toggle("oculto");
     horariosDisponibles.classList.toggle("animado");
     horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
     textoBoton.textContent = "Iniciar Sesión";
+       
 }
     };
 
