@@ -1,3 +1,17 @@
+
 .login input{
   min-width: 200px;
+}
+.login form{
+  padding: 5px;
+}
+.box{
+  padding-left: 25px ;
+}
+.box #remember{
+  min-width: max-content;
+  width: 15px;
+}
+.boxForgetPassword{
+  padding: 0;
 }
