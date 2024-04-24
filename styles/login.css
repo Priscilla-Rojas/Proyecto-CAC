@@ -41,6 +41,11 @@
   border-radius: 20px;
   color: var(--tertiary-color);
 }
+.login input:focus{
+  border: 2px solid var(--secundary-color);
+  outline: none;
+  
+}
 .box{
   align-self: flex-start;
   display: flex;
