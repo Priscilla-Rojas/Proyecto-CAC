@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/login.css">
   <!-- <link rel="stylesheet" media="(max-width: 320px)" href="styles/responsive/max-width-320.css"> -->
   <link rel="stylesheet" media="(max-width: 450px)" href="styles/responsive/max-width-450.css">
   <link rel="stylesheet" media="(max-width: 580px)" href="styles/responsive/max-width-580.css">
   <link rel="stylesheet" media="(max-width: 770px)" href="styles/responsive/max-width-770.css">
   <link rel="stylesheet" media="(max-width: 950px)" href="./styles/responsive/max-width-950.css">
-  
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -21,12 +20,12 @@
 </head>
 <body>
   <header class="header">
-    <section class="logo">
+    <a href="./index.html" class="logo">
       <figure>
         <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
       </figure>
       
-    </section>
+    </a>
     <nav id="nav">
       <i class="fa-solid fa-bars hamburger"></i>
       <ul class="header-nav">
@@ -37,7 +36,7 @@
         <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <a href="./login.html" class="user" title="Iniciar Sesión">
+    <a href="./login.html" class="user disable" title="Iniciar Sesión">
       <article>
         <i class="fa-regular fa-user"></i>
       </article>
@@ -46,89 +45,37 @@
       </article>
     </a>
   </header>
-  <main>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <picture>
-                <source class="d-block w-100" srcset="./assets/slider-vertical-1.png" media="(orientation: portrait)">
-                <img class="d-block w-100" src="./assets/slider1.jpg" alt="Second slide">
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source class="d-block w-100" srcset="./assets/slider-vertical-2.png" media="(orientation: portrait)">
-                <img class="d-block w-100" src="./assets/slider2.jpg" alt="Second slide">
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source class="d-block w-100" srcset="./assets/slider-vertical-3.png" media="(orientation: portrait)" >
-                <img class="d-block w-100" src="./assets/slider3.jpg" alt="Third slide">
-              </picture>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+  <main class="login">
+    <section>
+      <h3>Iniciar sesión:</h3>
+      <form >
+        <input type="text" placeholder="Ingresa tu mail">
+        <input type="password" placeholder="Ingresa contraseña">
+        <div class="box">
+          <input type="checkbox" name="remember" id="remember">
+          <label for="remember">Recordarme</label>
         </div>
-        <section class="nosotros">
-          <h2>Nosotros</h2>
-          <div>
-            <article>
-              <p>
-                El objetivo de nuestro club es potenciar la organización de torneos, como así también la presentación de nuestro club en San Isidro como sede oficial para las diferentes competencias juveniles. 
-              </p>
-              <p>
-                Así, nuestros socios, alumnos y docentes trabajarán día a día en mejorar las habilidades de nuestros alumnos y socios haciendo de este deporte un soporté, para poder crecer profesionalmente, como para liberar tensiones y disfrutar de la maravilla de este hermoso deporte. 
-              </p>
-              <p>
-                En APDA, nos esforzamos por ofrecer a nuestros socios y visitantes instalaciones de primera calidad, una atmósfera amigable y una comunidad comprometida con el juego limpio y el compañerismo. Fomentando la sana competencia. 
-              </p>
-              <h4>Nuestras Instalaciones y Servicios</h4>
-              <ul>
-                <li>6 canchas de pádel cubiertas</li>
-                <li>Vestuarios y duchas</li>
-                <li>Zona de descanso y cafetería</li>
-                <li>Tienda de equipamiento deportivo</li>
-              </ul>
-            </article>
-            <figure>
-              <img src="./assets/club-1.jpg" alt="">
-              <img src="./assets/club-2.jpg" alt="">
-              <img src="./assets/club-3.jpg" alt="">
-              <img src="./assets/club-4.jpg" alt="">
-            </figure>
-          </div>
-        </section>
-        <div class="location">
-          <article class="details">
-            <div>
-              <h2>Horarios</h2>
-              <ul>
-                <li>Lunes a Viernes: 10:00 am - 9:00 pm </li>
-                <li>Sábado y Domingo: 9:00 am - 7:00 pm</li>
-              </ul>
-            </div>
-            <div>
-              <h2>Ubicación</h2>
-              <p>
-                Obispo Terrero 3380, San Isidro,<br>
-                Provincia de Buenos Aires, CP B1609HMA </p>
-            </div>
-          </article>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6576.81910437065!2d-58.55101!3d-34.4925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb07689dfc16b%3A0xd99c91a74c6232d5!2sObispo%20Terrero%203380%2C%20B1642FXL%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712320958869!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <input type="submit" value="Ingresar">
+        <div class="box boxForgetPassword">
+          <i class="fa-solid fa-lock"></i>
+          <p>¿Olvidaste tu contraseña?</p>
         </div>
+        <div class="noAccount">
+          <p>¿No tienes cuenta? <a href="./registro.html">Regístrate</a></p>
+        </div>
+      </form>
+      <section class="loginRedes">
+        <h3>Iniciar sesión con:</h3>
+        <article class="iconsLoginRedes">
+          <a href="">
+            <img src="./assets/googleLogo.png" alt="Iniciar sesión con Google" title="Iniciar sesión tu cuenta de Google">
+          </a>
+          <a href="">
+            <img src="./assets/facebookLogo.png" alt="Iniciar sesión con facebook" title="Iniciar sesión tu cuenta de facebook">
+          </a>
+        </article>
+      </section>
+    </section>
   </main>
   <footer class="footer">
     <div class="logo-foother">

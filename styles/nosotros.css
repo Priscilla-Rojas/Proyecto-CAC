@@ -3,6 +3,7 @@
 
 /* Estilos específicos para el contenido de la página */
 body {
+  /* padding-top: 60px; */
   background-image: url(../assets/fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;

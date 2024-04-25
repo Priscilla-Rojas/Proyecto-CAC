@@ -1,0 +1,125 @@
+@import url(./root.css);
+@import url(./header&Footer.css);
+
+.login{
+  margin-top: 80px;
+  padding: 30px 0;
+  font-family: var(--text-font);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login > section{
+  background-color: var(--tertiary-color);
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid var(--secundary-color);
+  border-radius: 10px;
+}
+.login h3{
+  font-family: var(--title-font);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+.login form{
+  padding: 0 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.login input{
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  margin: 5px 0;
+  padding: 10px;
+  border: 2px solid var(--tertiary-color);
+  border-radius: 20px;
+  color: var(--tertiary-color);
+}
+.login input:focus{
+  border: 2px solid var(--secundary-color);
+  outline: none;
+  
+}
+.box{
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  margin: 0 0 20px 0;
+}
+.box input{
+  width: max-content;
+  min-width: max-content;
+  margin: 0 10px 0 0;
+}
+.box [type="checkbox"]:checked{
+  accent-color: var(--secundary-color);
+  
+}
+.box label{
+  color: white;
+}
+.box label:hover{
+  color: var(--secundary-color);
+  text-decoration: underline;
+}
+.login [type="submit"]{
+  background-color: var(--secundary-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.login .boxForgetPassword{
+  margin-top: 8px;
+  align-self: center;
+}
+.boxForgetPassword > i{
+  height: max-content;
+  color: rgb(151, 150, 150);
+}
+.boxForgetPassword > p{
+  margin: 0 0 0 10px;
+  color: rgb(151, 150, 150);
+}
+.noAccount p{
+  margin: 0;
+  color: rgb(151, 150, 150);
+}
+.noAccount p a{
+  color: rgba(146, 204, 0, 0.459);
+}
+.noAccount p a:hover{
+  color: var(--secundary-color);
+}
+.loginRedes{
+
+  position: relative;
+  width: max-content;
+  margin: 20px auto;
+}
+.loginRedes ::after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 120%;
+  translate: -50%;
+  border-top: 1px solid var(--secundary-color);
+}
+.iconsLoginRedes{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.iconsLoginRedes a {
+  text-decoration: none;
+}
+.iconsLoginRedes img{
+  width: 35px;
+}

@@ -6,7 +6,7 @@ const close = document.querySelector('.close');
 hamburger.addEventListener('click', ()=>{
   nav.classList.toggle('visible');
   header.classList.toggle('header-visible');
-  console.log(nav)
+  // console.log(nav)
 })
 close.addEventListener('click', ()=>{
   nav.classList.toggle('visible');
