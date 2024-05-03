@@ -4,11 +4,10 @@ const header = document.querySelector('.header');
 const close = document.querySelector('.close');
 
 hamburger.addEventListener('click', ()=>{
-  nav.classList.toggle('visible');
-  header.classList.toggle('header-visible');
-  // console.log(nav)
+  nav.classList.add('visible');
+  header.classList. add('header-visible');
 })
 close.addEventListener('click', ()=>{
-  nav.classList.toggle('visible');
-  header.classList.toggle('header-visible');
+  nav.classList.remove('visible');
+  header.classList.remove('header-visible');
 })
