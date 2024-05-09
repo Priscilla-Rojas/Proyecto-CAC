@@ -33,10 +33,19 @@ function queMensajeMuestro(){
     let textoBoton = document.getElementById("userP");
     if (textoBoton.textContent == "Iniciar Sesión")
 {
+    horariosDisponibles.style.cursor = "not-allowed";
     canchas.classList.toggle("oculto");
     horariosDisponibles.classList.toggle("animado");
     horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`;
-    textoBoton.textContent = "Cerrar Sesión";
+    horariosDisponibles.removeAttribute("onclick")
+    setTimeout(()=>{
+        horariosDisponibles.textContent = `Cerrar Sesión.`;
+        horariosDisponibles.style.cursor = "pointer";
+        horariosDisponibles.setAttribute("onclick", "queMensajeMuestro()")
+    }, 4000);
+
+    
+    textoBoton.textContent = "Hola User...!";
    
 }
 else {
