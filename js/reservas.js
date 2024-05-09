@@ -57,9 +57,9 @@ let fechaInput = document.getElementById('fecha-turno');
 fechaInput.addEventListener('change', function(){
     let nos = document.querySelectorAll('.no');
         nos.forEach(function(no) {
-            no.disabled = false;
+            // no.disabled = false;
             no.classList.remove("no");
-            no.value = "Reservar";
+            no.value == "Reservar" ? no.value = "Reservado" : no.value = "Reservar" ;
 
             
         });
@@ -79,9 +79,9 @@ let botones = document.querySelectorAll('.turno-disponible');
   botones.forEach(function(boton) {
     boton.addEventListener('click', function() {
        
-        this.value = "Reservado";
+        this.value == "Reservar" ? this.value = "Reservado" : this.value = "Reservar";
         this.classList.toggle('no');
-        this.disabled = true;
+        // this.disabled = true;
        
     });
 });

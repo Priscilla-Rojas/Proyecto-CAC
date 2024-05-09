@@ -170,8 +170,9 @@ p, a, li, span{
     margin: 0 auto ;
     padding: 2em;
     border-radius: 10px;
-    border: 1px dotted var(--secundary-color);
-    box-shadow: 2px 2px var(--primary-color);
+    border: 2px solid var(--secundary-color);
+    box-shadow: 2px 2px var(--secundary-color);
+    background-color: var(--primary-color);
   }
 
  
@@ -194,7 +195,8 @@ p, a, li, span{
   label {
     display: block;
     margin: 0.5rem 0;
-    width: 100%
+    width: 100%;
+    color:var(--secundary-color)
   }
   
   input,
@@ -202,12 +204,14 @@ p, a, li, span{
     margin: 10px 1px 0 0;
     width: 100%;
     min-height: 1.8em;
+    border-radius: 10px;
   }
   
   .principal input {
-    background-color: var(--primary-color);
-    border: 1px solid var(--secundary-color);
-    color: var(--secundary-color);
+    background-color: aliceblue;
+    border: 1px dotted var(--secundary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
     font-weight: 600;
     padding-left: 10px;;
   }
@@ -225,21 +229,49 @@ p, a, li, span{
     margin: 1em auto;
     height: 3em;
     font-size: 1.1rem;
-    background-color: var(--primary-color);
+    background-color: var(--secundary-color);
     border-color: var(--secundary-color);
     min-width: 200px;
   }
 
   .principal input[type="submit"]:hover{
-    cursor: pointer;
-    background-color: var(--secundary-color);
-    color: var(--primary-color);
-    border-radius: 5px;
+    animation: colores 5s linear 0.7s infinite;
+      cursor: pointer;
+    /* background-color: var(--primary-color);
+    color: var(--secundary-color); */
+    
     box-shadow: 2px 2px var(--primary-color);
   }
   
+  @keyframes colores {
+    0% {
+    background-color: var (--secundary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color)
+  }
+  25%{
+    color: aliceblue;
+  }
+    50% {
+      color: var(--secundary-color);
+      background-color: var(--primary-color);
+      border-color: var(--secundary-color)
+    }
+    75%{
+      color: aliceblue;
+    }
+    
+    100%{
+      background-color: var (--secundary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color)
+    }
+    }
+  
+
   input[type="file"] {
     padding: 1px 2px;
+    
   }
   
   

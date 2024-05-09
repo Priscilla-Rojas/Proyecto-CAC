@@ -71,6 +71,7 @@ body{
   text-decoration: underline;
   color: var(--primary-color);
   text-shadow: 0px 0px 5px #ffffffb5;
+  animation: 1.4s cubic-bezier(0.19, 1, 0.22, 1)
 }
 
 .user{
