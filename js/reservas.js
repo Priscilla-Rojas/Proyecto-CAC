@@ -21,38 +21,82 @@ function fechar(p){
 let elementos = document.querySelectorAll('.fe-turno');
     elementos.forEach(function(elemento) {
         elemento.textContent = fechar(hoy);
-});
+    });
 
-// ahora intentando que La pagina cambie el mensaje cada vez que cambio el valor de logueado
+    let usuarioQueIngreso = sessionStorage.getItem("usuarioSesion")
+    console.log(sessionStorage.getItem("usuarioSesion"))
 
-const horariosDisponibles = document.getElementById("reco-inicio-sesion");
-function queMensajeMuestro(){
+    // ahora intentando que La pagina cambie el mensaje cada vez que cambio el valor de logueado
     let textoBoton = document.getElementById("userP");
-    if (textoBoton.textContent == "Iniciar Sesión"){
+    const horariosDisponibles = document.getElementById("reco-inicio-sesion");
+
+    if(usuarioQueIngreso) {
+    document.getElementById("usuario-logueado").innerHTML = `Hola ${sessionStorage.getItem("usuarioSesion")}, ¿Vas a jugar? ¿Cuándo?
+    Elige una fecha: `   
+    textoBoton.textContent =` ${sessionStorage.getItem("usuarioSesion")}`;
     canchas.classList.toggle("oculto");
     horariosDisponibles.classList.toggle("animado");
-    horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`;
-    textoBoton.textContent = "Cerrar Sesión";
+    horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`; 
     }
-    else {
-        canchas.classList.toggle("oculto");
-        horariosDisponibles.classList.toggle("animado");
-        horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
-        textoBoton.textContent = "Iniciar Sesión";
-    }
-};
 
+    function queHago() {};
+  
+    // } else {
+    //     canchas.classList.toggle("oculto");
+    // horariosDisponibles.classList.toggle("animado");
+    // horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
+    // textoBoton.textContent = "Iniciar Sesión";
+    
+    // }
+   
+
+
+// function queMensajeMuestro(){
+    
+
+
+//     if (textoBoton.textContent == "Iniciar Sesión")
+// {
+//     horariosDisponibles.style.cursor = "not-allowed";
+//     canchas.classList.toggle("oculto");
+//     horariosDisponibles.classList.toggle("animado");
+//     horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`;
+//     // horariosDisponibles.removeAttribute("onclick")
+//     // setTimeout(()=>{
+//     //     horariosDisponibles.textContent = `Cerrar Sesión.`;
+//     //     horariosDisponibles.style.cursor = "pointer";
+//     //     horariosDisponibles.setAttribute("onclick", "queMensajeMuestro()")
+//     // }, 4000);
+
+    
+//     textoBoton.textContent = `Hola ${sessionStorage.getItem("usuarioSesion")}!`;
+   
+// }
+// else {
+//     canchas.classList.toggle("oculto");
+//     horariosDisponibles.classList.toggle("animado");
+//     horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
+//     textoBoton.textContent = "Iniciar Sesión";
+//     sessionStorage.setItem("usuarioSesion", "")
+       
+// }
+//     };
+
+
+ 
 // cambiar todas las fechas cada vez que elijan una fecha en la tabla. 
 
 let fechaInput = document.getElementById('fecha-turno');
 
 fechaInput.addEventListener('change', function(){
     let nos = document.querySelectorAll('.no');
-    nos.forEach(function(no) {
-        no.disabled = false;
-        no.classList.remove("no");
-        no.value = "Reservar";
-    });
+        nos.forEach(function(no) {
+            // no.disabled = false;
+            no.classList.remove("no");
+            no.value == "Reservar" ? no.value = "Reservado" : no.value = "Reservar" ;
+
+            
+        });
 
     let elementos = document.querySelectorAll('.fe-turno');
     elementos.forEach(function(elemento) {
@@ -66,8 +110,10 @@ let botones = document.querySelectorAll('.turno-disponible');
 
 botones.forEach(function(boton) {
     boton.addEventListener('click', function() {
-        this.value = "Reservado";
+       
+        this.value == "Reservar" ? this.value = "Reservado" : this.value = "Reservar";
         this.classList.toggle('no');
-        this.disabled = true;
+        // this.disabled = true;
+       
     });
 });

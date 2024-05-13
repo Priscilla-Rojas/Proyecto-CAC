@@ -87,6 +87,7 @@ p, a, li, span{
   text-decoration: underline;
   color: var(--primary-color);
   text-shadow: 0px 0px 5px #ffffffb5;
+  animation: 1.4s cubic-bezier(0.19, 1, 0.22, 1)
 } 
  
  #user{
@@ -241,11 +242,11 @@ color: rgba(255, 255, 255, 0.918) ;
     padding: 10px;
     border: 1.5px dotted var(--secundary-color);
     margin-top: 10px;
-    
+    /* cursor: pointer; */
   }
     .animado{
       animation: colores 5s linear 0.7s infinite;
-      cursor: pointer;
+      
     }
     
   
@@ -359,10 +360,10 @@ color: rgba(255, 255, 255, 0.918) ;
     font-weight: 600;
   }
   
-  #li-reservas{
+  /* #li-reservas{
     text-shadow: 1px 1px 3px rgb(76, 51, 166);
 
-  }
+  } */
   .oculto{
    display: none;
   }

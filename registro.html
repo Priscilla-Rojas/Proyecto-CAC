@@ -50,18 +50,18 @@
     
     <h1>Formulario de Registro</h1>
     <p>Ingresa unos pocos datos para conocerte mejor</p>
-    <form class="principal" method="post" action=''>
+    <form class="principal" action='./login.html'>
       <fieldset>
         <label for="nombreCompleto">Nombre Completo: <input id="nombreCompleto" name="nombreCompleto" type="text" required /></label>
         <label for="email">Correo Electrónico: <input id="email" name="email" type="email" required /></label>
         <label for="newPassword">Contraseña: <input id="newPassword" name="newPassword" type="password"  required /></label>
         <label for="confPassword">Confirme contraseña: <input id="confPassword" name="confPassword" type="password"  required /></label>
       </fieldset>
-      <fieldset class="generoField">
+      <fieldset class="generoField" id="genero">
         <label class="generoLabel">Género:</label>
-        <label for="femenino"><input id="femenino" type="radio" name="genero" class="inline" /> Femenino</label>
-        <label for="masculino"><input id="masculino" type="radio" name="genero" class="inline" /> Masculino</label>
-        <label for="noBinario"><input id="noBinario" type="radio" name="genero" class="inline" /> No Binario</label>
+        <label for="femenino"><input id="femenino" value="Femenino" type="radio" name="genero" class="inline" /> Femenino</label>
+        <label for="masculino"><input id="masculino" value="Masculino" type="radio" name="genero" class="inline" /> Masculino</label>
+        <label for="noBinario"><input id="noBinario" value="No Binario" type="radio" name="genero" class="inline" /> No Binario</label>
       </fieldset>
       <fieldset>
         <label for="fotoPerfil">Sube tu foto de perfil: <input id="fotoPerfil" type="file" name="file" /></label>
@@ -78,7 +78,7 @@
         
       </fieldset>
       
-      <input type="submit" value="Registrarme" />
+      <input type="submit" value="Registrarme" onclick="registrarNuevoUsuario()">
     </form>
 
   </main>

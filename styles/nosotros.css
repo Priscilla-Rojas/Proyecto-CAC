@@ -3,15 +3,16 @@
 
 /* Estilos específicos para el contenido de la página */
 body {
-  /* padding-top: 60px; */
   background-image: url(../assets/fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .container {
+
   max-width: 960px;
   margin: 0 auto;
+  margin-top: 60px;
   padding: 20px;
   background-color: rgba(0, 146, 204, 0.459);
   border-radius: 10px;
