@@ -242,7 +242,7 @@ color: rgba(255, 255, 255, 0.918) ;
     padding: 10px;
     border: 1.5px dotted var(--secundary-color);
     margin-top: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
     .animado{
       animation: colores 5s linear 0.7s infinite;

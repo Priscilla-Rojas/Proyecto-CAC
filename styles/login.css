@@ -123,3 +123,6 @@
 .iconsLoginRedes img{
   width: 35px;
 }
+input[type = submit]:hover{
+cursor: pointer;
+}

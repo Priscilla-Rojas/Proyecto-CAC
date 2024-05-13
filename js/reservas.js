@@ -23,39 +23,64 @@ let elementos = document.querySelectorAll('.fe-turno');
         elemento.textContent = fechar(hoy);
     });
 
+    let usuarioQueIngreso = sessionStorage.getItem("usuarioSesion")
+    console.log(sessionStorage.getItem("usuarioSesion"))
 
     // ahora intentando que La pagina cambie el mensaje cada vez que cambio el valor de logueado
-
-   
-
-const horariosDisponibles = document.getElementById("reco-inicio-sesion");
-function queMensajeMuestro(){
     let textoBoton = document.getElementById("userP");
-    if (textoBoton.textContent == "Iniciar Sesión")
-{
-    horariosDisponibles.style.cursor = "not-allowed";
+    const horariosDisponibles = document.getElementById("reco-inicio-sesion");
+
+    if(usuarioQueIngreso) {
+    document.getElementById("usuario-logueado").innerHTML = `Hola ${sessionStorage.getItem("usuarioSesion")}, ¿Vas a jugar? ¿Cuándo?
+    Elige una fecha: `   
+    textoBoton.textContent =` ${sessionStorage.getItem("usuarioSesion")}`;
     canchas.classList.toggle("oculto");
     horariosDisponibles.classList.toggle("animado");
-    horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`;
-    horariosDisponibles.removeAttribute("onclick")
-    setTimeout(()=>{
-        horariosDisponibles.textContent = `Cerrar Sesión.`;
-        horariosDisponibles.style.cursor = "pointer";
-        horariosDisponibles.setAttribute("onclick", "queMensajeMuestro()")
-    }, 4000);
+    horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`; 
+    }
+
+    function queHago() {};
+  
+    // } else {
+    //     canchas.classList.toggle("oculto");
+    // horariosDisponibles.classList.toggle("animado");
+    // horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
+    // textoBoton.textContent = "Iniciar Sesión";
+    
+    // }
+   
+
+
+// function queMensajeMuestro(){
+    
+
+
+//     if (textoBoton.textContent == "Iniciar Sesión")
+// {
+//     horariosDisponibles.style.cursor = "not-allowed";
+//     canchas.classList.toggle("oculto");
+//     horariosDisponibles.classList.toggle("animado");
+//     horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`;
+//     // horariosDisponibles.removeAttribute("onclick")
+//     // setTimeout(()=>{
+//     //     horariosDisponibles.textContent = `Cerrar Sesión.`;
+//     //     horariosDisponibles.style.cursor = "pointer";
+//     //     horariosDisponibles.setAttribute("onclick", "queMensajeMuestro()")
+//     // }, 4000);
 
     
-    textoBoton.textContent = "Hola User...!";
+//     textoBoton.textContent = `Hola ${sessionStorage.getItem("usuarioSesion")}!`;
    
-}
-else {
-    canchas.classList.toggle("oculto");
-    horariosDisponibles.classList.toggle("animado");
-    horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
-    textoBoton.textContent = "Iniciar Sesión";
+// }
+// else {
+//     canchas.classList.toggle("oculto");
+//     horariosDisponibles.classList.toggle("animado");
+//     horariosDisponibles.textContent = `Recuerda que debes iniciar sesión para poder reservar`;
+//     textoBoton.textContent = "Iniciar Sesión";
+//     sessionStorage.setItem("usuarioSesion", "")
        
-}
-    };
+// }
+//     };
 
 
  
