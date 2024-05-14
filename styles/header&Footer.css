@@ -8,7 +8,7 @@ body{
   overflow-x: hidden;
   padding: 5px 15px;
   background-color: var(--background-Header);
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;

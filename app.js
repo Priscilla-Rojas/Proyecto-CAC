@@ -11,17 +11,16 @@ close.addEventListener('click', ()=>{
   nav.classList.remove('visible');
   header.classList.remove('header-visible');
 })
- 
-  function usuario(a,b,c,d,e,f,g) {
-    this.nombreCompleto = a
-    this.email = b
-    this.clave = c
-    this.genero = d
-    this.foto = e
-    this.edad = f
-    this.referido = g
-  }
-;
+
+function usuario(a,b,c,d,e,f,g) {
+  this.nombreCompleto = a
+  this.email = b
+  this.clave = c
+  this.genero = d
+  this.foto = e
+  this.edad = f
+  this.referido = g
+};
 
 let usuarios = [
   {
@@ -65,5 +64,3 @@ let usuarios = [
 function cierraSesion(){
   sessionStorage.setItem("usuarioSesion", "");
 }
-
-  

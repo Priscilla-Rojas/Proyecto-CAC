@@ -122,8 +122,8 @@ p, a, li, span{
   }
   main{
     position: relative;
-    padding-top: 70px;
-    height: calc(100vh + 200px);
+    padding: 20px 10px;
+    min-height: max-content;
     background-image: url(/assets/fondo.jpg); 
     background-size: cover;
     color: var(--primary-color);
@@ -136,19 +136,18 @@ p, a, li, span{
     color: var(--primary-color)
   }
   
-  form {
-    width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
+  .contact-form {
+    width: 80vw;
+    max-width: 450px;
+    min-width: 250px;
     margin: 0 auto ;
     padding: 2em;
     border-radius: 10px;
     border: 2px solid var(--secundary-color);
     box-shadow: 2px 2px var(--secundary-color);
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
   }
 
- 
   
   fieldset {
     border: none;
@@ -160,8 +159,8 @@ p, a, li, span{
     display: block;
   }
   .generoField{
-   display: flex;
-   justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 
   }
     
@@ -183,12 +182,16 @@ p, a, li, span{
   input, textarea {
     background-color: aliceblue;
     border: 1px dotted var(--secundary-color);
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     font-weight: 600;
-    padding-left: 10px;;
+    padding: 5px 10px;
   }
-  
- .inline {
+  input:focus, textarea:focus{
+    border: 2px solid var(--secundary-color);
+    outline: none;
+
+  }
+  .inline {
     width: unset;
     margin: 0 0.3em 0 0;
     vertical-align: middle;
