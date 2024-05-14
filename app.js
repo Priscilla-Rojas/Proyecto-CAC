@@ -4,25 +4,23 @@ const header = document.querySelector('.header');
 const close = document.querySelector('.close');
 
 hamburger.addEventListener('click', ()=>{
-  nav.classList.toggle('visible');
-  header.classList.toggle('header-visible');
-  // console.log(nav)
+  nav.classList.add('visible');
+  header.classList. add('header-visible');
 })
 close.addEventListener('click', ()=>{
-  nav.classList.toggle('visible');
-  header.classList.toggle('header-visible');
+  nav.classList.remove('visible');
+  header.classList.remove('header-visible');
 })
- 
-  function usuario(a,b,c,d,e,f,g) {
-    this.nombreCompleto = a
-    this.email = b
-    this.clave = c
-    this.genero = d
-    this.foto = e
-    this.edad = f
-    this.referido = g
-  }
-;
+
+function usuario(a,b,c,d,e,f,g) {
+  this.nombreCompleto = a
+  this.email = b
+  this.clave = c
+  this.genero = d
+  this.foto = e
+  this.edad = f
+  this.referido = g
+};
 
 let usuarios = [
   {
@@ -66,5 +64,3 @@ let usuarios = [
 function cierraSesion(){
   sessionStorage.setItem("usuarioSesion", "");
 }
-
-  

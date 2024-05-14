@@ -13,8 +13,8 @@ document.getElementById("fecha-turno").value = hoy;
 document.getElementById("fecha-turno").min = hoy;
 
 function fechar(p){
-   p = p.slice(-2)+"/"+ p.substr(5,2) +"/"+ p.substr(0,4)
-   return p
+    p = p.slice(-2)+"/"+ p.substr(5,2) +"/"+ p.substr(0,4)
+    return p
 };
 
 
@@ -104,13 +104,11 @@ fechaInput.addEventListener('change', function(){
     });
 });
 
-
-
 // cambiar estado del boton si el turno esta disponible o no
 
 let botones = document.querySelectorAll('.turno-disponible');
 
-  botones.forEach(function(boton) {
+botones.forEach(function(boton) {
     boton.addEventListener('click', function() {
        
         this.value == "Reservar" ? this.value = "Reservado" : this.value = "Reservar";

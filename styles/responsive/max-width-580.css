@@ -41,7 +41,7 @@ body{
   height: 80vh;
   min-height: 150px;
   padding: 0;
-  background-color: var(--primary-color);
+  background-color: var(--tertiary-color);
   border: 3px solid var(--secundary-color);
 
   position: fixed;
