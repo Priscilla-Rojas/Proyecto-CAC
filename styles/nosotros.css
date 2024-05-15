@@ -9,10 +9,8 @@ body {
 }
 
 .container {
-
   max-width: 960px;
-  margin: 0 auto;
-  margin-top: 60px;
+  margin: 60px auto 0 auto;
   padding: 20px;
   background-color: rgba(0, 146, 204, 0.459);
   border-radius: 10px;
@@ -41,6 +39,23 @@ section p {
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -53,13 +68,19 @@ section p {
 }
 
 .media img {
-  animation: fadeIn 1s ease-in-out;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   margin: 10px;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .media img:hover {
+  animation: zoomIn 0.6s ease-in-out;
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos específicos para la sección Nosotros */
@@ -67,9 +88,9 @@ section p {
   padding: 50px 30px;
   position: relative;
   z-index: 1;
-  color: #030303; /* Cambiar al color de texto principal del proyecto */
-  background-color: #fff; /* Cambiar al color de fondo principal del proyecto */
-  border-top: 30px solid #3498db; /* Cambiar al color de acento del proyecto */
+  color: #030303;
+  background-color: #fff;
+  border-top: 30px solid #3498db;
 }
 
 .nosotros h2 {
@@ -77,18 +98,18 @@ section p {
   font-weight: 800;
   letter-spacing: 2px;
   text-align: center;
-  color: #3498db; /* Cambiar al color de acento del proyecto */
+  color: #3498db;
 }
 
 .nosotros p {
   margin: 10px 0;
-  color: #030303; /* Cambiar al color de texto principal del proyecto */
+  color: #030303;
 }
 
 .nosotros h4 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #3498db; /* Cambiar al color de acento del proyecto */
+  color: #3498db;
   text-decoration: underline;
   margin: 15px 0;
 }
@@ -122,9 +143,8 @@ section p {
 }
 
 .nosotros > div > figure > img {
-  width: 35%;
-  min-width: 150px;
-  height: 150px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -135,8 +155,8 @@ section p {
   justify-content: space-evenly;
   gap: 15px;
   padding: 30px 0;
-  color: #fff; /* Cambiar al color de texto invertido del proyecto */
-  background-color: #3498db; /* Cambiar al color de acento del proyecto */
+  color: #fff;
+  background-color: #3498db;
 }
 
 .location iframe {
@@ -156,4 +176,50 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .nosotros > div,
+  .nosotros > div > figure {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nosotros figure,
+  .nosotros article {
+    width: 100%;
+  }
+
+  .nosotros > div > figure > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .media img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+
+  .details {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .nosotros figure,
+  .nosotros article {
+    width: 100%;
+  }
 }
