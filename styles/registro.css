@@ -150,17 +150,17 @@ p, a, li, span{
   }
   main{
     position: relative;
-    padding: 70px;
+    padding: 20px;
     background-image: url(/assets/fondo.jpg); 
     background-size: cover;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
   }
   
 
   h1, p {
     margin: 1em auto;
     text-align: center;
-    color: var(--primary-color)
+    color: var(--tertiary-color)
   }
   
   .principal {
@@ -172,7 +172,7 @@ p, a, li, span{
     border-radius: 10px;
     border: 2px solid var(--secundary-color);
     box-shadow: 2px 2px var(--secundary-color);
-    background-color: var(--primary-color);
+    background-color: var(--tertiary-color);
   }
 
  
@@ -211,7 +211,7 @@ p, a, li, span{
     background-color: aliceblue;
     border: 1px dotted var(--secundary-color);
     border-radius: 10px;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     font-weight: 600;
     padding-left: 10px;;
   }
@@ -237,24 +237,24 @@ p, a, li, span{
   .principal input[type="submit"]:hover{
     animation: colores 5s linear 0.7s infinite;
       cursor: pointer;
-    /* background-color: var(--primary-color);
+    /* background-color: var(--tertiary-color);
     color: var(--secundary-color); */
     
-    box-shadow: 2px 2px var(--primary-color);
+    box-shadow: 2px 2px var(--tertiary-color);
   }
   
   @keyframes colores {
     0% {
     background-color: var (--secundary-color);
-    color: var(--primary-color);
-    border-color: var(--primary-color)
+    color: var(--tertiary-color);
+    border-color: var(--tertiary-color)
   }
   25%{
     color: aliceblue;
   }
     50% {
       color: var(--secundary-color);
-      background-color: var(--primary-color);
+      background-color: var(--tertiary-color);
       border-color: var(--secundary-color)
     }
     75%{
@@ -263,8 +263,8 @@ p, a, li, span{
     
     100%{
       background-color: var (--secundary-color);
-    color: var(--primary-color);
-    border-color: var(--primary-color)
+    color: var(--tertiary-color);
+    border-color: var(--tertiary-color)
     }
     }
   

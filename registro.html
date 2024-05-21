@@ -21,29 +21,31 @@
   </head>
 <body>
   <header class="header">
-    <a href="./index.html" class="logo">
+    <div class="logo">
       <figure>
         <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
       </figure>
       
-    </a>
+    </div>
     <nav id="nav">
       <i class="fa-solid fa-bars hamburger"></i>
       <ul class="header-nav">
-        <i class="fa-solid fa-xmark close"></i>
+        <li>
+          <i  class="fa-solid fa-xmark close"></i>
+        </li>
         <li id="li-home"><a href="./index.html">Home</a></li>
         <li id="li-reservas"><a href="./reservas.html">Reservas</a></li>
         <li id="li-nosotros"><a href="./nosotros.html">Nosotros</a></li>
         <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <a href="./registro.html" class="user disable" title="Iniciar Sesión">
-      <article>
+    <a href="./login.html" class="user" title="Iniciar Sesión">
+      <div>
         <i class="fa-regular fa-user"></i>
-      </article>
-      <article class="user-text">
+      </div>
+      <div class="user-text">
         <p>Iniciar Sesión</p>
-      </article>
+      </div>
     </a>
   </header>
   <main>  
@@ -52,20 +54,20 @@
     <p>Ingresa unos pocos datos para conocerte mejor</p>
     <form class="principal" action='./login.html'>
       <fieldset>
-        <label for="nombreCompleto">Nombre Completo: <input id="nombreCompleto" name="nombreCompleto" type="text" required /></label>
-        <label for="email">Correo Electrónico: <input id="email" name="email" type="email" required /></label>
-        <label for="newPassword">Contraseña: <input id="newPassword" name="newPassword" type="password"  required /></label>
-        <label for="confPassword">Confirme contraseña: <input id="confPassword" name="confPassword" type="password"  required /></label>
+        <label for="nombreCompleto">Nombre Completo: <input id="nombreCompleto" name="nombreCompleto" type="text" required></label>
+        <label for="email">Correo Electrónico: <input id="email" name="email" type="email" required></label>
+        <label for="newPassword">Contraseña: <input id="newPassword" name="newPassword" type="password"  required></label>
+        <label for="confPassword">Confirme contraseña: <input id="confPassword" name="confPassword" type="password"  required></label>
       </fieldset>
       <fieldset class="generoField" id="genero">
         <label class="generoLabel">Género:</label>
-        <label for="femenino"><input id="femenino" value="Femenino" type="radio" name="genero" class="inline" /> Femenino</label>
-        <label for="masculino"><input id="masculino" value="Masculino" type="radio" name="genero" class="inline" /> Masculino</label>
-        <label for="noBinario"><input id="noBinario" value="No Binario" type="radio" name="genero" class="inline" /> No Binario</label>
+        <label for="femenino"><input id="femenino" value="Femenino" type="radio" name="genero" class="inline"> Femenino</label>
+        <label for="masculino"><input id="masculino" value="Masculino" type="radio" name="genero" class="inline"> Masculino</label>
+        <label for="noBinario"><input id="noBinario" value="No Binario" type="radio" name="genero" class="inline"> No Binario</label>
       </fieldset>
       <fieldset>
-        <label for="fotoPerfil">Sube tu foto de perfil: <input id="fotoPerfil" type="file" name="file" /></label>
-        <label for="edad">Edad (en años): <input id="edad" type="number" name="edad" min="13" max="120" /></label>
+        <label for="fotoPerfil">Sube tu foto de perfil: <input id="fotoPerfil" type="file" name="file"></label>
+        <label for="edad">Edad (en años): <input id="edad" type="number" name="edad" min="13" max="120"></label>
         <label for="referido">¿Cómo nos conociste?
           <select id="referido" name="referido">
             <option value="">Elige una</option>
@@ -98,12 +100,12 @@
       <li><a href="./contacto.html">Contacto</a></li>
     </ul>
   </nav>
-  <section class="footer-us">
-    <article>
+  <div class="footer-us">
+    <section>
       <h2>Contactanos</h2>
       <p>apda.padael@gmail.com</p>
-    </article>
-    <article>
+    </section>
+    <section>
       <h2>Redes</h2>
       <div  class="iconos-redes">
         <a href="#"> 
@@ -122,8 +124,8 @@
           </svg>
         </a>
       </div>
-    </article>
-  </section>
+    </section>
+  </div>
   <section class="news">
     <h2>NewsLetter</h2>
     <form>

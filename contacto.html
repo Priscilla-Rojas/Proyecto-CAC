@@ -21,15 +21,18 @@
   </head>
 <body>
   <header class="header">
-    <a href="./index.html" class="logo">
+    <div class="logo">
       <figure>
         <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
       </figure>
-    </a>
+      
+    </div>
     <nav id="nav">
       <i class="fa-solid fa-bars hamburger"></i>
       <ul class="header-nav">
-        <i class="fa-solid fa-xmark close"></i>
+        <li>
+          <i  class="fa-solid fa-xmark close"></i>
+        </li>
         <li id="li-home"><a href="./index.html">Home</a></li>
         <li id="li-reservas"><a href="./reservas.html">Reservas</a></li>
         <li id="li-nosotros"><a href="./nosotros.html">Nosotros</a></li>
@@ -37,12 +40,12 @@
       </ul>
     </nav>
     <a href="./login.html" class="user" title="Iniciar Sesión">
-      <article>
+      <div>
         <i class="fa-regular fa-user"></i>
-      </article>
-      <article class="user-text">
+      </div>
+      <div class="user-text">
         <p>Iniciar Sesión</p>
-      </article>
+      </div>
     </a>
   </header>
     
@@ -50,17 +53,17 @@
       <!-- <input type="checkbox" name="logueado" id="logueado" onclick="queMensajeMuestro()">   -->
       <h1>Formulario de Contacto</h1>
       <p>Haznos llegar tus comentarios</p>
-      <form method="post" action='' class="contact-form">
+      <form method="post" class="contact-form">
         <fieldset>
-          <label for="nombreCompleto">Nombre Completo: <input id="nombreCompleto" name="nombreCompleto" type="text" required /></label>
-          <label for="email">Correo Electrónico: <input id="email" name="email" type="email" required /></label>
+          <label for="nombreCompleto">Nombre Completo: <input id="nombreCompleto" name="nombreCompleto" type="text" required></label>
+          <label for="email">Correo Electrónico: <input id="email" name="email" type="email" required></label>
         </fieldset>
         <fieldset>
           <label for="tuComentario">Escribe tu comentario:
             <textarea id="tuComentario" name="tuComentario" rows="10" cols="30" placeholder="Quisiera comentarles que..."></textarea>
           </label>
         </fieldset>
-        <input type="submit" value="Enviar" />
+        <input type="submit" value="Enviar">
       </form>
 
     </main>
@@ -80,12 +83,12 @@
         <li><a href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <section class="footer-us">
-      <article>
+    <div class="footer-us">
+      <section>
         <h2>Contactanos</h2>
         <p>apda.padael@gmail.com</p>
-      </article>
-      <article>
+      </section>
+      <section>
         <h2>Redes</h2>
         <div  class="iconos-redes">
           <a href="#"> 
@@ -104,8 +107,8 @@
             </svg>
           </a>
         </div>
-      </article>
-    </section>
+      </section>
+    </div>
     <section class="news">
       <h2>NewsLetter</h2>
       <form>
