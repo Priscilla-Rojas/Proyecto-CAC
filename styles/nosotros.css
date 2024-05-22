@@ -2,48 +2,58 @@
 @import url(./root.css);
 @import url(./header&Footer.css);
 
-main{
+main {
   width: 100%;
   font-family: var(--text-font);
+  margin-top: 80px; /* Ajusta este valor según la altura del header */
 }
-.us h1{
+
+.us h1 {
   color: var(--secundary-color);
   background-color: var(--tertiary-color);
   margin: 0 auto;
   text-align: center;
   padding: 30px 10px;
 }
-p{
+
+p {
   font-size: 1.1rem;
 }
-.presentation{
+
+.presentation {
   width: 100%;
   background-color: var(--tertiary-color);
   color: white;
   padding: 30px 10px;
   margin: 0 auto;
 }
+
 .presentation p,
-.presentation h2{
+.presentation h2 {
   width: 90%;
   max-width: 900px;
   min-width: 250px;
   margin: 0 auto;
 }
-.presentation h2{
+
+.presentation h2 {
   margin: 20px auto;
 }
-.presentation p{
+
+.presentation p {
   padding-bottom: 10px;
 }
-.club{
+
+.club {
   /* background-color: var(--primary-color); */
   margin: 0;
 }
-.container-club{
+
+.container-club {
   height: max-content;
 }
-.container-club h2{
+
+.container-club h2 {
   text-align: center;
   font-size: 2.5rem;
   color: var(--secundary-color);
@@ -52,7 +62,8 @@ p{
   margin: 0;
   background-color: var(--background-footer);
 }
-.options{
+
+.options {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -63,30 +74,37 @@ p{
   gap: 10px;
   padding: 50px 20px;
 }
-.options:nth-child(even){
+
+.options:nth-child(even) {
   flex-flow: row-reverse nowrap;
   background-color: var(--tertiary-color);
 }
-.options > div{
+
+.options > div {
   width: 50%;
   min-width: 200px;
 }
-.options h3{
+
+.options h3 {
   text-align: center;
   color: var(--primary-color);
 }
-.options p{
+
+.options p {
   color: var(--tertiary-color);
   text-align: center;
 }
+
 .options:nth-child(even) h3,
-#resalt{
+#resalt {
   color: var(--secundary-color);
 }
-.options:nth-child(even) p{
+
+.options:nth-child(even) p {
   color: white;
 }
-.options .slide{
+
+.options .slide {
   width: 100%;
   max-width: 400px;
   min-width: 250px;
@@ -95,12 +113,14 @@ p{
   min-height: 200px;
   overflow: hidden;
 }
-.carrousel-item img{
+
+.carrousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.banner{
+
+.banner {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -114,7 +134,8 @@ p{
   border-right: none;
   text-align: center;
 }
-.banner a{
+
+.banner a {
   border: none;
   border-radius: 15px;
   padding: 10px 20px;
@@ -122,6 +143,7 @@ p{
   color: var(--secundary-color);
   font-size: 1.5rem;
 }
-.banner a:hover{
-  color: var(--secundary-color);
+
+.banner a:hover {
+  color: var(--secondary-color);
 }
