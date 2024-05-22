@@ -15,9 +15,21 @@
 body {
   margin: 0;
   padding: 0;
+body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   background-image: url(../assets/fondo.jpg);
+  background-image: url(../assets/fondo.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
   background-attachment: fixed;
   color: var(--text-color);
   font-family: Arial, sans-serif;
@@ -29,6 +41,7 @@ body {
 /* Contenedor principal */
 .container {
   max-width: 960px;
+  margin: 120px auto 60px auto; /* Ajustar el margen para evitar solapamiento con header */
   margin: 120px auto 60px auto; /* Ajustar el margen para evitar solapamiento con header */
   padding: 20px;
   background-color: var(--main-bg-color);
@@ -54,6 +67,7 @@ footer {
   padding: 1px 0; /* Reducir el padding del footer */
   width: 100%;
   margin-top: auto; /* Esto empuja el footer al final de la página */
+  flex: 1; /* Esto asegura que el contenedor tome el espacio disponible */
 }
 
 /* Estilos de secciones */
