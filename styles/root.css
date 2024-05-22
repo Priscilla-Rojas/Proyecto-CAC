@@ -2,8 +2,9 @@
   --title-font: "Raleway", sans-serif;
   --text-font: "Lato", sans-serif;
   --text-color: rgb(0, 0, 0);
-  --background-Header: rgb(146, 204, 0);
+  --background-Header: #92cc00;
   --primary-color: #1A5AA8;
   --secundary-color: #91CC00;
   --tertiary-color: #133959;
+  --background-footer: rgb(2, 24, 37);
 }
