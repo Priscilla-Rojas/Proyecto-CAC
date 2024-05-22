@@ -42,3 +42,40 @@
   background-position: left;
 }
 
+/* Responsive Page Nosotros */
+.us h1{
+  padding-bottom: 10px;
+}
+.presentation{
+  padding: 5px;
+  padding-bottom: 30px;
+}
+.presentation p{
+  text-align: left;
+}
+.presentation h2{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.options,
+.options:nth-child(even){
+  flex-flow: column nowrap;
+}
+.options > div{
+  width: 95%;
+  min-width: 200px;
+}
+.container-club h2{
+  font-size: 2rem;
+}
+.banner{
+  padding: 10px;
+  /* flex-flow: column; */
+  gap: 20px;
+}
+.banner a{
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
