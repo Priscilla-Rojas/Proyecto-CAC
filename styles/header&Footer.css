@@ -91,7 +91,6 @@ body{
 
 .user{
   text-decoration: none;
-  color: var(--tertiary-color);
   font-weight: 500;
 
   display: flex;
@@ -102,7 +101,25 @@ body{
   padding: 5px 10px;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 1s linear;
 }
+
+.user i,
+.user p{
+  color: var(--tertiary-color);
+}
+
+.user:hover i,
+.user:hover p{
+  color: var(--secundary-color);
+  text-decoration: none;
+}
+
+.user:hover{
+  text-decoration: none;
+  background-color: var(--tertiary-color);
+}
+
 .header .disable{
   visibility: hidden;
 }
@@ -112,6 +129,8 @@ body{
 .user-text p{
   margin: 0;
   font-family: var(--text-font);
+  color: var(--tertiary-color);
+  padding-left: 5px;
 }
 
 .footer{
