@@ -1,0 +1,20 @@
+.header{
+  width: 100vw;
+  height: 45px;
+  position: relative;
+  background-color: var(--secundary-color);
+}
+.logo > figure{
+  height: 75%;
+}
+.user-text{
+  display: none;
+}
+.details{
+  flex-flow: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  margin-top: 0;
+}

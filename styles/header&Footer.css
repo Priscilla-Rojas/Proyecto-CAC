@@ -1,0 +1,240 @@
+
+body{
+  margin: 0;
+}
+.header{
+  max-width: 100vw;
+  height: 60px;
+  overflow-x: hidden;
+  padding: 5px 15px;
+  background-color: var(--background-Header);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  height: 50px; 
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.logo > figure,
+.logo > figure > img{
+  height: 100%;
+  margin: 0;
+}
+.logo > figure > img{
+  object-fit: cover;
+}
+#nav ul{
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+}
+#nav .close{
+  display: none;
+}
+#nav{
+  width: 50%;
+  align-items: center;
+}
+#nav > .fa-bars{
+  display: none;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+#nav ul li{
+  margin: 5px;
+}
+#nav ul li:not(:last-child){
+  margin-right: 15px;
+}
+#nav ul li a{
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--text-font);
+  font-size: 1.1rem;
+}
+#nav ul li a:hover{
+  /* font-size: 1.2rem; */
+  text-decoration: underline;
+  color: var(--primary-color);
+  text-shadow: 0px 0px 5px #ffffffb5;
+  transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
+  /* animation: 1.4s cubic-bezier(0.19, 1, 0.22, 1) */
+}
+  
+#nav .item-active{
+  color: rgb(19, 138, 19);
+  cursor: default;
+  pointer-events: none;
+}
+#nav .item-active:hover{
+  text-shadow: none;
+  text-decoration: none;
+}
+
+.user{
+  text-decoration: none;
+  font-weight: 500;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.918);
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 1s linear;
+}
+
+.user i,
+.user p{
+  color: var(--tertiary-color);
+}
+
+.user:hover i,
+.user:hover p{
+  color: var(--secundary-color);
+  text-decoration: none;
+}
+
+.user:hover{
+  text-decoration: none;
+  background-color: var(--tertiary-color);
+}
+
+.header .disable{
+  visibility: hidden;
+}
+.user article{
+  margin: 0 5px;
+}
+.user-text p{
+  margin: 0;
+  font-family: var(--text-font);
+  color: var(--tertiary-color);
+  padding-left: 5px;
+}
+
+.footer{
+  /* width: 100%; */
+  max-width: 100vw;
+  min-height: 200px;
+  padding: 30px;
+  background-color: var(--background-footer);
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+  align-content: center;
+}
+.footer h2{
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  text-align: center;
+  font-family: var(--title-font);
+}
+.logo-foother{
+  width: 200px;
+  align-self: center;
+}
+.logo-foother figure{
+  width: 100%;
+  /* height: 80px; */
+  margin: 0;
+}
+.logo-foother figure img{
+  width: 100%;
+  object-fit: cover;
+}
+.nav-footer{
+  width:  max-content;
+}
+.nav-footer ul{
+  list-style: '- ';
+  color: white;
+  margin: 0;
+}
+.nav-footer ul li a,
+.footer p{
+  color: white;
+  font-family: var(--text-font);
+  font-style: normal;
+  text-decoration: none;
+}
+.footer section{
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+.iconos-redes{
+  width: max-content;
+  margin: 0 auto;
+}
+.iconos-redes a{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.iconos-redes svg{
+  width: 100%;
+  height: 100%;
+}
+.iconos-redes .facebook{
+  fill: #3b5998;
+}
+.iconos-redes .twiter{
+  fill: #08a0e9;
+}
+.iconos-redes .instagram{
+  fill:  rgba(177,52,175,1);
+}
+.iconos-redes a:hover{
+  text-decoration: none;
+}
+.footer form{
+  width: auto;
+  display: flex;
+  flex-flow: column;
+  border: none;
+  box-shadow: none;
+}
+.footer input{
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  padding: 5px 10px ;
+  margin-top: 10px;
+  border: none;
+  background-color: white;
+  color: var(--tertiary-color);
+}
+.footer input[type=submit]{
+  width: 100%;
+  height: max-content;
+  max-width: 300px;
+  font-weight: 600;
+  background-color: var(--secundary-color);
+  padding: 5px;
+  margin: 10px 0 0 0;
+}

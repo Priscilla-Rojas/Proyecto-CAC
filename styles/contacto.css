@@ -1,0 +1,247 @@
+@import url(./root.css);
+@import url(./header&Footer.css);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--title-font);
+}
+
+h1, h2, h3, h4{
+  font-family: var(--title-font);
+}
+p, a, li, span{
+  font-family: var(--text-font);
+}
+  
+  /* Responsive */
+  
+  @media (max-width: 950px) {
+    .nosotros{
+      padding-bottom: 30px;
+    }
+    .nosotros > div{
+      flex-flow: column;
+      row-gap: 30px;
+    }
+    .nosotros figure, .nosotros article{
+      width: 100%;
+    }
+    .nosotros{
+      background-position: left;
+    }
+    main{
+      text-shadow: 1px 1px 1px aliceblue;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .user-text{
+      display: none;
+    }
+    .details{
+      flex-flow: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+    .cancha{
+      width:90%;
+    }
+
+  }
+  @media (max-width: 580px) {
+
+    .nosotros > div{
+      width: 100%;
+    }
+    .nosotros  figure {
+      width: 95%;
+      margin: 0 auto;
+      gap: 10px 10px;
+    }
+    .nosotros figure, .nosotros article{
+      min-width: 200px;
+    }
+    .nosotros  figure img{
+      width: 40%;
+      height: 100px;
+      max-width: 250px;
+      min-width: 200px;
+      object-fit: cover;
+    }
+    .nosotros article{
+      width: 95%;
+      padding: 0;
+      margin: 30px auto;
+    }
+    .nosotros article p{
+      padding: 5px;
+    }
+    .cancha{
+      width:95%;
+    }
+    td{
+      font-size: 13px;
+      padding: 7px 2px;
+    }
+
+
+  }
+  @media (max-width: 450px) {
+    
+  }
+  @media (max-width: 420px) {
+    td{
+      font-size:11px;
+    }
+    span{
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 385px) {
+    td{
+      font-size:10px;
+    }
+    span{
+      font-size: 11px;
+    }
+  }
+
+  body{
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    margin: 0px;
+    
+  }
+  #logueado{
+    display: none;
+  }
+  main{
+    position: relative;
+    padding: 20px 10px;
+    min-height: max-content;
+    background-image: url(/assets/fondo.jpg); 
+    background-size: cover;
+    color: var(--primary-color);
+  }
+  
+
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+    color: var(--primary-color)
+  }
+  
+  .contact-form {
+    width: 80vw;
+    max-width: 450px;
+    min-width: 250px;
+    margin: 0 auto ;
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid var(--secundary-color);
+    box-shadow: 2px 2px var(--secundary-color);
+    background-color: var(--tertiary-color);
+  }
+
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    width: 100%;
+    
+  }
+  .generoLabel{
+    display: block;
+  }
+  .generoField{
+    display: flex;
+    justify-content: space-around;
+
+  }
+    
+  label {
+    display: block;
+    margin: 0.5rem 0;
+    width: 100%;
+    color:var(--secundary-color)
+  }
+  
+  input, textarea,
+  select {
+    margin: 10px 1px 0 0;
+    width: 100%;
+    min-height: 1.8em;
+    border-radius: 10px;
+  }
+  
+  input, textarea {
+    background-color: aliceblue;
+    border: 1px dotted var(--secundary-color);
+    color: var(--tertiary-color);
+    font-weight: 600;
+    padding: 5px 10px;
+  }
+  input:focus, textarea:focus{
+    border: 2px solid var(--secundary-color);
+    outline: none;
+
+  }
+  .inline {
+    width: unset;
+    margin: 0 0.3em 0 0;
+    vertical-align: middle;
+    display: inline; 
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 45%;
+    margin: 1em auto;
+    height: 3em;
+    font-size: 1.1rem;
+    background-color: var(--secundary-color);
+    border-color: var(--secundary-color);
+    min-width: 200px;
+  }
+  input[type="submit"]:hover {
+    animation: colores 5s linear 0.7s infinite;
+      cursor: pointer;
+    /* background-color: var(--primary-color);
+    color: var(--secundary-color); */
+    
+    box-shadow: 2px 2px var(--primary-color);
+  }
+  
+  @keyframes colores {
+    0% {
+    background-color: var (--secundary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color)
+  }
+  25%{
+    color: aliceblue;
+  }
+    50% {
+      color: var(--secundary-color);
+      background-color: var(--primary-color);
+      border-color: var(--secundary-color)
+    }
+    75%{
+      color: aliceblue;
+    }
+    
+    100%{
+      background-color: var (--secundary-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color)
+    }
+    }
+  
+  
+  
+  

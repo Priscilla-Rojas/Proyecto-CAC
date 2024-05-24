@@ -1,0 +1,103 @@
+@import url(./root.css);
+
+body{
+  position: relative;
+}
+.header-visible{
+  overflow-x: visible;
+}
+#nav{
+  width: 40px;
+}
+#nav ul{
+  display: none;
+}
+#nav > .fa-bars{
+  display: block;
+  order: 1;
+}
+.logo{
+  order: 2;
+}
+.user{
+  order: 3;
+}
+.header-visible #nav::before{
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left:0%;
+  background-color: var(--background-Header);
+  /* z-index: -1; */
+}
+
+
+.header #nav .visible{
+  display: block;
+  width: 80vw;
+  min-width: max-content;
+  height: 80vh;
+  min-height: 150px;
+  padding: 0;
+  background-color: var(--tertiary-color);
+  border: 3px solid var(--secundary-color);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  translate: 15% 15%;
+
+  z-index: 100;
+}
+
+#nav .visible .close{
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--secundary-color);
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+.header #nav .visible li{
+  width: max-content;
+  margin: 10px auto;
+}
+#nav ul li a{
+  color: white;
+}
+#nav ul li a:hover{
+  color: var(--secundary-color);
+  text-shadow: none;
+}
+.nosotros > div{
+  width: 100%;
+}
+.nosotros  figure {
+  width: 95%;
+  margin: 0 auto;
+  gap: 10px 10px;
+}
+.nosotros figure, .nosotros article{
+  min-width: 200px;
+}
+.nosotros  figure img{
+  width: 40%;
+  height: 100px;
+  max-width: 250px;
+  min-width: 200px;
+  object-fit: cover;
+}
+.nosotros article{
+  width: 95%;
+  padding: 0;
+  margin: 30px auto;
+}
+.nosotros article p{
+  padding: 5px;
+}

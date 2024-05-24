@@ -1,7 +1,10 @@
 :root{
-  --background-Header: hsla(196, 100%, 41%, 0.466);
-  --primary-color: blue;
-  --secundary-color: red;
-  --title-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  --text-font: sans-serif;
+  --title-font: "Raleway", sans-serif;
+  --text-font: "Lato", sans-serif;
+  --text-color: rgb(0, 0, 0);
+  --background-Header: #92cc00;
+  --primary-color: #1A5AA8;
+  --secundary-color: #91CC00;
+  --tertiary-color: #133959;
+  --background-footer: rgb(2, 24, 37);
 }

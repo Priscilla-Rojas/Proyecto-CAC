@@ -1,0 +1,81 @@
+.nosotros{
+  padding-bottom: 30px;
+}
+.nosotros > div{
+  flex-flow: column;
+  row-gap: 30px;
+}
+.nosotros figure, .nosotros article{
+  width: 100%;
+}
+.footer{
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.logo-foother{
+  width: 90%;
+  border-bottom: 1px solid var(--secundary-color);
+  padding: 20px 0;
+  order: 1;
+}
+.logo-foother > figure{
+  width: 200px;
+  margin: 0 auto;
+}
+.nav-footer{
+  order: 3;
+}
+.news{
+  order: 2;
+}
+.footer-us{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  order: 4;
+}
+.nosotros{
+  background-position: left;
+}
+
+/* Responsive Page Nosotros */
+.us h1{
+  padding-bottom: 10px;
+}
+.presentation{
+  padding: 5px;
+  padding-bottom: 30px;
+}
+.presentation p{
+  text-align: left;
+}
+.presentation h2{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.options,
+.options:nth-child(even){
+  flex-flow: column nowrap;
+}
+.options > div{
+  width: 95%;
+  min-width: 200px;
+}
+.container-club h2{
+  font-size: 2rem;
+}
+.banner{
+  padding: 10px;
+  /* flex-flow: column; */
+  gap: 20px;
+}
+.banner a{
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
