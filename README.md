@@ -1,7 +1,5 @@
 ![Logo](https://github.com/Priscilla-Rojas/Proyecto-CAC/blob/dev/assets/logo.png)
 
-# APDA - Pádel
-
 APDA Pádel es una página web desarrollada para el curso de desarrolador Full Stack - Node Js de Codo a Codo.
 
 
