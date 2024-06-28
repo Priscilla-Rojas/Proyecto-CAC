@@ -44,7 +44,7 @@ let usuarios = [
   {
       nombreCompleto: "Daniela Bastias",
       email: "danybastias@outlook.com",
-      clave: "Padel-era100%",
+      clave: "Padelera100%",
       genero: "Femenino",
       foto: "url",
       edad: 25,
