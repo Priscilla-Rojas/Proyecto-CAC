@@ -53,7 +53,7 @@ let usuarios = [
   {
       nombreCompleto: "Adrián Bulacio",
       email: "adrian.bulacio.ab@hotmail.com",
-      clave: "Padel-ero100%",
+      clave: "Padelero100%",
       genero: "Masculino",
       foto: "url",
       edad: 26,
