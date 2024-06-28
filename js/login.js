@@ -2,7 +2,9 @@ const verificarUsuario = (v1, v2, array) => {
     for (let objeto of array) {
         if (objeto.email === v1 && objeto.clave === v2) {
             var usuarioLogueado = objeto.nombreCompleto;
-            sessionStorage.setItem("usuarioSesion", usuarioLogueado);
+            var DNI_Usuario = objeto.DNI_usuario
+            sessionStorage.setItem("usuarioSesion", usuarioLogueado)
+            sessionStorage.setItem("DNISesion", DNI_Usuario);
             return true;
         }
     }

@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchCanchas() {
-    fetch('http://localhost:3000/canchas')
+    fetch(`http://localhost:3000/canchas`)
         .then(response => response.json())
         .then(data => {
             renderCanchas(data);
-            renderAddCard();
+           // renderAddCard();
         })
         .catch(error => console.error('Error buscando canchas:', error));
 }

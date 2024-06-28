@@ -12,7 +12,7 @@ close.addEventListener('click', ()=>{
   header.classList.remove('header-visible');
 })
 
-function usuario(a,b,c,d,e,f,g) {
+function usuario(a,b,c,d,e,f,g,h) {
   this.nombreCompleto = a
   this.email = b
   this.clave = c
@@ -20,6 +20,7 @@ function usuario(a,b,c,d,e,f,g) {
   this.foto = e
   this.edad = f
   this.referido = g
+  this.DNI_usuario = h
 };
 
 let usuarios = [
@@ -30,7 +31,8 @@ let usuarios = [
       genero: "Masculino",
       foto: "url",
       edad: 46,
-      referido: 1
+      referido: 1,
+      DNI_usuario: '12345672'
   },
   {
       nombreCompleto: "Priscilla Rojas",
@@ -39,7 +41,8 @@ let usuarios = [
       genero: "Femenino",
       foto: "url",
       edad: 20,
-      referido: 2
+      referido: 2,
+      DNI_usuario: '12345673'
   },
   {
       nombreCompleto: "Daniela Bastias",
@@ -48,7 +51,8 @@ let usuarios = [
       genero: "Femenino",
       foto: "url",
       edad: 25,
-      referido: 3
+      referido: 3,
+      DNI_usuario: '12345671'
   },
   {
       nombreCompleto: "Adrián Bulacio",
@@ -57,7 +61,8 @@ let usuarios = [
       genero: "Masculino",
       foto: "url",
       edad: 26,
-      referido: 4
+      referido: 4,
+      DNI_usuario: '12345674'
   }
 ];
 
