@@ -15,7 +15,9 @@ p, a, li, span{
   font-family: var(--text-font);
 }
 
-
+main{
+  padding-top: 0;
+}
 
 
   /* Responsive */
@@ -36,7 +38,7 @@ p, a, li, span{
       background-position: left;
     }
     main{
-      text-shadow: 1px 1px 1px aliceblue;
+      /* text-shadow: 1px 1px 1px aliceblue; */
     }
   }
 
@@ -151,6 +153,7 @@ p, a, li, span{
   main{
     position: relative;
     padding: 20px;
+    padding-top: 0;
     background-image: url(/assets/fondo.jpg); 
     background-size: cover;
     color: var(--tertiary-color);
@@ -161,6 +164,9 @@ p, a, li, span{
     margin: 1em auto;
     text-align: center;
     color: var(--tertiary-color)
+  }
+  main > h1{
+    padding-top: 20px;
   }
   
   .principal {

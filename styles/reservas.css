@@ -7,7 +7,7 @@
   main{
     
     position:relative;
-    padding-top: 60px;
+    /* padding-top: 60px; */
     width: 100%;
     min-height: calc(100vh - 50px);
      background-image: url(/assets/fondo.jpg); 
@@ -170,6 +170,12 @@
     visibility: hidden;
   }
   
+  .turno-no-disponible{
+    background-color: var(--secundary-color);
+    border: 1px solid var(--secundary-color);
+    color: var(--primary-color);
+    font-weight: 500;
+  }
   
   /* Responsive */
   

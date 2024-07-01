@@ -39,36 +39,50 @@
         <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <a href="./login.html" class="user" title="Iniciar Sesión">
-      <div>
-        <i class="fa-regular fa-user"></i>
+    <a id="user" class="user " title="Iniciar Sesión">
+      <div id="img-User">
       </div>
-      <div class="user-text">
-        <p>Iniciar Sesión</p>
-      </div>
+      <!-- <div class="user-text"> -->
+          <p id="userP" class="user-text" >Iniciar Sesión</p>
+      <!-- </div> -->
     </a>
   </header>
   <main>  
-    
+    <div id="menu-user" class="menu-user hidden">
+      <nav class="nav-user">
+        <a id="img-Name-User">
+        </a>
+        <a href="">Mis Reservas</a>
+        <a href="" id="closeSesion">Cerrar Sesion</a>
+      </nav>
+    </div>
     <h1>Formulario de Registro</h1>
     <p>Ingresa unos pocos datos para conocerte mejor</p>
-    <form class="principal" action='./login.html'>
+    <form class="principal" action='./login.html' id="form">
       <fieldset>
-        <label for="nombreCompleto">Nombre Completo: <input id="nombreCompleto" name="nombreCompleto" type="text" required></label>
-        <label for="email">Correo Electrónico: <input id="email" name="email" type="email" required></label>
-        <label for="newPassword">Contraseña: <input id="newPassword" name="newPassword" type="password"  required></label>
-        <label for="confPassword">Confirme contraseña: <input id="confPassword" name="confPassword" type="password"  required></label>
+        <label for="nombre_completo">Nombre Completo: </label>
+        <input id="nombre_completo" name="nombreCompleto" type="text" required>
+        <label for="DNI">Dni: </label>
+        <input id="DNI" name="DNI" type="text" required>
+        <label for="mail">Correo Electrónico: </label>
+        <input id="mail" name="email" type="email" required>
+        <label for="password">Contraseña: </label>
+        <input id="password" name="newPassword" type="password"  required>
+        <label for="confPassword">Confirme contraseña: </label>
+        <input id="confPassword" name="confPassword" type="password"  required>
       </fieldset>
-      <fieldset class="generoField" id="genero">
+      <!-- <fieldset class="generoField" id="genero">
         <label class="generoLabel">Género:</label>
         <label for="femenino"><input id="femenino" value="Femenino" type="radio" name="genero" class="inline"> Femenino</label>
         <label for="masculino"><input id="masculino" value="Masculino" type="radio" name="genero" class="inline"> Masculino</label>
         <label for="noBinario"><input id="noBinario" value="No Binario" type="radio" name="genero" class="inline"> No Binario</label>
       </fieldset>
-      <fieldset>
-        <label for="fotoPerfil">Sube tu foto de perfil: <input id="fotoPerfil" type="file" name="file"></label>
-        <label for="edad">Edad (en años): <input id="edad" type="number" name="edad" min="13" max="120"></label>
-        <label for="referido">¿Cómo nos conociste?
+      <fieldset> -->
+        <!-- <label for="fotoPerfil">Sube tu foto de perfil: <input id="fotoPerfil" type="file" name="file"></label> -->
+        <label for="foto">Ingresa la url de tu foto de perfil: </label>
+        <input id="foto" type="text" name="file">
+        <!-- <label for="edad">Edad (en años): <input id="edad" type="number" name="edad" min="13" max="120"></label> -->
+        <!-- <label for="referido">¿Cómo nos conociste?
           <select id="referido" name="referido">
             <option value="">Elige una</option>
             <option value="1">Redes Sociales</option>
@@ -76,11 +90,11 @@
             <option value="3">Recomendación de amigos</option>
             <option value="4">Otras</option>
           </select>
-        </label>
+        </label> -->
         
       </fieldset>
       
-      <input type="submit" value="Registrarme" onclick="registrarNuevoUsuario()">
+      <input type="submit" value="Registrarme" >
     </form>
 
   </main>
@@ -139,6 +153,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- <script src="./js/reservas.js"></script> -->
   <script src="app.js"></script>
+  <script src="./js/register.js"></script>
 </body>
 </html>
     

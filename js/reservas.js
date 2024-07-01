@@ -1,5 +1,3 @@
-
-
 // fecha de hoy
 const fecha = Date.now();
 const fechaActual = new Date(fecha);
@@ -31,10 +29,23 @@ fechaInput.addEventListener('change', function(){
   });
   fechaSeleccionada = fechaInput.value
 });
-// Solicitud de las chanchas y turnos para cerar tablas
 
+// Validación de usuario 
+const sesion = localStorage.getItem('sesionIniciada');
+const usuarioName = localStorage.getItem('nombre');
+const userMail = localStorage.getItem('mail');
 
-// const estructuraCanchas = document.getElementById("canchas");
+const horariosDisponibles = document.getElementById("reco-inicio-sesion");
+if(sesion) {
+  document.getElementById("usuario-logueado").innerHTML = `Hola ${usuarioName}, ¿Vas a jugar? ¿Cuándo?
+  Elige una fecha: `; 
+  canchas.classList.toggle("oculto");
+  horariosDisponibles.classList.toggle("animado");
+  horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`; 
+}else{
+  horariosDisponibles.textContent = 'Para ver los horarios y canchas disponibles debes iniciar sesión';
+  horariosDisponibles.href = './login.html'
+}
 
 // Funcion que genera una tabla html en base a las canchas que se pasen por parametro
 const createTablaCanchas = (canchas)=>{
@@ -80,7 +91,7 @@ const createTablaCanchas = (canchas)=>{
           input.type = 'button';
           input.classList.add('turno-disponible');
           input.value = 'Reservar';
-          input.id = `${index+1}`;
+          input.id = `${cancha.NOMBRE_CANCHA}_${turno.TURNO_NOMBRE}`;
           td.appendChild(input);
         };
         trBody.appendChild(td)
@@ -104,12 +115,11 @@ const groupReservasByFecha = (reservas)=>{
     if(fecha[0].length < 2) fecha[0] = `0${fecha[0]}`;
     if(fecha[1].length < 2) fecha[1] = `0${fecha[1]}`;
     fecha = fecha.join('/');
-
     if (!reservasByFecha[fecha]){
       reservasByFecha[fecha] = {
         [nombreCancha]: {
           [reserva.ID]:{
-            usuario: reserva.DNI_usuario,
+            usuario: reserva.mail_usuario,
             estado: reserva.estado,
             turno: {...reserva.turno, Fin: reserva.turno.Fin.slice(0, 5), Inicio: reserva.turno.Inicio.slice(0, 5)}
           }
@@ -137,31 +147,38 @@ const groupReservasByFecha = (reservas)=>{
 }
 const checkDisponibilidad = (elemntsHTML, reservas)=>{
   elemntsHTML.forEach( element=>{
-
-    console.log(element)
-
     const cancha = element.children[0].id.slice(3,5).split('');
     const turnoRow = element.children[1].textContent;
     const nameCanchaRow = `Cancha-${cancha[1]}`;
     const fechaRow = element.children[0].textContent;
-
-    console.log(nameCanchaRow, fechaRow, turnoRow);
-
+    const buttonRow =element.children[4].children[0];
     if(reservas[fechaRow]){
       if(reservas[fechaRow][nameCanchaRow]){
-        console.log('Existen reservas en la fecha y cacha:', nameCanchaRow, fechaRow)
-        for (const reserva in reservas[fechaRow][nameCanchaRow]) {
-          console.log(reservas[fechaRow][nameCanchaRow])
-          const turno = reservas[fechaRow][nameCanchaRow][reserva].turno.Nombre_turno
-          if(turno === turnoRow){
-            const button =element.children[4].children[0];
-            button.value = 'No disponible';
-            button.disabled = true;
-            button.classList.add('disabled')
-            console.log(element.children[4].children[0].value = 'No disponible')
+        const reservasInCancha = reservas[fechaRow][nameCanchaRow]
+        for (const reserva in reservasInCancha) {
+          const estado = reservasInCancha[reserva].estado;
+          const turno = reservasInCancha[reserva].turno.Nombre_turno;
+
+          if(estado === 'Reservado' && turno === turnoRow ){
+            buttonRow.value = 'No disponible';
+            buttonRow.disabled = true;
+            buttonRow.classList.add('disabled')
+          }else if(estado !== 'Reservado' && turno !== turnoRow){
+            buttonRow.value = 'Reservar';
+            buttonRow.disabled = false;
+            buttonRow.classList.remove('disabled');
           }
         }
+
+      }else{
+        buttonRow.value = 'Reservar';
+        buttonRow.disabled = false;
+        buttonRow.classList.remove('disabled');
       }
+    }else{
+      buttonRow.value = 'Reservar';
+      buttonRow.disabled = false;
+      buttonRow.classList.remove('disabled');
     }
   })
 }
@@ -195,17 +212,50 @@ const obtenerReservas = async () => {
     console.error('la petición de datos arroja el siguiente error:', error);
   }
 };
-
+const realizarReserva = async(mail_usuario, fecha, nombre_cancha, nombre_turno, estado)=>{
+  const url = 'http://localhost:3009/reservas';
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ mail_usuario, fecha, nombre_cancha, nombre_turno, estado }),
+  });
+  if (response.ok) {
+    const data = await response.json();
+    return {reservaCreada: data.idReserva, nombre_cancha, nombre_turno };
+  } else {
+      console.error('Error surgio un error al crear la reserva intentalo nuevamente');
+  }
+}
+const eliminarReserva = async(id)=>{
+  const url = `http://localhost:3009/reservas/${id}`;
+  const response = await fetch(url, {
+    method: 'DELETE',
+    headers: {
+        'Content-Type': 'application/json',
+    }
+  });
+  if (response.ok) {
+    // const data = await response.json();
+    return {idReserva: id, message: `La reserva con se ha borrado correctamente`};
+  } else {
+      console.error('Error surgio un error al crear la reserva intentalo nuevamente');
+  }
+}
 obtenerCanchas()
   .then(data => {
     createTablaCanchas(data);
   });
+  
 obtenerReservas()
   .then(data => {
     const reservasOrder = groupReservasByFecha(data);
+    console.log()
     const rowsTable = document.querySelectorAll('.row-data');
     checkDisponibilidad(rowsTable, reservasOrder)      
   })
+
 fechaInput.addEventListener('change', function(){
   obtenerReservas()
     .then(data => {
@@ -215,72 +265,35 @@ fechaInput.addEventListener('change', function(){
     })
 });
 
-  // Validación de usuario hardcodeada
-
-    let usuarioQueIngreso = sessionStorage.getItem("usuarioSesion")
-    // console.log(sessionStorage.getItem("usuarioSesion"))
-    let DNI_Usuario = '12345672'
-    // console.log(DNI_Usuario)
-  
-    // ahora intentando que La pagina cambie el mensaje cada vez que cambio el valor de logueado
-    let textoBoton = document.getElementById("userP");
-    const horariosDisponibles = document.getElementById("reco-inicio-sesion");
-
-    if(usuarioQueIngreso) {
-    document.getElementById("usuario-logueado").innerHTML = `Hola ${sessionStorage.getItem("usuarioSesion")}, ¿Vas a jugar? ¿Cuándo?
-    Elige una fecha: `   
-    textoBoton.textContent =` ${sessionStorage.getItem("usuarioSesion")}`;
-    canchas.classList.toggle("oculto");
-    horariosDisponibles.classList.toggle("animado");
-    horariosDisponibles.textContent = `Veamos qué turnos hay disponibles para ti`; 
-    }
-    
-  
-    // fetch para traer las reservas registradas
-
-        
-            
-            
-const registroReserva = async (DNI, fechaTurno, Id_TC, estado) => {
-    const url2 = 'http://localhost:3000/reservas/';
-    const method = 'POST';
-    const body = JSON.stringify({
-        DNI_usuario: DNI,
-        fecha: fechaTurno,
-        ID_turno_cancha: Id_TC,
-        estado: "Reservado"
-    });
-
-    try {
-        const response = await fetch(url2, {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: body
-        });
-
-        if (!response.ok) {
-            throw new Error('No hay respuesta del servidor: ' + response.statusText);
-        }
-
-        const data = await response.json();
-        console.log('Reserva realizada:', data);
-    } catch (error) {
-        console.error('Error en la reserva:', error);
-    }
-};
-
 // Asignar el evento de click a los botones de reserva
-
 document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('turno-disponible')) {
-        const Id_TC = event.target.id;
-        const fechaTurno = fechaInput.value;
-        registroReserva(DNI_Usuario, fechaTurno, Id_TC, "Reservado");
-        alert("Reserva realizada con éxito");
-        
-        obtenerReservas(url2)
-    }
+  if (event.target.classList.contains('turno-disponible')) {
+    console.log(event.target.id)
+    const Id_TC = event.target.id.split('_');
+    const nombreCancha = Id_TC[0];
+    const nombreTurno = Id_TC[1];
+    const fechaTurno = fechaInput.value;
+    event.target.classList.remove('turno-disponible');
+    event.target.classList.add('turno-no-disponible');
+    event.target.value = '¿Cancelar?';
 
+    realizarReserva(userMail, fechaTurno, nombreCancha, nombreTurno, "Reservado")
+      .then( response => {
+        sessionStorage.setItem(`${response.nombre_cancha}_${response.nombre_turno}`, JSON.stringify(response));
+        alert(`Se realizao la reserva de la ${response.nombre_cancha} en el ${response.nombre_turno}`)
+      })
+
+  }else if (event.target.classList.contains('turno-no-disponible')){
+    const idButoon = event.target.id;
+    const reserva = JSON.parse(sessionStorage.getItem(`${idButoon}`));
+    event.target.classList.remove('turno-no-disponible');
+    event.target.classList.add('turno-disponible');
+    event.target.value = 'Reservar';
+    
+    eliminarReserva(reserva.reservaCreada)
+    .then( response => {
+      alert(`se ha cancelado la reserva de la ${reserva.nombre_cancha} en el turno ${reserva.nombre_turno}`)
+      reserva ? sessionStorage.removeItem(`${idButoon}`) : alert(`Reserva no enocontrada`);
+      })
+  }
 });
