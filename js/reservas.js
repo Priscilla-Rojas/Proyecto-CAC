@@ -100,7 +100,7 @@ fechaInput.addEventListener('change', function(){
 
     let elementos = document.querySelectorAll('.fe-turno');
     elementos.forEach(function(elemento) {
-        elemento.textContent = fechar(fechaInput.value);
+        elemento.textCíontent = fechar(fechaInput.value);
     });
 });
 
@@ -117,3 +117,6 @@ botones.forEach(function(boton) {
        
     });
 });
+
+
+

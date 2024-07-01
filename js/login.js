@@ -27,3 +27,8 @@ const verificar = () => {
         sessionStorage.setItem("usuarioSesion", "");
     }
 };
+
+
+const obtenerUsuario = () => {
+    
+}
