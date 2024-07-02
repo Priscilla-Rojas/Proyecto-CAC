@@ -137,12 +137,17 @@ body{
   color: var(--tertiary-color);
   padding-left: 5px;
 }
-/* Styles  menu user in logeo */
-.main{
-  position: relative;
+.nav-user > #closeSesion{
+  color: var(--tertiary-color);
+  background-color: transparent;
 }
+/* Styles  menu user in logeo */
+/* .main{
+  position: relative;
+} */
 .menu-user{
-  position: absolute;
+  position: fixed;
+  top: 60px;
   right: 0;
   z-index: 99;
   width: 200px;

@@ -4,6 +4,10 @@
   position: relative;
   background-color: var(--secundary-color);
 }
+.menu-user{
+  position: absolute;
+  top: 40px;
+}
 .logo > figure{
   height: 75%;
 }
@@ -20,4 +24,15 @@
 }
 .user{
   background-color: transparent;
+}
+.container-body{
+  min-height: 500px;
+}
+.container-data{
+  padding-left: 20px;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.container-data p{
+  font-size: 1.8rem;
 }

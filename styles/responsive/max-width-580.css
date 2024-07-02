@@ -101,3 +101,9 @@ body{
 .nosotros article p{
   padding: 5px;
 }
+#user{
+  visibility: visible;
+}
+.nav-main{
+  display: none;
+}

@@ -1,6 +1,9 @@
 @import url(./root.css);
 @import url(./header&Footer.css);
 
+#user{
+  visibility: hidden;
+}
 .login{
   padding: 30px 0;
   font-family: var(--text-font);

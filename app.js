@@ -19,7 +19,6 @@ if(logeo) {
   
   locationURL === '/login.html' ? window.location.href = './reservas.html' : false
 
-
   bottonLogin.textContent =` ${nameUSer}`
   user.title = 'Mi cuenta';
 
@@ -39,7 +38,8 @@ if(logeo) {
   user.title ='Iniciar Sesion';
   menuUser.classList.add('hidden');
   divImgUSer.innerHTML = `<i class="fa-regular fa-user"></i>`;
-  menuUser.classList.add('hidden')
+  menuUser.classList.add('hidden');
+
 
 };
 
@@ -59,12 +59,19 @@ user.addEventListener('click', ()=>{
 })
 
 closeSesion.addEventListener('click', ()=>{
+  console.log('escuchando cerrar sesion')
   if(logeo){
-    console.log('Sesion Cerrada')
-    localStorage.removeItem('sesionIniciada')
-    localStorage.removeItem('nombre');
-    localStorage.removeItem('foto');
-    localStorage.removeItem('token');
+    const rememberMail = localStorage.getItem('remember') ? true : false;
+    let check;
+    if(rememberMail) check = localStorage.getItem('mail');
+
+    localStorage.clear();
+    sessionStorage.clear();
+    if (rememberMail) {
+      localStorage.setItem('mail', check);
+      localStorage.setItem('remember', true);
+    }
+    location.reload();
   }else{
     console.log('No se encuentra logeado')
   }

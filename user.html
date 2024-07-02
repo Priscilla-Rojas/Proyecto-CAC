@@ -40,32 +40,27 @@
         <li id="li-contacto"><a href="./contacto.html" >Contacto</a></li>
       </ul>
     </nav>
-    <!-- <a id="user" class="user " title="Iniciar Sesión">
+    <a id="user" class="user " title="Iniciar Sesión">
       <div id="img-User">
       </div>
-      
-          <p id="userP" class="user-text" >Iniciar Sesión</p>
-      
-    </a> -->
+      <p id="userP" class="user-text" >Iniciar Sesión</p>
+    </a>
+    
   </header>
   <main>
     <div id="menu-user" class="menu-user hidden">
       <nav class="nav-user">
-        <a href="./user.html" id="img-Name-User">
+        <a href="./user.html#myperfil" id="img-Name-User">
         </a>
-        <a href="">Mis Reservas</a>
-        <a href="" id="closeSesion">Cerrar Sesion</a>
+        <a id="reservas" href="./user.html#myReservas">Mis Reservas</a>
+        <a href="#" id="closeSesion">Cerrar Sesion</a>
       </nav>
     </div>
     <section class="title-myAcount">
       <h2>Mi Cuenta</h2>
     </section>
     <div class="container-body">
-      <nav class="nav-main">
-        <a href="">Perfil</a>
-        <a href="">Mis Reservas</a>
-      </nav>
-      <section id="myperfil" class="body-myAcount">
+      <section id="myperfil" class="body-myAcount hidden">
           <div id="foto"></div>
           <div class="container-data" id="myName">
             <h3>Nombre: </h3>
@@ -82,13 +77,20 @@
           <div class="container-data" id="deleteAcount">
             <button>Eliminar Cuenta</button>
           </div>
-        </div>
       </section>
-      <!-- <section id="myReservas" class="body-myAcount">
-
-      </section> -->
+      <section id="myReservas" class="body-myAcount ">
+        
+      </section>
     </div>
   </main>
+  <!-- <div id="menu-user" class="menu-user">
+    <nav class="nav-user">
+      <a href="#myperfil" id="img-Name-User">
+      </a>
+      <a id="reservas" href="#myReservas">Mis Reservas</a>
+      <a href="#" id="closeSesion">Cerrar Sesion</a>
+    </nav>
+  </div> -->
   <footer class="footer">
     <div class="logo-foother">
       <figure>

@@ -12,9 +12,10 @@ if(localStorage.getItem('mail')){
 remember.addEventListener('change', ()=>{
     if(remember.checked){
         localStorage.setItem('mail', mail.value);
-        console.log(mail)
+        localStorage.setItem('remember', true);
     }else{
         localStorage.removeItem('mail');
+        localStorage.removeItem('remember');
         mail.value = ''
     }
 })
@@ -28,27 +29,35 @@ form.addEventListener('submit', async (event) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ mail: mail.value, contraseña: contraseña.value }),
+        
     });
-
     if (response.ok) {
         // Manejar la respuesta exitosa
         const data = await response.json();
-        // localStorage.removeItem('token')
-        console.log('Inicio de sesión exitoso:', data);
-        if(isTokenValid(data.token)){ 
-            console.log('token valido')
+        
+        if(isTokenValid(data.token)){
             const { payload } = decodeToken(data.token);
+            const pass = payload.password.length;
+            const cifrado = '*'.repeat(pass)
+            
+            console.log( pass, cifrado)
             localStorage.setItem('token', data.token)
             localStorage.setItem('foto', payload.foto);
             localStorage.setItem('mail', payload.mail);
             localStorage.setItem('nombre', payload.nombre_completo);
+            localStorage.setItem('dni', payload.dni);
+            
+            localStorage.setItem('password', cifrado);
             localStorage.setItem('sesionIniciada', true);
             console.log(window.location)
             window.location.href = './reservas.html';
         }else{
             console.log('token invalido')
         }
-    } else {
+    } else if(!response.ok){
+        const data = await response.json();
+        !data.auth && alert('Verifique su usuario y/o contraseña') 
+    }else{
         // Manejar errores
         console.error('Error en el inicio de sesión');
     }
@@ -72,35 +81,38 @@ function isTokenValid(token) {
 
         const currentTime = Math.floor(Date.now() / 1000);
         if (payload.exp && currentTime > payload.exp) {
-            console.error('El token ha expirado');
             return false;
         }
 
         return true;
     } catch (error) {
-        console.error('Error al decodificar el token:', error);
         return false;
     }
 }
 
 const token = localStorage.getItem('token');
-isTokenValid(token)
+// isTokenValid(token)
 
 
 if (isTokenValid(token)) {
     const { payload } = decodeToken(token);
-    localStorage.setItem('foto', payload.foto);
-    localStorage.setItem('mail', payload.mail);
-    localStorage.setItem('nombre', payload.nombre_completo);
-    localStorage.setItem('sesionIniciada', true);
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('foto', payload.foto);
+        localStorage.setItem('mail', payload.mail);
+        localStorage.setItem('nombre', payload.nombre_completo);
+        localStorage.setItem('dni', payload.dni);
+        localStorage.setItem('password', payload.password);
+        localStorage.setItem('sesionIniciada', true);
+        window.location.href = './reservas.html';
     // console.log('El token es válido');
 } else {
-    localStorage.removeItem('token')
-    localStorage.removeItem('foto');
-    localStorage.removeItem('nombre');
-    localStorage.removeItem('sesionIniciada');
-    console.log('Tu sesión ha expirado. Por favor, inicia sesión nuevamente.');
-    // window.location.href = '/login.html';
-    console.log('El token no es válido');
+    const rememberMail = localStorage.getItem('remember') ? true : false;
+    let check;
+    if(rememberMail) check = localStorage.getItem('mail');
+    localStorage.clear()
+    if (rememberMail) {
+        localStorage.setItem('mail', check);
+        localStorage.setItem('remember', true);
+    }
 }
 

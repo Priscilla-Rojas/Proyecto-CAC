@@ -1,5 +1,7 @@
 @import url('./root.css');
-
+/* #user{
+  visibility: hidden;
+} */
 .title-myAcount{
   width: 100%;
   height: 150px;
@@ -19,9 +21,8 @@
 }
 .container-body{
   width: 100%;
-  height: 65vh;
-  display: flex;
-  flex-flow: row nowrap;
+  height: max-content;
+  min-height: 400px;
 }
 .nav-main{
   width: 20%;
@@ -45,29 +46,41 @@
 .nav-main a:hover{
   color: var(--secundary-color);
 }
+#closeSesion{
+  background-color: var(--tertiary-color);
+}
 .body-myAcount{
-  width: 80%;
+  width: 95%;
   min-width: 250px;
+  height: 100%;
+  min-height: max-content;
+  margin: 10px auto;
+  
+  padding: 10px 5px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  gap: 8px;
 }
 #foto{
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  align-self: center;
 }
 #foto > img{
   width: 100%;
   height: 100%;
 }
 .container-data{
+  width: 90%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 5px;
+  padding-left: 50px;
 }
 .container-data h3{
   font-size: 1.5rem;
@@ -78,4 +91,70 @@
   font-size: 2rem;
   font-weight: 600;
   margin: 0;
+}
+#myReservas{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+#myReservas .reserva:nth-child(even){
+  background-color: var(--tertiary-color);
+}
+#myReservas .reserva:nth-child(odd){
+  background-color: var(--primary-color);
+}
+.reserva{
+  width: max-content;
+  min-width: 200px;
+
+  border-radius: 10px;
+  padding: 0;
+  color: white;
+  overflow: hidden;
+}
+
+.fila,
+.data{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+.fila{
+  width: 100%;
+  padding: 5px 10px;
+}
+.date{
+  background-color: var(--green-color);
+  
+}
+.date .data{
+  gap: 40px;
+}
+.data{
+gap: 8px;
+}
+.data p,
+.data h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.details{
+  flex-flow: column;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.Reservado{
+  background-color: var(--green-color);
+}
+.Cancelado{
+  background-color: red;
+}
+.Cumplido{
+  background-color: gray;
+}
+.hidden{
+  display: none !important; 
 }
