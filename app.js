@@ -39,8 +39,6 @@ if(logeo) {
   menuUser.classList.add('hidden');
   divImgUSer.innerHTML = `<i class="fa-regular fa-user"></i>`;
   menuUser.classList.add('hidden');
-
-
 };
 
 hamburger.addEventListener('click', ()=>{

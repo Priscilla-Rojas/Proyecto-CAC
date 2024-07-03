@@ -280,7 +280,7 @@ document.addEventListener('click', (event) => {
     realizarReserva(userMail, fechaTurno, nombreCancha, nombreTurno, "Reservado")
       .then( response => {
         sessionStorage.setItem(`${response.nombre_cancha}_${response.nombre_turno}`, JSON.stringify(response));
-        alert(`Se realizao la reserva de la ${response.nombre_cancha} en el ${response.nombre_turno}`)
+        alert(`Se realizao la reserva de la ${response.nombre_cancha} en el turno: ${response.nombre_turno}`)
       })
 
   }else if (event.target.classList.contains('turno-no-disponible')){
@@ -292,7 +292,7 @@ document.addEventListener('click', (event) => {
     
     eliminarReserva(reserva.reservaCreada)
     .then( response => {
-      alert(`se ha cancelado la reserva de la ${reserva.nombre_cancha} en el turno ${reserva.nombre_turno}`)
+      alert(`Se ha cancelado la reserva de la ${reserva.nombre_cancha} en el turno ${reserva.nombre_turno}`)
       reserva ? sessionStorage.removeItem(`${idButoon}`) : alert(`Reserva no enocontrada`);
       })
   }

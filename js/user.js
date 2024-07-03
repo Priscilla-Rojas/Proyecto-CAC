@@ -7,33 +7,87 @@ const reservas = document.getElementById('reservas');
 const myReservas = document.getElementById('myReservas');
 const perfil = document.getElementById('img-Name-User');
 const myperfil = document.getElementById('myperfil');
+const formNewUserName = document.getElementById('formNewUserName');
+const pencil = document.getElementById('pencil');
 const locationUser = window.location.hash;
-console.log(locationUser)
+const tokenUser = localStorage.getItem('token');
 
-if(!localStorage.getItem('token')){
-  alert('Acceso denegado');
-  sessionStorage.clear();
+const Auth = async () => {
+  const url = 'http://localhost:3009/auth/user';
+  //Manejo de error
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Authorization': tokenUser
+      }
+    });
+    if (!response.ok) {
+      throw new Error('No hay respuesta del servidor' + response.statusText);
+    }
+    const data = await response.json();
+    return data.auth;
+  } catch (error) {
+    console.error('la petición de datos arroja el siguiente error:', error);
+  }
+};
+
+const access = Auth();
+
+if(!access){
   window.location.href = './login.html';
 }
 
-if(locationUser === '#myReservas' ){
-  myReservas.classList.remove('hidden')
-  myperfil.classList.add('hidden')
+const toglleClassList = (itemActive, itemInactive)=>{
+  itemActive.classList.remove('hidden')
+  itemInactive.classList.add('hidden')
 }
-if(locationUser === '#myperfil' ){
-  myperfil.classList.remove('hidden')
-  myReservas.classList.add('hidden')
-}
-perfil.addEventListener('click', ()=>{
-  console.log('escuchando perfil')
-  myperfil.classList.remove('hidden')
-  myReservas.classList.add('hidden')
+
+locationUser === '#myReservas' && toglleClassList(myReservas, myperfil);
+locationUser === '#myperfil' && toglleClassList(myperfil, myReservas)
+
+perfil.addEventListener('click', ()=> toglleClassList(myperfil, myReservas))
+reservas.addEventListener('click', ()=> toglleClassList(myReservas, myperfil))
+
+pencil.addEventListener('click', ()=>{
+  const form = document.getElementById('newUserName');
+  form.classList.remove('hidden');
 })
-reservas.addEventListener('click', ()=>{
-  console.log('escuchando reservas')
-  myReservas.classList.remove('hidden')
-  myperfil.classList.add('hidden')
+
+formNewUserName.addEventListener('submit', (event)=>{
+  event.preventDefault();
+  const newName = document.getElementById('newName').value;
+  console.log(newName)
+  updateUsername(newName);
+  const form = document.getElementById('newUserName');
+  const nameUSer = document.getElementById('nameUSer');
+  nameUSer.textContent = newName
+  form.classList.add('hidden');
+
 })
+
+const updateUsername = async (newUsername) => {
+  const token = localStorage.getItem('token');
+  const mail = localStorage.getItem('mail');
+  
+  try {
+    const response = await fetch('http://localhost:3009/auth', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ token, newUsername, mail }),
+    });
+
+    const data = await response.json();
+    alert(data.message); // Muestra la respuesta del servidor en la consola
+    
+  } catch (error) {
+    console.error('Error al intentar actualizar el nombre de usuario:', error);
+    // Manejo de errores
+  }
+};
+
 
 // Creacion Perfil
 const img = document.createElement('img');
@@ -41,6 +95,7 @@ const url = localStorage.getItem('foto');
 img.src = url;
 const pName = document.createElement('p');
 const nameUser = localStorage.getItem('nombre');
+pName.id = 'nameUSer';
 pName.textContent = nameUser;
 const pDni = document.createElement('p');
 const dniUser = localStorage.getItem('dni')
@@ -52,12 +107,35 @@ const pPassword = document.createElement('p');
 const passUser = localStorage.getItem('password');
 pPassword.textContent = passUser;
 
+
 foto.appendChild(img);
 myName.append(pName);
 dni.append(pDni);
 mail.append(pMail);
 password.append(pPassword);
 
+const calcelarReserva = async (id) => {
+  const url = `http://localhost:3009/reservas/${id}`
+  const response = await fetch(url, {
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ estado: 'Cancelado' }),
+  });
+  console.log(response)
+  //Manejo de error
+  if (response.ok) {
+    // Manejar la respuesta exitosa
+    const data = await response.json();
+    return data;;
+  } else if (!response.ok){
+    throw new Error('No se pudo cancelar la reserva' + response.statusText);
+  } else {
+      // Manejar errores
+      console.error('error con el servidor');
+  }
+}
 const getMyReservas = async () => {
   const url = `http://localhost:3009/reservas/user/${mailUSer}`
   //Manejo de error
@@ -74,7 +152,6 @@ const getMyReservas = async () => {
 }
 
 const htmlReservations = (reservas)=>{
-  console.log(reservas)
   reservas.forEach(reserva => {
     const div = document.createElement('div');
     div.classList.add('reserva');
@@ -125,14 +202,24 @@ const htmlReservations = (reservas)=>{
 
     const divState = document.createElement('div');
     divState.classList.add('data');
-    const h4State = document.createElement('h4');
-    h4State.textContent = 'Estado:'
     const pState = document.createElement('p');
     const State = reserva.estado;
     divRowState.classList.add(State);
-    pState.textContent = State
-    divState.append(h4State);
+    pState.textContent = State;
     divState.append(pState);
+
+    if(reserva.estado === 'Reservado'){
+      const divCancel = document.createElement('div');
+      divCancel.classList.add('data');
+      const pCancel = document.createElement('p');
+      divCancel.classList.add('Cancel');
+      divCancel.classList.add(`reserva-${reserva.ID}`);
+      pCancel.textContent = '¿Cancelar?';
+      divCancel.append(pCancel);
+      
+      divRowState.append(divCancel);
+    }
+    
 
     divRow.append(divDate);
     divRowDetails.append(divCancha);
@@ -146,11 +233,45 @@ const htmlReservations = (reservas)=>{
     
   });
 }
+const ordenarReservas = (reservas)=>{
+  const hoy = new Date();
+  
+  let reservadas = [];
+  let cumplidasOCanceladas = [];
+
+  reservas.forEach(reserva => {
+      if (reserva.estado === "Reservado") {
+          reservadas.push(reserva);
+      } else if (reserva.estado === "Cumplido" || reserva.estado === "Cancelado") {
+          cumplidasOCanceladas.push(reserva);
+      }
+  });
+
+  reservadas.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+  
+  cumplidasOCanceladas.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+  return {
+      reservadas: reservadas,
+      cumplidasOCanceladas: cumplidasOCanceladas
+  };
+}
 
 
 getMyReservas()
-  .then( response => {
-    // console.log(response)
-    sessionStorage.setItem('myReservatons', JSON.stringify(response));
-    htmlReservations(response)
+.then( response => {
+  // console.log(response)
+  sessionStorage.setItem('myReservatons', JSON.stringify(response));
+  
+  const reserbasOrdenadas=ordenarReservas(response)
+  htmlReservations(reserbasOrdenadas.reservadas)
+  htmlReservations(reserbasOrdenadas.cumplidasOCanceladas)
+})
+
+document.addEventListener('click', (event) => {
+  if(event.target.classList.contains('Cancel')){
+    const  idReserva = event.target.classList[2].split('-')[1];
+    console.log(idReserva)
+    calcelarReserva(idReserva);
+    location.reload();
+  }
 })

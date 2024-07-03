@@ -23,6 +23,7 @@
   width: 100%;
   height: max-content;
   min-height: 400px;
+  position: relative;
 }
 .nav-main{
   width: 20%;
@@ -50,24 +51,61 @@
   background-color: var(--tertiary-color);
 }
 .body-myAcount{
-  width: 95%;
-  min-width: 250px;
+  
   height: 100%;
   min-height: max-content;
   margin: 10px auto;
   
   padding: 10px 5px;
+  padding-top: 60px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
 }
+#myperfil,
+#newUserName{
+  width: 50%;
+  min-width: 250px;
+  max-width: max-content;
+  background-color: var(--green-color);
+  border-radius: 15px;
+}
+#newUserName{
+  padding: 20px;
+  position: fixed;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--tertiary-color);
+  color: white;
+  z-index: 100;
+}
+/* #newUserName > div::after{
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color:rgba(12, 12, 70, 0.384);
+  z-index: 98;
+} */
+#myReservas{
+  width: 95%;
+  min-width: 250px;
+  max-width: max-content;
+}
+
 #foto{
   width: 100px;
   height: 100px;
   border-radius: 50%;
   align-self: center;
+  border-radius: 50%;
+  overflow: hidden;
 }
 #foto > img{
   width: 100%;
@@ -75,12 +113,13 @@
 }
 .container-data{
   width: 90%;
+  
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
   gap: 5px;
-  padding-left: 50px;
+  /* padding-left: 20px; */
 }
 .container-data h3{
   font-size: 1.5rem;
@@ -91,6 +130,23 @@
   font-size: 2rem;
   font-weight: 600;
   margin: 0;
+}
+#myName{
+  position: relative;
+}
+.pencil{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--tertiary-color);
+  border-radius: 50%;
+  transition: all .3s linear;
+}
+.pencil:hover{
+  color: var(--secundary-color);
+  background-color: var(--tertiary-color);
 }
 #myReservas{
   display: flex;
@@ -112,7 +168,6 @@
   color: white;
   overflow: hidden;
 }
-
 .fila,
 .data{
   display: flex;
@@ -148,12 +203,40 @@ gap: 8px;
 }
 .Reservado{
   background-color: var(--green-color);
+  padding: 0;
+  justify-content: space-evenly;
 }
-.Cancelado{
-  background-color: red;
+.Reservado > div{
+  font-size: 1.5rem;
+}
+.Reservado > .Cancel{
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+.Reservado > .Cancel{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.Reservado > .Cancel p{
+  font-size: 1rem;
+
+}
+/* .Reservado > div{
+  width: 50%;
+} */
+.Cancel{
+  width: 40%;
+  background-color: rgba(252, 136, 41, 0.507);
+  border-radius: 10px;
+  cursor: pointer;
 }
 .Cumplido{
   background-color: gray;
+}
+.Cancelado{
+  background-color: rgba(252, 136, 41, 0.507);
 }
 .hidden{
   display: none !important; 

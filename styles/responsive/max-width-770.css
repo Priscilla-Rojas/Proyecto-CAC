@@ -28,6 +28,9 @@
 .container-body{
   min-height: 500px;
 }
+#myperfil{
+  width: 90%;
+}
 .container-data{
   padding-left: 20px;
   flex-flow: row wrap;

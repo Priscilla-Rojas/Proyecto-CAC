@@ -15,6 +15,9 @@
 .boxForgetPassword{
   padding: 0;
 }
+.container-data{
+  padding-left: 0;
+}
 .container-data h3{
   font-size: 1.3rem;
 }

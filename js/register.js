@@ -8,7 +8,6 @@ form.addEventListener('submit', async (event) => {
   const  nombre_completo = document.getElementById('nombre_completo').value;
   const  foto = document.getElementById('foto').value;
   const  password = document.getElementById('password').value;
-  console.log(DNI, mail, nombre_completo, foto, password)
   const response = await fetch('http://localhost:3009/auth/register', {
       method: 'POST',
       headers: {

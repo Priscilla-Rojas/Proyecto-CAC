@@ -34,7 +34,7 @@
         <li>
           <i  class="fa-solid fa-xmark close"></i>
         </li>
-        <li id="li-home"><a href="./index.html" class="item-active">Home</a></li>
+        <li id="li-home"><a href="./index.html">Home</a></li>
         <li id="li-reservas"><a href="./reservas.html">Reservas</a></li>
         <li id="li-nosotros"><a href="./nosotros.html">Nosotros</a></li>
         <li id="li-contacto"><a href="./contacto.html" >Contacto</a></li>
@@ -45,7 +45,6 @@
       </div>
       <p id="userP" class="user-text" >Iniciar Sesión</p>
     </a>
-    
   </header>
   <main>
     <div id="menu-user" class="menu-user hidden">
@@ -63,7 +62,8 @@
       <section id="myperfil" class="body-myAcount hidden">
           <div id="foto"></div>
           <div class="container-data" id="myName">
-            <h3>Nombre: </h3>
+            <i id="pencil" title="Editar nombre de usuario" class="fa-solid fa-pencil pencil"></i>
+            <h3>Usuario: </h3>
           </div>
           <div class="container-data" id="dni">
             <h3>DNI: </h3>
@@ -74,23 +74,24 @@
           <div class="container-data" id="password">
             <h3>Paswoord</h3>
           </div>
-          <div class="container-data" id="deleteAcount">
+      </section>
+      <section id="newUserName" class="body-myAcount hidden">
+        <div>
+          <h3>Nuevo nombre de Usuario: </h3>
+          <form id="formNewUserName" method="POST">
+            <input id="newName" type="text">
+            <input type="submit" value="Cambiar">
+          </form>
+        </div>
+          <!-- <div class="container-data" id="deleteAcount">
             <button>Eliminar Cuenta</button>
-          </div>
+          </div> -->
       </section>
       <section id="myReservas" class="body-myAcount ">
         
       </section>
     </div>
   </main>
-  <!-- <div id="menu-user" class="menu-user">
-    <nav class="nav-user">
-      <a href="#myperfil" id="img-Name-User">
-      </a>
-      <a id="reservas" href="#myReservas">Mis Reservas</a>
-      <a href="#" id="closeSesion">Cerrar Sesion</a>
-    </nav>
-  </div> -->
   <footer class="footer">
     <div class="logo-foother">
       <figure>
