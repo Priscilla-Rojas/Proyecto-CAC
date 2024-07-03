@@ -7,7 +7,7 @@
   main{
     
     position:relative;
-    padding-top: 60px;
+    /* padding-top: 60px; */
     width: 100%;
     min-height: calc(100vh - 50px);
      background-image: url(/assets/fondo.jpg); 
@@ -50,6 +50,11 @@
     border: none;
     color: var(--primary-color);
     text-align: center;
+}
+.disabled{
+  cursor: not-allowed;
+  background-color: rgb(112, 112, 112);
+  pointer-events:none;
 }
 @keyframes colores {
   0% {
@@ -100,16 +105,17 @@
   
     width: 96%;
     height: 96%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display:flex;
     flex-direction: column;
     background-color: var(--secundary-color);
     align-items: center;
-    margin: auto;
+    margin: 10px auto;
     color:aliceblue;
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--primary-color);
     text-shadow: 1px 1px 1px var(--primary-color);
+    overflow: hidden;
   }
   .cancha > h4 {
     padding-top: 5px;
@@ -164,6 +170,12 @@
     visibility: hidden;
   }
   
+  .turno-no-disponible{
+    background-color: var(--secundary-color);
+    border: 1px solid var(--secundary-color);
+    color: var(--primary-color);
+    font-weight: 500;
+  }
   
   /* Responsive */
   

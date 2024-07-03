@@ -21,35 +21,49 @@
   </head>
 <body>
   <header class="header">
-    <a href="./index.html" class="logo">
+    <div class="logo">
       <figure>
         <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
       </figure>
-      
-    </a>
+
+    </div>
     <nav id="nav">
       <i class="fa-solid fa-bars hamburger"></i>
       <ul class="header-nav">
         <li>
-          <i class="fa-solid fa-xmark close"></i>
+          <i  class="fa-solid fa-xmark close"></i>
         </li>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./reservas.html">Reservas</a></li>
-        <!-- <li><a href="./torneos.html">Torneos</a></li> -->
-        <li><a href="./nosotros.html" class="item-active">Nosotros</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
+        <li id="li-home"><a href="./index.html">Home</a></li>
+        <li id="li-reservas"><a href="./reservas.html">Reservas</a></li>
+        <li id="li-nosotros"><a href="./nosotros.html" class="item-active">Nosotros</a></li>
+        <li id="li-contacto"><a href="./contacto.html" >Contacto</a></li>
       </ul>
     </nav>
-    <a href="./login.html" class="user" title="Iniciar Sesión">
-      <div>
-        <i class="fa-regular fa-user"></i>
+    <a id="user" class="user " title="Iniciar Sesión">
+      <div id="img-User">
       </div>
-      <div class="user-text">
-        <p>Iniciar Sesión</p>
-      </div>
+      <!-- <div class="user-text"> -->
+          <p id="userP" class="user-text" >Iniciar Sesión</p>
+      <!-- </div> -->
     </a>
   </header>
   <main class="us">
+    <div id="menu-user" class="menu-user hidden">
+      <nav class="nav-user">
+        <a href="./user.html#myperfil" id="img-Name-User">
+        </a>
+        <a href="./user.html#myReservas">Mis Reservas</a>
+        <a href="#" id="closeSesion">Cerrar Sesion</a>
+      </nav>
+    </div>
+    <div id="menu-user" class="menu-user hidden">
+      <nav class="nav-user">
+        <a id="img-Name-User">
+        </a>
+        <a href="">Mis Reservas</a>
+        <a href="" id="closeSesion">Cerrar Sesion</a>
+      </nav>
+    </div>
     <h1>APDA - Padel</h1>
     <section class="presentation">
         <h2>¡Bienvenidos a nuestro club!</h2>

@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/login.css">
+  <link rel="stylesheet" href="./styles/header&Footer.css">
+  <link rel="stylesheet" href="./styles/user.css">
   <!-- <link rel="stylesheet" media="(max-width: 320px)" href="styles/responsive/max-width-320.css"> -->
-  <link rel="stylesheet" media="(max-width: 950px)" href="./styles/responsive/max-width-950.css">
-  <link rel="stylesheet" media="(max-width: 770px)" href="styles/responsive/max-width-770.css">
-  <link rel="stylesheet" media="(max-width: 580px)" href="styles/responsive/max-width-580.css">
   <link rel="stylesheet" media="(max-width: 450px)" href="styles/responsive/max-width-450.css">
+  <link rel="stylesheet" media="(max-width: 580px)" href="styles/responsive/max-width-580.css">
+  <link rel="stylesheet" media="(max-width: 770px)" href="styles/responsive/max-width-770.css">
+  <link rel="stylesheet" media="(max-width: 950px)" href="./styles/responsive/max-width-950.css">
+  
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -24,7 +26,7 @@
       <figure>
         <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
       </figure>
-      
+
     </div>
     <nav id="nav">
       <i class="fa-solid fa-bars hamburger"></i>
@@ -35,56 +37,60 @@
         <li id="li-home"><a href="./index.html">Home</a></li>
         <li id="li-reservas"><a href="./reservas.html">Reservas</a></li>
         <li id="li-nosotros"><a href="./nosotros.html">Nosotros</a></li>
-        <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
+        <li id="li-contacto"><a href="./contacto.html" >Contacto</a></li>
       </ul>
     </nav>
     <a id="user" class="user " title="Iniciar Sesión">
       <div id="img-User">
       </div>
-      <!-- <div class="user-text"> -->
-          <p id="userP" class="user-text" >Iniciar Sesión</p>
-      <!-- </div> -->
+      <p id="userP" class="user-text" >Iniciar Sesión</p>
     </a>
   </header>
-  <main class="login">
+  <main>
     <div id="menu-user" class="menu-user hidden">
       <nav class="nav-user">
-        <a id="img-Name-User">
+        <a href="./user.html#myperfil" id="img-Name-User">
         </a>
-        <a href="">Mis Reservas</a>
-        <a href="" id="closeSesion">Cerrar Sesion</a>
+        <a id="reservas" href="./user.html#myReservas">Mis Reservas</a>
+        <a href="#" id="closeSesion">Cerrar Sesion</a>
       </nav>
     </div>
-    <section>
-      <h3>Iniciar sesión:</h3>
-      <form action="reservas.html" method="POST" id="loginForm">
-        <input id="userMail" name="mailUsuario" type="text" placeholder="Ingresa tu mail" required>
-        <input id="password" name="passUsuario" type="password" placeholder="Ingresa contraseña" required>
-        <div class="box">
-          <input type="checkbox" name="remember" id="remember">
-          <label for="remember">Recordarme</label>
-        </div>
-        <input type="submit" value="Ingresar" id="ingresar">
-        <div class="box boxForgetPassword">
-          <i class="fa-solid fa-lock"></i>
-          <p>¿Olvidaste tu contraseña?</p>
-        </div>
-        <div class="noAccount">
-          <p>¿No tienes cuenta? <a href="./registro.html">Regístrate</a></p>
-        </div>
-      </form>
-      <section class="loginRedes">
-        <h3>Iniciar sesión con:</h3>
-        <div class="iconsLoginRedes">
-          <a href="">
-            <img src="./assets/googleLogo.png" alt="Iniciar sesión con Google" title="Iniciar sesión tu cuenta de Google">
-          </a>
-          <a href="">
-            <img src="./assets/facebookLogo.png" alt="Iniciar sesión con facebook" title="Iniciar sesión tu cuenta de facebook">
-          </a>
-        </div>
-      </section>
+    <section class="title-myAcount">
+      <h2>Mi Cuenta</h2>
     </section>
+    <div class="container-body">
+      <section id="myperfil" class="body-myAcount hidden">
+          <div id="foto"></div>
+          <div class="container-data" id="myName">
+            <i id="pencil" title="Editar nombre de usuario" class="fa-solid fa-pencil pencil"></i>
+            <h3>Usuario: </h3>
+          </div>
+          <div class="container-data" id="dni">
+            <h3>DNI: </h3>
+          </div>
+          <div class="container-data" id="mail">
+            <h3>Mail: </h3>
+          </div>
+          <div class="container-data" id="password">
+            <h3>Paswoord</h3>
+          </div>
+      </section>
+      <section id="newUserName" class="body-myAcount hidden">
+        <div>
+          <h3>Nuevo nombre de Usuario: </h3>
+          <form id="formNewUserName" method="POST">
+            <input id="newName" type="text">
+            <input type="submit" value="Cambiar">
+          </form>
+        </div>
+          <!-- <div class="container-data" id="deleteAcount">
+            <button>Eliminar Cuenta</button>
+          </div> -->
+      </section>
+      <section id="myReservas" class="body-myAcount ">
+        
+      </section>
+    </div>
   </main>
   <footer class="footer">
     <div class="logo-foother">
@@ -139,10 +145,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
   <script src="app.js"></script>
-  <script src="./js/login.js"></script>
-  <!-- <script src="./js/reservas.js"></script> -->
+  <script src="./js/user.js"></script>
 </body> 
 </html>
 

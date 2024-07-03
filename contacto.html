@@ -25,7 +25,7 @@
       <figure>
         <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
       </figure>
-      
+
     </div>
     <nav id="nav">
       <i class="fa-solid fa-bars hamburger"></i>
@@ -39,16 +39,22 @@
         <li id="li-contacto"><a href="./contacto.html" class="item-active">Contacto</a></li>
       </ul>
     </nav>
-    <a href="./login.html" class="user" title="Iniciar Sesión">
-      <div>
-        <i class="fa-regular fa-user"></i>
+    <a id="user" class="user " title="Iniciar Sesión">
+      <div id="img-User">
       </div>
-      <div class="user-text">
-        <p>Iniciar Sesión</p>
-      </div>
+      <p id="userP" class="user-text" >Iniciar Sesión</p>
     </a>
+    
   </header>
   <main>  
+    <div id="menu-user" class="menu-user hidden">
+      <nav class="nav-user">
+        <a href="./user.html#myperfil" id="img-Name-User">
+        </a>
+        <a href="./user.html#myReservas">Mis Reservas</a>
+        <a href="#" id="closeSesion">Cerrar Sesion</a>
+      </nav>
+    </div>
     <!-- <input type="checkbox" name="logueado" id="logueado" onclick="queMensajeMuestro()">   -->
     <h1>Formulario de Contacto</h1>
     <p>Haznos llegar tus comentarios</p>
@@ -66,6 +72,7 @@
     </form>
 
   </main>
+  
   <footer class="footer">
     <div class="logo-foother">
       <figure>

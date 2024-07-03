@@ -20,43 +20,49 @@
     </head>
 <body>
     <header class="header">
-        <a href="./index.html" class="logo">
-            <figure>
-                <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
-            </figure>
-        </a>
+        <div class="logo">
+          <figure>
+            <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
+          </figure>
+    
+        </div>
         <nav id="nav">
-            <i class="fa-solid fa-bars hamburger"></i>
-            <ul class="header-nav">
-                <li>
-                    <i class="fa-solid fa-xmark close"></i>
-                </li>
-                <li id="li-home"><a href="./index.html">Home</a></li>
-                <li id="li-reservas"><a href="./reservas.html" class="item-active">Reservas</a></li>
-                <li id="li-nosotros"><a href="./nosotros.html">Nosotros</a></li>
-                <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
-            </ul>
+          <i class="fa-solid fa-bars hamburger"></i>
+          <ul class="header-nav">
+            <li>
+              <i  class="fa-solid fa-xmark close"></i>
+            </li>
+            <li id="li-home"><a href="./index.html">Home</a></li>
+            <li id="li-reservas"><a href="./reservas.html" class="item-active">Reservas</a></li>
+            <li id="li-nosotros"><a href="./nosotros.html">Nosotros</a></li>
+            <li id="li-contacto"><a href="./contacto.html" >Contacto</a></li>
+          </ul>
         </nav>
-        <a href="./login.html" id="user" class="user " title="Iniciar Sesión" onclick="cierraSesion()">
-            <div>
-                <i class="fa-regular fa-user"></i>
-            </div>
-            <div class="user-text">
-                <p id="userP" >Iniciar Sesión</p>
-            </div>
+        <a id="user" class="user " title="Iniciar Sesión">
+          <div id="img-User">
+          </div>
+          <!-- <div class="user-text"> -->
+              <p id="userP" class="user-text" >Iniciar Sesión</p>
+          <!-- </div> -->
         </a>
-        <!-- <input type="checkbox" name="logueado" id="logueado" onclick="queMensajeMuestro()"> -->
-    </header>
-    <main>
+      </header>
+      <main class="us">
+        <div id="menu-user" class="menu-user hidden">
+          <nav class="nav-user">
+            <a href="./user.html#myperfil" id="img-Name-User">
+            </a>
+            <a href="./user.html#myReservas">Mis Reservas</a>
+            <a href="#" id="closeSesion">Cerrar Sesion</a>
+          </nav>
+        </div>
         <section id="head-main">
                 <h3 id="hora-dispo">Horarios Disponibles</h3>
                     <p id="usuario-logueado">¿Vas a jugar? ¿Cuándo?
                         Elige una fecha: </p> <input type="date" name="fecha-turno" id="fecha-turno" > 
-                    <p><span class="animado" id="reco-inicio-sesion">Recuerda que debes iniciar sesión para poder reservar</span></p>
-                    
+                    <p><a class="animado" id="reco-inicio-sesion"></a></p>
         </section>
         <section class="canchas oculto" id="canchas">
-                <div class="cancha" id="cancha-1"><h4>Cancha 1</h4>
+               <!--  <div class="cancha" id="cancha-1"><h4>Cancha 1</h4>
                     <table class="horario" id="horario-cancha-1">
                         <thead>
                             <tr>
@@ -407,7 +413,7 @@
                             
                         </tbody>
                         </table>
-                    <a class="volver" href="#">Volver</a></div>
+                    <a class="volver" href="#">Volver</a></div> -->
         </section>
     </main>
     <footer class="footer">
@@ -464,8 +470,9 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="./app.js"></script>
+        <script src="./js/reservas.js"></script> 
         <!-- <script src="./js/login.js"></script> -->
-        <script src="./js/reservas.js"></script>
+       <!-- <script src="./js/getReservas.js"></script> -->
 </body>
 </html>
     

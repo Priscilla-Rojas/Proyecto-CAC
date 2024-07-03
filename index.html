@@ -25,7 +25,7 @@
       <figure>
         <img src="./assets/logo.png" alt="APDA logo" title="APDA Padel">
       </figure>
-      
+
     </div>
     <nav id="nav">
       <i class="fa-solid fa-bars hamburger"></i>
@@ -39,98 +39,105 @@
         <li id="li-contacto"><a href="./contacto.html" >Contacto</a></li>
       </ul>
     </nav>
-    <a href="./login.html" class="user" title="Iniciar Sesión">
-      <div>
-        <i class="fa-regular fa-user"></i>
+    <a id="user" class="user " title="Iniciar Sesión">
+      <div id="img-User">
       </div>
-      <div class="user-text">
-        <p>Iniciar Sesión</p>
-      </div>
+      <!-- <div class="user-text"> -->
+          <p id="userP" class="user-text" >Iniciar Sesión</p>
+      <!-- </div> -->
     </a>
   </header>
   <main>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <picture>
-                <source class="d-block w-100" srcset="./assets/slider-vertical-1.png" media="(orientation: portrait)">
-                <img class="d-block w-100" src="./assets/slider1.jpg" alt="Second slide">
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source class="d-block w-100" srcset="./assets/slider-vertical-2.png" media="(orientation: portrait)">
-                <img class="d-block w-100" src="./assets/slider2.jpg" alt="Second slide">
-              </picture>
-            </div>
-            <div class="carousel-item">
-              <picture>
-                <source class="d-block w-100" srcset="./assets/slider-vertical-3.png" media="(orientation: portrait)" >
-                <img class="d-block w-100" src="./assets/slider3.jpg" alt="Third slide">
-              </picture>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+    <div id="menu-user" class="menu-user hidden">
+      <nav class="nav-user">
+        <a href="./user.html#myperfil" id="img-Name-User">
+        </a>
+        <a href="./user.html#myReservas">Mis Reservas</a>
+        <a href="#" id="closeSesion">Cerrar Sesion</a>
+      </nav>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <picture>
+            <source class="d-block w-100" srcset="./assets/slider-vertical-1.png" media="(orientation: portrait)">
+            <img class="d-block w-100" src="./assets/slider1.jpg" alt="Second slide">
+          </picture>
         </div>
-        <section class="nosotros">
-          <h2>Nosotros</h2>
-          <div>
-            <article>
-              <p>
-                El objetivo de nuestro club es potenciar la organización de torneos, como así también la presentación de nuestro club en San Isidro como sede oficial para las diferentes competencias juveniles. 
-              </p>
-              <p>
-                Así, nuestros socios, alumnos y docentes trabajarán día a día en mejorar las habilidades de nuestros alumnos y socios haciendo de este deporte un soporté, para poder crecer profesionalmente, como para liberar tensiones y disfrutar de la maravilla de este hermoso deporte. 
-              </p>
-              <p>
-                En APDA, nos esforzamos por ofrecer a nuestros socios y visitantes instalaciones de primera calidad, una atmósfera amigable y una comunidad comprometida con el juego limpio y el compañerismo. Fomentando la sana competencia. 
-              </p>
-              <h4>Nuestras Instalaciones y Servicios</h4>
-              <ul>
-                <li>6 canchas de pádel cubiertas</li>
-                <li>Vestuarios y duchas</li>
-                <li>Zona de descanso y cafetería</li>
-                <li>Tienda de equipamiento deportivo</li>
-              </ul>
-            </article>
-            <figure>
-              <img src="./assets/club-2.jpg" alt="Canchas de Padel">
-              <img src="./assets/club-3.jpg" alt="Padel APDA">
-              <img src="./assets/confort1.jpg" alt="APDA Bar">
-              <img src="./assets/comodidad3.jpg" alt="APDA Vestuarios">
-            </figure>
-          </div>
-        </section>
-        <div class="location">
-          <article class="details">
-            <div>
-              <h2>Horarios</h2>
-              <ul>
-                <li>Lunes a Viernes: 10:00 am - 9:00 pm </li>
-                <li>Sábado y Domingo: 9:00 am - 7:00 pm</li>
-              </ul>
-            </div>
-            <div>
-              <h2>Ubicación</h2>
-              <p>
-                Obispo Terrero 3380, San Isidro,<br>
-                Provincia de Buenos Aires, CP B1609HMA </p>
-            </div>
-          </article>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6576.81910437065!2d-58.55101!3d-34.4925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb07689dfc16b%3A0xd99c91a74c6232d5!2sObispo%20Terrero%203380%2C%20B1642FXL%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712320958869!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="carousel-item">
+          <picture>
+            <source class="d-block w-100" srcset="./assets/slider-vertical-2.png" media="(orientation: portrait)">
+            <img class="d-block w-100" src="./assets/slider2.jpg" alt="Second slide">
+          </picture>
         </div>
+        <div class="carousel-item">
+          <picture>
+            <source class="d-block w-100" srcset="./assets/slider-vertical-3.png" media="(orientation: portrait)" >
+            <img class="d-block w-100" src="./assets/slider3.jpg" alt="Third slide">
+          </picture>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <section class="nosotros">
+      <h2>Nosotros</h2>
+      <div>
+        <article>
+          <p>
+            El objetivo de nuestro club es potenciar la organización de torneos, como así también la presentación de nuestro club en San Isidro como sede oficial para las diferentes competencias juveniles. 
+          </p>
+          <p>
+            Así, nuestros socios, alumnos y docentes trabajarán día a día en mejorar las habilidades de nuestros alumnos y socios haciendo de este deporte un soporté, para poder crecer profesionalmente, como para liberar tensiones y disfrutar de la maravilla de este hermoso deporte. 
+          </p>
+          <p>
+            En APDA, nos esforzamos por ofrecer a nuestros socios y visitantes instalaciones de primera calidad, una atmósfera amigable y una comunidad comprometida con el juego limpio y el compañerismo. Fomentando la sana competencia. 
+          </p>
+          <h4>Nuestras Instalaciones y Servicios</h4>
+          <ul>
+            <li>6 canchas de pádel cubiertas</li>
+            <li>Vestuarios y duchas</li>
+            <li>Zona de descanso y cafetería</li>
+            <li>Tienda de equipamiento deportivo</li>
+          </ul>
+        </article>
+        <figure>
+          <img src="./assets/club-2.jpg" alt="Canchas de Padel">
+          <img src="./assets/club-3.jpg" alt="Padel APDA">
+          <img src="./assets/confort1.jpg" alt="APDA Bar">
+          <img src="./assets/comodidad3.jpg" alt="APDA Vestuarios">
+        </figure>
+      </div>
+    </section>
+    <div class="location">
+      <article class="details">
+        <div>
+          <h2>Horarios</h2>
+          <ul>
+            <li>Lunes a Viernes: 10:00 am - 9:00 pm </li>
+            <li>Sábado y Domingo: 9:00 am - 7:00 pm</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Ubicación</h2>
+          <p>
+            Obispo Terrero 3380, San Isidro,<br>
+            Provincia de Buenos Aires, CP B1609HMA </p>
+        </div>
+      </article>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6576.81910437065!2d-58.55101!3d-34.4925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb07689dfc16b%3A0xd99c91a74c6232d5!2sObispo%20Terrero%203380%2C%20B1642FXL%20San%20Isidro%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712320958869!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </main>
   <footer class="footer">
     <div class="logo-foother">

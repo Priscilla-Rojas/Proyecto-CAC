@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/login.css">
-  <!-- <link rel="stylesheet" media="(max-width: 320px)" href="styles/responsive/max-width-320.css"> -->
-  <link rel="stylesheet" media="(max-width: 950px)" href="./styles/responsive/max-width-950.css">
-  <link rel="stylesheet" media="(max-width: 770px)" href="styles/responsive/max-width-770.css">
-  <link rel="stylesheet" media="(max-width: 580px)" href="styles/responsive/max-width-580.css">
-  <link rel="stylesheet" media="(max-width: 450px)" href="styles/responsive/max-width-450.css">
-  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/308f84be54.js" crossorigin="anonymous"></script>
-  <title>APDA - Padél</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin.css">
+    <!-- <link rel="stylesheet" media="(max-width: 320px)" href="styles/responsive/max-width-320.css"> -->
+    <link rel="stylesheet" media="(max-width: 450px)" href="styles/responsive/max-width-450.css">
+    <link rel="stylesheet" media="(max-width: 580px)" href="styles/responsive/max-width-580.css">
+    <link rel="stylesheet" media="(max-width: 770px)" href="styles/responsive/max-width-770.css">
+    <link rel="stylesheet" media="(max-width: 950px)" href="./styles/responsive/max-width-950.css">
+    
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/308f84be54.js" crossorigin="anonymous"></script>
+    <title>APDA - Padél</title>
+  </head>
 <body>
   <header class="header">
     <div class="logo">
@@ -38,53 +39,48 @@
         <li id="li-contacto"><a href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
-    <a id="user" class="user " title="Iniciar Sesión">
-      <div id="img-User">
+    <a href="./login.html" id="user" class="user " title="Iniciar Sesión">
+      <div>
+          <i class="fa-regular fa-user"></i>
       </div>
-      <!-- <div class="user-text"> -->
-          <p id="userP" class="user-text" >Iniciar Sesión</p>
-      <!-- </div> -->
-    </a>
+      <div class="user-text">
+          <p id="userP" >Iniciar Sesión</p>
+      </div>
+  </a>
   </header>
-  <main class="login">
-    <div id="menu-user" class="menu-user hidden">
-      <nav class="nav-user">
-        <a id="img-Name-User">
-        </a>
-        <a href="">Mis Reservas</a>
-        <a href="" id="closeSesion">Cerrar Sesion</a>
-      </nav>
-    </div>
-    <section>
-      <h3>Iniciar sesión:</h3>
-      <form action="reservas.html" method="POST" id="loginForm">
-        <input id="userMail" name="mailUsuario" type="text" placeholder="Ingresa tu mail" required>
-        <input id="password" name="passUsuario" type="password" placeholder="Ingresa contraseña" required>
-        <div class="box">
-          <input type="checkbox" name="remember" id="remember">
-          <label for="remember">Recordarme</label>
-        </div>
-        <input type="submit" value="Ingresar" id="ingresar">
-        <div class="box boxForgetPassword">
-          <i class="fa-solid fa-lock"></i>
-          <p>¿Olvidaste tu contraseña?</p>
-        </div>
-        <div class="noAccount">
-          <p>¿No tienes cuenta? <a href="./registro.html">Regístrate</a></p>
-        </div>
-      </form>
-      <section class="loginRedes">
-        <h3>Iniciar sesión con:</h3>
-        <div class="iconsLoginRedes">
-          <a href="">
-            <img src="./assets/googleLogo.png" alt="Iniciar sesión con Google" title="Iniciar sesión tu cuenta de Google">
-          </a>
-          <a href="">
-            <img src="./assets/facebookLogo.png" alt="Iniciar sesión con facebook" title="Iniciar sesión tu cuenta de facebook">
-          </a>
-        </div>
-      </section>
-    </section>
+  <main>  
+   
+    <h1 id="config-gral">Configuración General</h1>
+    <p>Desde esta página se realiza el mantenimiento del sitio</p>
+  
+<section id="canchas" class="tabla-canchas">
+  <div class="card-container" id="card-container">
+    <!-- Tarjetas se generarán aquí -->
+</div>
+
+<div class="form-container">
+    <h2>Modificar Cancha</h2>
+    <form id="cancha-form">
+        <input type="hidden" id="cancha-id" name="id">
+        <label for="cancha-nombre">Nombre</label>
+        <input type="text" id="cancha-nombre" name="nombre" required>
+        <label for="cancha-material">Material</label>
+        <input type="text" id="cancha-material" name="material" required>
+        <label for="cancha-cubierta">Cubierta</label>
+        <select id="cancha-cubierta" name="cubierta">
+            <option value="1">Sí</option>
+            <option value="0">No</option>
+        </select>
+        <button type="submit">Guardar</button>
+        <button type="button" id="delete-cancha-btn">Eliminar</button>
+        <button type="button" id="delete-btn">Cancelar</button>
+    </form>
+</div>
+
+
+
+
+</section>
   </main>
   <footer class="footer">
     <div class="logo-foother">
@@ -137,12 +133,9 @@
     </section>
   </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-  <script src="app.js"></script>
-  <script src="./js/login.js"></script>
-  <!-- <script src="./js/reservas.js"></script> -->
-</body> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="./js/admin.js"></script>
+</body>
 </html>
-

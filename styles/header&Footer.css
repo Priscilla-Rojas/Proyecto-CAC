@@ -97,6 +97,7 @@ body{
   flex-flow: row wrap;
   align-content: center;
   justify-content: center;
+  gap: 5px;
   background-color: rgba(255, 255, 255, 0.918);
   padding: 5px 10px;
   border-radius: 10px;
@@ -107,6 +108,10 @@ body{
 .user i,
 .user p{
   color: var(--tertiary-color);
+}
+.user p{
+  margin: 0;
+  padding: 0;
 }
 
 .user:hover i,
@@ -131,6 +136,63 @@ body{
   font-family: var(--text-font);
   color: var(--tertiary-color);
   padding-left: 5px;
+}
+.nav-user > #closeSesion{
+  color: var(--tertiary-color);
+  background-color: transparent;
+}
+/* Styles  menu user in logeo */
+/* .main{
+  position: relative;
+} */
+.menu-user{
+  position: fixed;
+  top: 60px;
+  right: 0;
+  z-index: 99;
+  width: 200px;
+  height: max-content;
+  background-color: var(--secundary-color);
+}
+
+#img-Name-User{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+.fotoUser,
+.fotoUserMenu{
+  border-radius: 50%;
+  background-color: transparent;
+}
+.fotoUserMenu{
+  width: 40px;
+}
+.fotoUser{
+  width: 30px;
+}
+#img-Name-User > p{
+  margin: 0;
+}
+.nav-user{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  margin: 5px 5px 5px 15px;
+  color: white;
+}
+.nav-user a{
+  color: var(--tertiary-color);
+  font-size: 1.2rem;
+}
+
+
+.hidden{
+  display: none;
 }
 
 .footer{

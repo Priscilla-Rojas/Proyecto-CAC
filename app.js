@@ -2,65 +2,75 @@ const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.header-nav');
 const header = document.querySelector('.header');
 const close = document.querySelector('.close');
+const user = document.querySelector('#user');
+const menuUser= document.getElementById('menu-user');
+const logeo = localStorage.getItem('sesionIniciada');
+const nameUSer = localStorage.getItem('nombre');
+const bottonLogin = document.getElementById("userP");
+const divdatesUSer = document.getElementById("img-Name-User");
+const divImgUSer = document.getElementById("img-User");
+const navUser = document.getElementById('nav-user');
+const closeSesion = document.getElementById('closeSesion');
+
+const locationURL = window.location.pathname;
+const prevlocationURL = document.referrer;
+
+if(logeo) {
+  
+  locationURL === '/login.html' ? window.location.href = './reservas.html' : false
+
+  bottonLogin.textContent =` ${nameUSer}`
+  user.title = 'Mi cuenta';
+
+  const srcFoto = localStorage.getItem('foto');
+  const img = document.createElement('img');
+  img.src = srcFoto;
+  img.classList.add('fotoUser');
+  divImgUSer.append(img);
+
+  const p = document.createElement('p');;
+  p.textContent = nameUSer;
+  divdatesUSer.innerHTML = `<img src="${srcFoto}" class="fotoUserMenu">`;
+  divdatesUSer.appendChild(p)
+
+}else{
+  bottonLogin.textContent ='Iniciar Sesion';
+  user.title ='Iniciar Sesion';
+  menuUser.classList.add('hidden');
+  divImgUSer.innerHTML = `<i class="fa-regular fa-user"></i>`;
+  menuUser.classList.add('hidden');
+};
 
 hamburger.addEventListener('click', ()=>{
   nav.classList.add('visible');
   header.classList. add('header-visible');
 })
+
 close.addEventListener('click', ()=>{
   nav.classList.remove('visible');
   header.classList.remove('header-visible');
 })
+user.addEventListener('click', ()=>{
+  !logeo 
+  ? user.href = './login.html'
+  : menuUser.classList.toggle('hidden')
+})
 
-function usuario(a,b,c,d,e,f,g) {
-  this.nombreCompleto = a
-  this.email = b
-  this.clave = c
-  this.genero = d
-  this.foto = e
-  this.edad = f
-  this.referido = g
-};
+closeSesion.addEventListener('click', ()=>{
+  console.log('escuchando cerrar sesion')
+  if(logeo){
+    const rememberMail = localStorage.getItem('remember') ? true : false;
+    let check;
+    if(rememberMail) check = localStorage.getItem('mail');
 
-let usuarios = [
-  {
-      nombreCompleto: "Ariel Zulian",
-      email: "azulian093@gmail.com",
-      clave: "Padelero100%",
-      genero: "Masculino",
-      foto: "url",
-      edad: 46,
-      referido: 1
-  },
-  {
-      nombreCompleto: "Priscilla Rojas",
-      email: "priscilla.k.rojas@hotmail.com",
-      clave: "Padelera100%",
-      genero: "Femenino",
-      foto: "url",
-      edad: 20,
-      referido: 2
-  },
-  {
-      nombreCompleto: "Daniela Bastias",
-      email: "danybastias@outlook.com",
-      clave: "Padel-era100%",
-      genero: "Femenino",
-      foto: "url",
-      edad: 25,
-      referido: 3
-  },
-  {
-      nombreCompleto: "Adrián Bulacio",
-      email: "adrian.bulacio.ab@hotmail.com",
-      clave: "Padel-ero100%",
-      genero: "Masculino",
-      foto: "url",
-      edad: 26,
-      referido: 4
+    localStorage.clear();
+    sessionStorage.clear();
+    if (rememberMail) {
+      localStorage.setItem('mail', check);
+      localStorage.setItem('remember', true);
+    }
+    location.reload();
+  }else{
+    console.log('No se encuentra logeado')
   }
-];
-
-function cierraSesion(){
-  sessionStorage.setItem("usuarioSesion", "");
-}
+})

@@ -1,0 +1,243 @@
+@import url('./root.css');
+/* #user{
+  visibility: hidden;
+} */
+.title-myAcount{
+  width: 100%;
+  height: 150px;
+  background-image: url('../assets/fondo2.jpg');
+  background-position: 11% 19%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-myAcount h2{
+  text-align: center;
+  color: white;
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+.container-body{
+  width: 100%;
+  height: max-content;
+  min-height: 400px;
+  position: relative;
+}
+.nav-main{
+  width: 20%;
+  min-width: 150px;
+  max-width: 250px;
+  height: 100%;
+  background-color: var(--secundary-color);
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+  padding: 10px 5px;
+}
+.nav-main a{
+  color: white;
+  /* margin: 10px; */
+  padding: 5px 8px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+}
+.nav-main a:hover{
+  color: var(--secundary-color);
+}
+#closeSesion{
+  background-color: var(--tertiary-color);
+}
+.body-myAcount{
+  
+  height: 100%;
+  min-height: max-content;
+  margin: 10px auto;
+  
+  padding: 10px 5px;
+  padding-top: 60px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+#myperfil,
+#newUserName{
+  width: 50%;
+  min-width: 250px;
+  max-width: max-content;
+  background-color: var(--green-color);
+  border-radius: 15px;
+}
+#newUserName{
+  padding: 20px;
+  position: fixed;
+  height: max-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--tertiary-color);
+  color: white;
+  z-index: 100;
+}
+/* #newUserName > div::after{
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color:rgba(12, 12, 70, 0.384);
+  z-index: 98;
+} */
+#myReservas{
+  width: 95%;
+  min-width: 250px;
+  max-width: max-content;
+}
+
+#foto{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  align-self: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#foto > img{
+  width: 100%;
+  height: 100%;
+}
+.container-data{
+  width: 90%;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  /* padding-left: 20px; */
+}
+.container-data h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+.container-data p{
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+#myName{
+  position: relative;
+}
+.pencil{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--tertiary-color);
+  border-radius: 50%;
+  transition: all .3s linear;
+}
+.pencil:hover{
+  color: var(--secundary-color);
+  background-color: var(--tertiary-color);
+}
+#myReservas{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+#myReservas .reserva:nth-child(even){
+  background-color: var(--tertiary-color);
+}
+#myReservas .reserva:nth-child(odd){
+  background-color: var(--primary-color);
+}
+.reserva{
+  width: max-content;
+  min-width: 200px;
+
+  border-radius: 10px;
+  padding: 0;
+  color: white;
+  overflow: hidden;
+}
+.fila,
+.data{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+.fila{
+  width: 100%;
+  padding: 5px 10px;
+}
+.date{
+  background-color: var(--green-color);
+  
+}
+.date .data{
+  gap: 40px;
+}
+.data{
+gap: 8px;
+}
+.data p,
+.data h4 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+.details{
+  flex-flow: column;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.Reservado{
+  background-color: var(--green-color);
+  padding: 0;
+  justify-content: space-evenly;
+}
+.Reservado > div{
+  font-size: 1.5rem;
+}
+.Reservado > .Cancel{
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+.Reservado > .Cancel{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.Reservado > .Cancel p{
+  font-size: 1rem;
+
+}
+/* .Reservado > div{
+  width: 50%;
+} */
+.Cancel{
+  width: 40%;
+  background-color: rgba(252, 136, 41, 0.507);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Cumplido{
+  background-color: gray;
+}
+.Cancelado{
+  background-color: rgba(252, 136, 41, 0.507);
+}
+.hidden{
+  display: none !important; 
+}

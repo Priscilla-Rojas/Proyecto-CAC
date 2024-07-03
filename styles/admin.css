@@ -14,12 +14,7 @@ h1, h2, h3, h4{
 p, a, li, span{
   font-family: var(--text-font);
 }
-
-main{
-  padding-top: 0;
-}
-
-
+  
   /* Responsive */
   
   @media (max-width: 950px) {
@@ -33,26 +28,16 @@ main{
     .nosotros figure, .nosotros article{
       width: 100%;
     }
-
     .nosotros{
       background-position: left;
     }
     main{
-      /* text-shadow: 1px 1px 1px aliceblue; */
+      text-shadow: 1px 1px 1px aliceblue;
     }
   }
 
 
   @media (max-width: 768px) {
-    .header{
-      width: 100vw;
-      height: 45px;
-      position: relative;
-      background-color: var(--secundary-color);
-    }
-    .logo > figure{
-      height: 75%;
-    }
     .user-text{
       display: none;
     }
@@ -67,22 +52,7 @@ main{
 
   }
   @media (max-width: 580px) {
-    #nav{
-      width: 40px;
-    }
-    #nav ul{
-      display: none;
-    }
-    #nav > .fa-bars{
-      display: block;
-      order: 1;
-    }
-    .logo{
-      order: 2;
-    }
-    #user{
-      order: 3;
-    }
+
     .nosotros > div{
       width: 100%;
     }
@@ -152,36 +122,22 @@ main{
   }
   main{
     position: relative;
-    padding: 20px;
-    padding-top: 0;
+    padding: 20px 10px;
+    min-height: max-content;
     background-image: url(/assets/fondo.jpg); 
     background-size: cover;
-    color: var(--tertiary-color);
+    color: var(--primary-color);
   }
   
 
   h1, p {
     margin: 1em auto;
     text-align: center;
-    color: var(--tertiary-color)
+    color: var(--primary-color)
   }
-  main > h1{
-    padding-top: 20px;
-  }
-  
-  .principal {
-    width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto ;
-    padding: 2em;
-    border-radius: 10px;
-    border: 2px solid var(--secundary-color);
-    box-shadow: 2px 2px var(--secundary-color);
-    background-color: var(--tertiary-color);
-  }
-
  
+ 
+/*  
   
   fieldset {
     border: none;
@@ -193,11 +149,11 @@ main{
     display: block;
   }
   .generoField{
-   display: flex;
-   justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 
   }
-    
+     */
   label {
     display: block;
     margin: 0.5rem 0;
@@ -205,7 +161,7 @@ main{
     color:var(--secundary-color)
   }
   
-  input,
+  input, textarea,
   select {
     margin: 10px 1px 0 0;
     width: 100%;
@@ -213,23 +169,26 @@ main{
     border-radius: 10px;
   }
   
-  .principal input {
+  input, textarea {
     background-color: aliceblue;
     border: 1px dotted var(--secundary-color);
-    border-radius: 10px;
     color: var(--tertiary-color);
     font-weight: 600;
-    padding-left: 10px;;
+    padding: 5px 10px;
   }
-  
- .inline {
+  input:focus, textarea:focus{
+    border: 2px solid var(--secundary-color);
+    outline: none;
+
+  }
+  .inline {
     width: unset;
     margin: 0 0.3em 0 0;
     vertical-align: middle;
     display: inline; 
   }
   
- .principal input[type="submit"] {
+  button[type="submit"] {
     display: block;
     width: 45%;
     margin: 1em auto;
@@ -239,28 +198,27 @@ main{
     border-color: var(--secundary-color);
     min-width: 200px;
   }
-
-  .principal input[type="submit"]:hover{
+  button[type="submit"]:hover {
     animation: colores 5s linear 0.7s infinite;
       cursor: pointer;
-    /* background-color: var(--tertiary-color);
+    /* background-color: var(--primary-color);
     color: var(--secundary-color); */
     
-    box-shadow: 2px 2px var(--tertiary-color);
+    box-shadow: 2px 2px var(--primary-color);
   }
   
   @keyframes colores {
     0% {
     background-color: var (--secundary-color);
-    color: var(--tertiary-color);
-    border-color: var(--tertiary-color)
+    color: var(--primary-color);
+    border-color: var(--primary-color)
   }
   25%{
     color: aliceblue;
   }
     50% {
       color: var(--secundary-color);
-      background-color: var(--tertiary-color);
+      background-color: var(--primary-color);
       border-color: var(--secundary-color)
     }
     75%{
@@ -269,18 +227,72 @@ main{
     
     100%{
       background-color: var (--secundary-color);
-    color: var(--tertiary-color);
-    border-color: var(--tertiary-color)
+    color: var(--primary-color);
+    border-color: var(--primary-color)
     }
     }
-  
 
-  input[type="file"] {
-    padding: 1px 2px;
-    
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      padding: 16px;
+  }
+  
+  .card {
+      border: 1px solid #ccc;
+      
+      padding: 16px;
+      border-radius: 10px;
+      border: 2px solid var(--secundary-color);
+      box-shadow: 2px 2px var(--secundary-color);
+      cursor: pointer;
+      transition: transform 0.2s;
+  }
+  
+  .card:hover {
+      transform: scale(1.05);
+  }
+  
+  .card h3 {
+      margin: auto;
+  }
+  
+  .card p {
+      margin: 4px 0;
+  }
+  
+  .add-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      color: #555;
   }
   
   
+  
+  .form-container input, .form-container button, .form-container select {
+      margin: 8px 0;
+      padding: 8px;
+      width: 100%;
+    }
+  .form-container {
+    width: 80vw;
+    max-width: 450px;
+    min-width: 250px;
+    margin: 0 auto ;
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid var(--secundary-color);
+    box-shadow: 2px 2px var(--secundary-color);
+    background-color: var(--tertiary-color);
+  }
+
+  form button:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px var(--primary-color);
+  }
   
   
   

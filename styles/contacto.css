@@ -122,11 +122,11 @@ p, a, li, span{
   }
   main{
     position: relative;
-    padding: 20px 10px;
     min-height: max-content;
     background-image: url(/assets/fondo.jpg); 
     background-size: cover;
     color: var(--primary-color);
+    padding-bottom: 30px;
   }
   
 
@@ -136,6 +136,9 @@ p, a, li, span{
     color: var(--primary-color)
   }
   
+  main > h1{
+    padding: 30px;
+  }
   .contact-form {
     width: 80vw;
     max-width: 450px;
